@@ -58,7 +58,7 @@
     {
       "roll": 12,
       "name": "Sailor",
-      "description": "Pirate, privateer, or merchant — the seas are yours."
+      "description": "Pirate, privateer, or merchant \u2014 the seas are yours."
     },
     {
       "roll": 13,
@@ -99,6 +99,210 @@
       "roll": 20,
       "name": "Chirurgeon",
       "description": "You know anatomy, surgery, and first aid."
+    }
+  ],
+  "nord_backgrounds": [
+    {
+      "roll": 1,
+      "name": "Freed",
+      "description": "You were a thrall, but escaped or won your freedom."
+    },
+    {
+      "roll": 2,
+      "name": "Displaced",
+      "description": "You fled after a rival jarl attacked your village."
+    },
+    {
+      "roll": 3,
+      "name": "Criminal",
+      "description": "You were exiled from your village for a crime."
+    },
+    {
+      "roll": 4,
+      "name": "Drifter",
+      "description": "You have not yet found a jarl worthy of your loyalty."
+    },
+    {
+      "roll": 5,
+      "name": "Crop Farmer",
+      "description": "You toil in the earth and know all plants."
+    },
+    {
+      "roll": 6,
+      "name": "Livestock Farmer",
+      "description": "You have intuition about all animals."
+    },
+    {
+      "roll": 7,
+      "name": "Hunter",
+      "description": "You know how to move quietly in the wilds."
+    },
+    {
+      "roll": 8,
+      "name": "Fisher",
+      "description": "You know all the sea creatures and legends."
+    },
+    {
+      "roll": 9,
+      "name": "Enforcer",
+      "description": "You enforce the jarl's law in your village."
+    },
+    {
+      "roll": 10,
+      "name": "Trader",
+      "description": "You have mercantile connections in every village."
+    },
+    {
+      "roll": 11,
+      "name": "Crafter",
+      "description": "You can make and fix any utilitarian item."
+    },
+    {
+      "roll": 12,
+      "name": "Bowyer",
+      "description": "You can make and fix any bow or arrow."
+    },
+    {
+      "roll": 13,
+      "name": "Seer's Apprentice",
+      "description": "You know some of the mystic arts."
+    },
+    {
+      "roll": 14,
+      "name": "Shipwright",
+      "description": "You know how to build and repair longboats."
+    },
+    {
+      "roll": 15,
+      "name": "Blacksmith",
+      "description": "Weapons, armor, horseshoes; you do it all."
+    },
+    {
+      "roll": 16,
+      "name": "Far Traveler",
+      "description": "You know many distant people and customs."
+    },
+    {
+      "roll": 17,
+      "name": "Skald",
+      "description": "You are a poet and know all the ancient ballads."
+    },
+    {
+      "roll": 18,
+      "name": "Heroborn",
+      "description": "You are the descendant of a famous warrior."
+    },
+    {
+      "roll": 19,
+      "name": "Nobleborn",
+      "description": "You are the child of a 1d6: 1-5. jarl, 6. king."
+    },
+    {
+      "roll": 20,
+      "name": "God's Blood",
+      "description": "You are descended from a god; it marks you."
+    }
+  ],
+  "diabolical_backgrounds": [
+    {
+      "roll": 1,
+      "name": "Hermit",
+      "description": "The wilds (and its creatures) are your family."
+    },
+    {
+      "roll": 2,
+      "name": "Outcast",
+      "description": "You were thrown out for real or supposed crimes."
+    },
+    {
+      "roll": 3,
+      "name": "Woodborn",
+      "description": "They found you in the hollow of an oak tree."
+    },
+    {
+      "roll": 4,
+      "name": "Amnesiac",
+      "description": "Your past is a haze, but some memories return."
+    },
+    {
+      "roll": 5,
+      "name": "Haunted",
+      "description": "A restless spirit wants something from you."
+    },
+    {
+      "roll": 6,
+      "name": "Fugitive",
+      "description": "An anonymous savior helped you disappear."
+    },
+    {
+      "roll": 7,
+      "name": "Feytouched",
+      "description": "A fairy befriended you in your childhood."
+    },
+    {
+      "roll": 8,
+      "name": "Witchborn",
+      "description": "They burned your mother, but spared you."
+    },
+    {
+      "roll": 9,
+      "name": "Forager",
+      "description": "You know how to find the edible and the deadly."
+    },
+    {
+      "roll": 10,
+      "name": "Redeemer",
+      "description": "You must redeem the name of your kin."
+    },
+    {
+      "roll": 11,
+      "name": "Marked",
+      "description": "You carry an eldritch mark. Is it a curse, or a gift?"
+    },
+    {
+      "roll": 12,
+      "name": "Sacrifice",
+      "description": "You were to be ritually sacrificed, but escaped."
+    },
+    {
+      "roll": 13,
+      "name": "Marooned",
+      "description": "They left you behind, but you refused to die."
+    },
+    {
+      "roll": 14,
+      "name": "Fallen",
+      "description": "You fell from grace. Will you atone, or embrace it?"
+    },
+    {
+      "roll": 15,
+      "name": "Drawn",
+      "description": "You hear a whispered call and follow it."
+    },
+    {
+      "roll": 16,
+      "name": "Ascetic",
+      "description": "People fear you, but seek out your guidance."
+    },
+    {
+      "roll": 17,
+      "name": "Wolfchild",
+      "description": "Long ago, you walked into town wearing pelts."
+    },
+    {
+      "roll": 18,
+      "name": "Healer",
+      "description": "You understand how life and death intertwine."
+    },
+    {
+      "roll": 19,
+      "name": "Chosen",
+      "description": "An eldritch being selected you for a purpose."
+    },
+    {
+      "roll": 20,
+      "name": "Demonborn",
+      "description": "An ancestor of yours is a powerful demon."
     }
   ]
 }
