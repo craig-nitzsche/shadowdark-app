@@ -1,0 +1,350 @@
+{
+  "gear_list": {
+    "adventuring_gear": [
+      { "item": "Arrows (20)",          "cost": "1 gp",  "slots": 1, "description": "Ammunition for bows." },
+      { "item": "Backpack",             "cost": "2 gp",  "slots": 0, "description": "Holds 10 gear slots." },
+      { "item": "Caltrops (one bag)",   "cost": "1 gp",  "slots": 1, "description": "Covers a close area. Creatures must check vs. DEX or take 1 damage and stop." },
+      { "item": "Crossbow bolts (20)",  "cost": "1 gp",  "slots": 1, "description": "Ammunition for crossbows." },
+      { "item": "Crowbar",              "cost": "2 gp",  "slots": 1, "description": "Advantage on checks to pry open objects." },
+      { "item": "Flask (empty)",        "cost": "3 sp",  "slots": 1, "description": "Can hold 1 dose of liquid." },
+      { "item": "Grappling hook",       "cost": "1 gp",  "slots": 1, "description": "Used for climbing." },
+      { "item": "Iron spikes (10)",     "cost": "1 gp",  "slots": 1, "description": "Can be used to wedge doors or for climbing." },
+      { "item": "Lantern",              "cost": "5 gp",  "slots": 1, "description": "Requires oil. Sheds light to a near distance." },
+      { "item": "Mirror (small steel)", "cost": "10 gp", "slots": 1, "description": "Used for signaling or looking around corners." },
+      { "item": "Oil (1 flask)",        "cost": "5 sp",  "slots": 1, "description": "Burns in a lantern for 1 hour." },
+      { "item": "Pole (10-foot)",       "cost": "5 sp",  "slots": 1, "description": "Used to probe for traps or reach far objects." },
+      { "item": "Rations (3 days)",     "cost": "5 sp",  "slots": 1, "description": "Standard preserved food." },
+      { "item": "Rope (50-foot)",       "cost": "1 gp",  "slots": 1, "description": "Standard hempen rope." },
+      { "item": "Torches (3)",          "cost": "5 sp",  "slots": 1, "description": "Sheds light to a near distance for 1 hour each." }
+    ],
+    "weapons": [
+      {
+        "item": "Bastard sword",
+        "cost": "10 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 2,
+        "damage": "1d8/1d10",
+        "properties": ["Versatile", "2 slots"]
+      },
+      {
+        "item": "Blowgun",
+        "cost": "5 gp",
+        "type": "R",
+        "range": "N",
+        "slots": 1,
+        "damage": "1",
+        "properties": ["See notes"],
+        "notes": "Firing this weapon from hiding doesn't reveal your position.",
+        "source": "new_weapons"
+      },
+      {
+        "item": "Bolas",
+        "cost": "2 gp",
+        "type": "R",
+        "range": "N",
+        "slots": 1,
+        "damage": "-",
+        "properties": ["See notes"],
+        "notes": "When you hit a legged creature the size of a horse or smaller, the target's speed is reduced to close until it frees itself (DC 15 STR or DEX check).",
+        "source": "new_weapons"
+      },
+      {
+        "item": "Club",
+        "cost": "5 cp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": []
+      },
+      {
+        "item": "Crossbow",
+        "cost": "8 gp",
+        "type": "R",
+        "range": "F",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Two-handed", "Loading"]
+      },
+      {
+        "item": "Dagger",
+        "cost": "1 gp",
+        "type": "M/R",
+        "range": "C/N",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["Finesse", "Thrown"]
+      },
+      {
+        "item": "Greataxe",
+        "cost": "10 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 2,
+        "damage": "1d8/1d10",
+        "properties": ["Versatile", "2 slots"]
+      },
+      {
+        "item": "Greatsword",
+        "cost": "12 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 2,
+        "damage": "1d12",
+        "properties": ["Two-handed", "2 slots"]
+      },
+      {
+        "item": "Handaxe",
+        "cost": "2 gp",
+        "type": "M/R",
+        "range": "C/N",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Finesse", "Thrown"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Javelin",
+        "cost": "5 sp",
+        "type": "M/R",
+        "range": "C/F",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["Thrown"]
+      },
+      {
+        "item": "Longbow",
+        "cost": "8 gp",
+        "type": "R",
+        "range": "F",
+        "slots": 1,
+        "damage": "1d8",
+        "properties": ["Two-handed"]
+      },
+      {
+        "item": "Longsword",
+        "cost": "9 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d8",
+        "properties": []
+      },
+      {
+        "item": "Mace",
+        "cost": "5 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": []
+      },
+      {
+        "item": "Morningstar",
+        "cost": "5 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d6/1d8",
+        "properties": ["Versatile"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Pike",
+        "cost": "10 gp",
+        "type": "M",
+        "range": "2xC",
+        "slots": 2,
+        "damage": "1d10",
+        "properties": ["Two-handed", "2 slots"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Razor chain",
+        "cost": "12 gp",
+        "type": "M/R",
+        "range": "C/N",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Finesse", "Lasso"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Scimitar",
+        "cost": "8 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Finesse"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Shortbow",
+        "cost": "6 gp",
+        "type": "R",
+        "range": "F",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["Two-handed"]
+      },
+      {
+        "item": "Shortsword",
+        "cost": "7 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": []
+      },
+      {
+        "item": "Shuriken",
+        "cost": "1 gp",
+        "type": "R",
+        "range": "N",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["See notes"],
+        "notes": "Can be thrown into the ground. Living creatures who step on it take 1 damage and can only move at half speed for 10 rounds.",
+        "source": "new_weapons"
+      },
+      {
+        "item": "Sling",
+        "cost": "5 sp",
+        "type": "R",
+        "range": "F",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": [],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Spear",
+        "cost": "5 sp",
+        "type": "M/R",
+        "range": "C/N",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Thrown"]
+      },
+      {
+        "item": "Staff",
+        "cost": "5 sp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["Two-handed"]
+      },
+      {
+        "item": "Stave",
+        "cost": "2 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d6",
+        "properties": ["Two-handed", "Sundering"],
+        "source": "new_weapons"
+      },
+      {
+        "item": "Warhammer",
+        "cost": "10 gp",
+        "type": "M",
+        "range": "C",
+        "slots": 1,
+        "damage": "1d10",
+        "properties": ["Two-handed"]
+      },
+      {
+        "item": "Whip",
+        "cost": "10 gp",
+        "type": "M/R",
+        "range": "C/N",
+        "slots": 1,
+        "damage": "1d4",
+        "properties": ["Finesse", "Lasso"],
+        "source": "new_weapons"
+      },
+      {
+      "item": "Rapier",
+      "cost": "8 gp",
+      "type": "M",
+      "range": "C",
+      "slots": 1,
+      "damage": "1d6",
+      "properties": ["Finesse"],
+      "note": "Introduced via the Swashbuckler class feature. Available to Swashbucklers as a class weapon.",
+      "source": "expansion2_swashbuckler"
+      }
+    ],
+    "weapon_properties": {
+      "F":  "Finesse. You may use your STR or DEX when attacking with this weapon.",
+      "L":  "Loading. You must forgo moving to reload this weapon.",
+      "La": "Lash. When you make a ranged attack with this weapon, it does not leave your grasp.",
+      "S":  "When you are hit with a melee attack, you may choose to destroy this weapon or armor to negate all damage from the attack.",
+      "Th": "Thrown. You may throw this weapon to make a ranged attack using STR or DEX.",
+      "V":  "Versatile. You can use this weapon with one or two hands. Use the higher damage die when wielding with two hands.",
+      "2H": "Two-handed. You must use this weapon with two hands."
+    },
+    "weapon_types": {
+      "M":   "Melee. Strikes at arm's reach.",
+      "R":   "Ranged. Strikes at a distance.",
+      "M/R": "Can be used as both melee and ranged."
+    },
+    "ranges": {
+      "C":   "Close",
+      "N":   "Near",
+      "F":   "Far",
+      "C/N": "Close or Near",
+      "C/F": "Close or Far",
+      "2xC": "Double close range (Pike only)"
+    },
+    "armor": [
+      {
+        "item": "Leather armor",
+        "cost": "10 gp",
+        "slots": 1,
+        "ac": "11 + DEX mod",
+        "properties": []
+      },
+      {
+        "item": "Chainmail",
+        "cost": "60 gp",
+        "slots": 2,
+        "ac": "13 + DEX mod",
+        "properties": ["Disadvantage on stealth", "No swimming"]
+      },
+      {
+        "item": "Plate mail",
+        "cost": "130 gp",
+        "slots": 3,
+        "ac": "15",
+        "properties": ["No swimming", "Disadvantage on stealth"]
+      },
+      {
+        "item": "Shield",
+        "cost": "10 gp",
+        "slots": 1,
+        "ac": "+2",
+        "properties": ["Occupies one hand"]
+      },
+      {
+        "item": "Round shield",
+        "cost": "15 gp",
+        "slots": 1,
+        "ac": "+2",
+        "properties": ["Occupies one hand", "Sundering"],
+        "source": "new_armor"
+      },
+      {
+        "item": "Mithral upgrade (metal armor only)",
+        "cost": "x4 base armor cost",
+        "slots": -1,
+        "ac": "Same as base armor",
+        "properties": ["No penalty to stealth", "No penalty to swimming"],
+        "notes": "Mithral is an upgrade applied to an existing metal armor. Multiply the base armor cost by 4. Reduces gear slots used by 1."
+      }
+    ]
+  }
+}

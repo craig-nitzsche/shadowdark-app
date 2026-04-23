@@ -1,0 +1,104 @@
+{
+  "backgrounds": [
+    {
+      "roll": 1,
+      "name": "Urchin",
+      "description": "You grew up in the merciless streets of a large city."
+    },
+    {
+      "roll": 2,
+      "name": "Wanted",
+      "description": "There's a price on your head, but you have allies."
+    },
+    {
+      "roll": 3,
+      "name": "Cult Initiate",
+      "description": "You know blasphemous secrets and rituals."
+    },
+    {
+      "roll": 4,
+      "name": "Thieves' Guild",
+      "description": "You have connections, contacts, and debts."
+    },
+    {
+      "roll": 5,
+      "name": "Banished",
+      "description": "Your people cast you out for supposed crimes."
+    },
+    {
+      "roll": 6,
+      "name": "Orphaned",
+      "description": "An unusual guardian rescued and raised you."
+    },
+    {
+      "roll": 7,
+      "name": "Wizard's Apprentice",
+      "description": "You have a knack and eye for magic."
+    },
+    {
+      "roll": 8,
+      "name": "Jeweler",
+      "description": "You can easily appraise value and authenticity."
+    },
+    {
+      "roll": 9,
+      "name": "Herbalist",
+      "description": "You know plants, medicines, and poisons."
+    },
+    {
+      "roll": 10,
+      "name": "Barbarian",
+      "description": "You left the horde, but it never quite left you."
+    },
+    {
+      "roll": 11,
+      "name": "Mercenary",
+      "description": "You fought friend and foe alike for your coin."
+    },
+    {
+      "roll": 12,
+      "name": "Sailor",
+      "description": "Pirate, privateer, or merchant — the seas are yours."
+    },
+    {
+      "roll": 13,
+      "name": "Acolyte",
+      "description": "You're well trained in religious rites and doctrines."
+    },
+    {
+      "roll": 14,
+      "name": "Soldier",
+      "description": "You served as a fighter in an organized army."
+    },
+    {
+      "roll": 15,
+      "name": "Ranger",
+      "description": "The woods and wilds are your true home."
+    },
+    {
+      "roll": 16,
+      "name": "Scout",
+      "description": "You survived on stealth, observation, and speed."
+    },
+    {
+      "roll": 17,
+      "name": "Minstrel",
+      "description": "You've traveled far with your charm and talent."
+    },
+    {
+      "roll": 18,
+      "name": "Scholar",
+      "description": "You know much about ancient history and lore."
+    },
+    {
+      "roll": 19,
+      "name": "Noble",
+      "description": "A famous name has opened many doors for you."
+    },
+    {
+      "roll": 20,
+      "name": "Chirurgeon",
+      "description": "You know anatomy, surgery, and first aid."
+    }
+  ]
+}

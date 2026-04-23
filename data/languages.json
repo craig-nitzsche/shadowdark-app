@@ -1,0 +1,22 @@
+{
+  "languages": {
+    "common": [
+      "Common",
+      "Dwarvish",
+      "Elvish",
+      "Giant",
+      "Goblin",
+      "Merran",
+      "Orcish",
+      "Reptilian",
+      "Sylvan",
+      "Thanian"
+    ],
+    "rare": [
+      "Celestial",
+      "Diabolic",
+      "Draconic",
+      "Primordial"
+    ]
+  }
+}
