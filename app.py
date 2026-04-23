@@ -1,7 +1,8 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import json
 import random
-from fpdf import FPDF
+import html
 from data_loader import (
     get_ancestries,
     get_ancestry_names,
@@ -23,6 +24,67 @@ from data_loader import (
     get_spell_classes,
 )
 
+def default_character():
+    return {
+        "name": "",
+        "level": 1,
+        "hp": 0,
+        "strength": 10,
+        "dexterity": 10,
+        "constitution": 10,
+        "intelligence": 10,
+        "wisdom": 10,
+        "charisma": 10,
+        "ancestry": "-",
+        "background": "-",
+        "class": "-",
+        "gear": [],
+        "languages": [],
+        "spells": [],
+        "talents": [],
+    }
+
+
+def normalize_character_data(data):
+    character = default_character()
+    character.update(data or {})
+
+    # Normalize selection fields for required dropdowns
+    for key in ["ancestry", "background", "class"]:
+        value = character.get(key)
+        if value is None or (isinstance(value, str) and not value.strip()):
+            character[key] = "-"
+        else:
+            character[key] = str(value)
+
+    # Ensure numeric fields are properly typed
+    try:
+        character["level"] = int(character.get("level", 1))
+    except (TypeError, ValueError):
+        character["level"] = 1
+
+    for attr in ["hp", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]:
+        try:
+            character[attr] = int(character.get(attr, default_character()[attr]))
+        except (TypeError, ValueError):
+            character[attr] = default_character()[attr]
+
+    for list_attr in ["gear", "languages", "spells", "talents"]:
+        value = character.get(list_attr, [])
+        if isinstance(value, str):
+            character[list_attr] = [item.strip() for item in value.split(",") if item.strip()]
+        elif value is None:
+            character[list_attr] = []
+        else:
+            character[list_attr] = list(value)
+
+    return character
+
+
+def build_spell_option(spell_name, tier="?"):
+    return f"{spell_name} (Tier {tier})"
+
+
 st.set_page_config(
     page_title="Shadowdark TTRPG Character Builder",
     page_icon="⚔️",
@@ -42,22 +104,38 @@ if page == "Character Creator":
     
     # Initialize session state for character
     if "character" not in st.session_state:
-        st.session_state.character = {
-            "name": "",
-            "level": 1,
-            "hp": 0,
-            "ancestry": None,
-            "background": None,
-            "class": None,
-            "gear": [],
-            "languages": [],
-            "spells": [],
-        }
+        st.session_state.character = default_character()
+
+    if "pending_import" in st.session_state:
+        imported_data = st.session_state.pop("pending_import")
+        st.session_state.character = imported_data
+        st.session_state["name_input"] = imported_data["name"]
+        st.session_state["level_select"] = imported_data["level"]
+        st.session_state["hp_input"] = imported_data["hp"]
+        st.session_state["strength_input"] = imported_data["strength"]
+        st.session_state["dexterity_input"] = imported_data["dexterity"]
+        st.session_state["constitution_input"] = imported_data["constitution"]
+        st.session_state["intelligence_input"] = imported_data["intelligence"]
+        st.session_state["wisdom_input"] = imported_data["wisdom"]
+        st.session_state["charisma_input"] = imported_data["charisma"]
+        st.session_state["ancestry_select"] = imported_data["ancestry"]
+        st.session_state["background_select"] = imported_data["background"]
+        st.session_state["class_select"] = imported_data["class"]
+        st.session_state["languages_select"] = imported_data["languages"]
+        st.session_state["talents_select"] = imported_data.get("talents", [])
+
+        spell_options = []
+        for spell in imported_data["spells"]:
+            tier = next((s["tier"] for s in get_spells() if s["name"] == spell), "?")
+            spell_options.append(build_spell_option(spell, tier))
+        st.session_state["spells_select"] = sorted(spell_options)
+        st.success("Character imported successfully!")
     
     # Character name
     st.session_state.character["name"] = st.text_input(
         "Character Name",
         value=st.session_state.character["name"],
+        key="name_input",
     )
     
     # Level and HP
@@ -77,12 +155,103 @@ if page == "Character Creator":
             key="hp_input",
         )
     
+    # Ability Scores
+    st.subheader("Ability Scores")
+    attr_cols = st.columns(3)
+    
+    # Strength
+    with attr_cols[0]:
+        st.markdown("**Strength**")
+        strength = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["strength"],
+            key="strength_input",
+        )
+        st.session_state.character["strength"] = strength
+        modifier = (strength - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Dexterity
+    with attr_cols[1]:
+        st.markdown("**Dexterity**")
+        dexterity = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["dexterity"],
+            key="dexterity_input",
+        )
+        st.session_state.character["dexterity"] = dexterity
+        modifier = (dexterity - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Constitution
+    with attr_cols[2]:
+        st.markdown("**Constitution**")
+        constitution = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["constitution"],
+            key="constitution_input",
+        )
+        st.session_state.character["constitution"] = constitution
+        modifier = (constitution - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Second row
+    attr_cols2 = st.columns(3)
+    
+    # Intelligence
+    with attr_cols2[0]:
+        st.markdown("**Intelligence**")
+        intelligence = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["intelligence"],
+            key="intelligence_input",
+        )
+        st.session_state.character["intelligence"] = intelligence
+        modifier = (intelligence - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Wisdom
+    with attr_cols2[1]:
+        st.markdown("**Wisdom**")
+        wisdom = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["wisdom"],
+            key="wisdom_input",
+        )
+        st.session_state.character["wisdom"] = wisdom
+        modifier = (wisdom - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Charisma
+    with attr_cols2[2]:
+        st.markdown("**Charisma**")
+        charisma = st.number_input(
+            "Score",
+            min_value=1,
+            max_value=25,
+            value=st.session_state.character["charisma"],
+            key="charisma_input",
+        )
+        st.session_state.character["charisma"] = charisma
+        modifier = (charisma - 10) // 2
+        st.markdown(f"**Modifier:** {modifier:+d}")
+    
     col1, col2, col3 = st.columns(3)
     
     # Ancestry selection
     with col1:
         st.subheader("Ancestry")
-        ancestry_names = sorted(get_ancestry_names())
+        ancestry_names = ["-"] + sorted(get_ancestry_names())
         selected_ancestry = st.selectbox(
             "Choose your ancestry:",
             ancestry_names,
@@ -104,7 +273,7 @@ if page == "Character Creator":
     # Background selection
     with col2:
         st.subheader("Background")
-        background_names = sorted(get_background_names())
+        background_names = ["-"] + sorted(get_background_names())
         selected_background = st.selectbox(
             "Choose your background:",
             background_names,
@@ -125,7 +294,8 @@ if page == "Character Creator":
     # Class selection
     with col3:
         st.subheader("Class")
-        class_names = sorted(get_class_names())
+        class_names = ["-"] + sorted(get_class_names())
+        previous_class = st.session_state.character["class"]
         selected_class = st.selectbox(
             "Choose your class:",
             class_names,
@@ -134,6 +304,9 @@ if page == "Character Creator":
             else 0,
             key="class_select",
         )
+        if selected_class != previous_class:
+            st.session_state.character["spells"] = []
+            st.session_state.character["talents"] = []
         st.session_state.character["class"] = selected_class
         
         # Display class details
@@ -219,6 +392,30 @@ if page == "Character Creator":
             )
             # Extract just the spell names
             st.session_state.character["spells"] = [option.split(' (Tier ')[0] for option in selected_spell_options]
+
+        class_features = character_class.get("class_features", []) if character_class else []
+        if class_features:
+            st.subheader(f"Class Features ({selected_class})")
+            for feature in class_features:
+                st.markdown(f"**{feature.get('name', 'Unnamed feature')}**")
+                st.markdown(feature.get("description", "No description available."))
+                st.markdown("---")
+
+        talents_table = character_class.get("talents_table", []) if character_class else []
+        if talents_table:
+            st.subheader("Class Talents")
+            talent_options = [
+                f"{talent['roll']}: {talent['effect']}"
+                for talent in talents_table
+            ]
+            talent_options_sorted = sorted(talent_options)
+            selected_talents = st.multiselect(
+                "Choose your talents from the table:",
+                talent_options_sorted,
+                default=[talent for talent in st.session_state.character.get("talents", []) if talent in talent_options_sorted],
+                key="talents_select",
+            )
+            st.session_state.character["talents"] = selected_talents
     
     # Display character summary
     st.divider()
@@ -230,6 +427,23 @@ if page == "Character Creator":
         st.markdown(f"**Name:** {st.session_state.character['name'] or 'Unnamed'}")
         st.markdown(f"**Level:** {st.session_state.character['level']}")
         st.markdown(f"**HP:** {st.session_state.character['hp']}")
+        
+        # Ability Scores
+        st.markdown("**Ability Scores:**")
+        str_mod = (st.session_state.character['strength'] - 10) // 2
+        dex_mod = (st.session_state.character['dexterity'] - 10) // 2
+        con_mod = (st.session_state.character['constitution'] - 10) // 2
+        int_mod = (st.session_state.character['intelligence'] - 10) // 2
+        wis_mod = (st.session_state.character['wisdom'] - 10) // 2
+        cha_mod = (st.session_state.character['charisma'] - 10) // 2
+        
+        st.markdown(f"STR: {st.session_state.character['strength']} ({str_mod:+d}) | "
+                   f"DEX: {st.session_state.character['dexterity']} ({dex_mod:+d}) | "
+                   f"CON: {st.session_state.character['constitution']} ({con_mod:+d})")
+        st.markdown(f"INT: {st.session_state.character['intelligence']} ({int_mod:+d}) | "
+                   f"WIS: {st.session_state.character['wisdom']} ({wis_mod:+d}) | "
+                   f"CHA: {st.session_state.character['charisma']} ({cha_mod:+d})")
+        
         st.markdown(f"**Ancestry:** {st.session_state.character['ancestry']}")
         st.markdown(f"**Background:** {st.session_state.character['background']}")
         st.markdown(f"**Class:** {st.session_state.character['class']}")
@@ -256,11 +470,49 @@ if page == "Character Creator":
             )
             if len(st.session_state.character["spells"]) > 3:
                 st.markdown(f"*...and {len(st.session_state.character['spells']) - 3} more spells*")
+    # Class features, selected talents, and spells
+    st.divider()
+    st.subheader("🧠 Class Features, Talents & Spells")
 
+    ancestry_info = get_ancestry_by_name(st.session_state.character.get("ancestry", ""))
+    if ancestry_info and ancestry_info.get("trait"):
+        with st.expander("Ancestry Trait"):
+            st.markdown(f"**{ancestry_info['trait'].get('name', 'Trait')}**")
+            st.markdown(ancestry_info['trait'].get("description", "No description available."))
+            st.markdown("---")
+
+    if character_class:
+        class_features = character_class.get("class_features", [])
+        if class_features:
+            with st.expander("Class Features"):
+                for feature in class_features:
+                    st.markdown(f"**{feature.get('name', 'Unnamed feature')}**")
+                    st.markdown(feature.get("description", "No description available."))
+                    st.markdown("---")
+        else:
+            st.markdown("*No class features available.*")
+
+    selected_talents = st.session_state.character.get("talents", [])
+    if selected_talents:
+        with st.expander("Selected Talents"):
+            for talent in selected_talents:
+                st.markdown(f"- {talent}")
+    else:
+        st.markdown("*No talents chosen.*")
+
+    if st.session_state.character.get("spells"):
+        for spell_name in st.session_state.character["spells"]:
+            spell = get_spell_by_name(spell_name)
+            with st.expander(spell_name):
+                if spell:
+                    st.markdown(f"**Tier:** {spell.get('tier', '?')}")
+                    st.markdown(spell.get("description", "No description available."))
+                else:
+                    st.markdown("Spell details unavailable.")
     # Dice Roller
     st.divider()
     st.subheader("🎲 Dice Roller")
-    dice_col1, dice_col2, dice_col3 = st.columns([2, 1, 1])
+    dice_col1, dice_col2, dice_col3, dice_col4 = st.columns([2, 1, 1, 1])
     
     with dice_col1:
         dice_type = st.selectbox(
@@ -268,18 +520,30 @@ if page == "Character Creator":
             ["d4", "d6", "d8", "d10", "d12", "d20"],
             key="dice_type",
         )
+        dice_count = st.number_input(
+            "Number of dice:",
+            min_value=1,
+            max_value=20,
+            value=1,
+            step=1,
+            key="dice_count",
+        )
     
     with dice_col2:
         if st.button("Roll Dice", key="roll_dice"):
             dice_value = int(dice_type[1:])  # Extract number from "d4" etc.
-            roll_result = random.randint(1, dice_value)
-            st.success(f"Rolled {dice_type}: {roll_result}")
+            rolls = [random.randint(1, dice_value) for _ in range(dice_count)]
+            total = sum(rolls)
+            st.success(f"Rolled {dice_count}{dice_type}: {rolls} = {total}")
     
     with dice_col3:
         if st.button("Roll 3d6", key="roll_3d6"):
             rolls = [random.randint(1, 6) for _ in range(3)]
             total = sum(rolls)
             st.success(f"3d6: {rolls} = {total}")
+    
+    with dice_col4:
+        st.markdown("*Use the selector to roll multiple dice of the chosen type.*")
 
     # Character Export/Import
     st.divider()
@@ -304,104 +568,162 @@ if page == "Character Creator":
         uploaded_file = st.file_uploader("📁 Import Character JSON", type="json", key="import_json")
         if uploaded_file is not None and st.button("Import Character", key="import_button"):
             try:
-                imported_data = json.load(uploaded_file)
-                st.session_state.character = imported_data
-                st.success("Character imported successfully!")
+                imported_data = normalize_character_data(json.load(uploaded_file))
+                st.session_state["pending_import"] = imported_data
                 st.rerun()
             except Exception as e:
                 st.error(f"Error importing character: {e}")
 
-    # PDF Export
+    # HTML Export
     st.divider()
-    if st.button("📄 Export Character Sheet as PDF", key="export_pdf"):
-        # Generate PDF
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        
-        # Title
-        pdf.set_font("Arial", size=16, style='B')
-        pdf.cell(200, 10, txt="Shadowdark Character Sheet", ln=True, align='C')
-        pdf.ln(10)
-        
-        # Character Info
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="Name:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=st.session_state.character.get('name', 'Unnamed'), ln=True)
-        
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="Level:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=str(st.session_state.character.get('level', 1)), ln=True)
-        
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="HP:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=str(st.session_state.character.get('hp', 0)), ln=True)
-        
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="Ancestry:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=st.session_state.character.get('ancestry', ''), ln=True)
-        
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="Background:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=st.session_state.character.get('background', ''), ln=True)
-        
-        pdf.set_font("Arial", size=12, style='B')
-        pdf.cell(50, 10, txt="Class:", ln=False)
-        pdf.set_font("Arial", size=12)
-        pdf.cell(0, 10, txt=st.session_state.character.get('class', ''), ln=True)
-        
-        pdf.ln(5)
-        
-        # Languages
-        if st.session_state.character.get("languages"):
-            pdf.set_font("Arial", size=12, style='B')
-            pdf.cell(50, 10, txt="Languages:", ln=False)
-            pdf.set_font("Arial", size=12)
-            pdf.cell(0, 10, txt=", ".join(st.session_state.character["languages"]), ln=True)
-        
-        # Gear
-        if st.session_state.character.get("gear"):
-            pdf.set_font("Arial", size=12, style='B')
-            pdf.cell(50, 10, txt="Gear:", ln=False)
-            pdf.set_font("Arial", size=12)
-            gear_text = ", ".join(st.session_state.character["gear"])
-            # Handle long text
-            if len(gear_text) > 100:
-                gear_text = gear_text[:97] + "..."
-            pdf.cell(0, 10, txt=gear_text, ln=True)
-        
-        # Spells
-        if st.session_state.character.get("spells"):
-            pdf.ln(5)
-            pdf.set_font("Arial", size=12, style='B')
-            pdf.cell(0, 10, txt="Spells:", ln=True)
-            pdf.set_font("Arial", size=12)
-            
-            all_spells = get_spells()
-            spell_tier_map = {spell["name"]: spell["tier"] for spell in all_spells}
-            
-            for spell in st.session_state.character["spells"]:
-                tier = spell_tier_map.get(spell, '?')
-                pdf.cell(0, 8, txt=f"• {spell} (Tier {tier})", ln=True)
-        
-        # Save PDF with error handling
-        try:
-            pdf_output = pdf.output()
-            
-            st.download_button(
-                label="📥 Download PDF",
-                data=pdf_output,
-                file_name=f"{st.session_state.character.get('name', 'Character')}_Shadowdark_Sheet.pdf",
-                mime="application/pdf",
-                key="download_pdf"
-            )
-        except Exception as e:
-            st.error(f"Error generating PDF: {e}. Try using simpler character names without special characters.")
+    if st.button("🌐 Export Character Sheet as HTML", key="export_html"):
+        def html_escape(value):
+            return html.escape(str(value))
+
+        def html_list(items):
+            return ", ".join(html_escape(item) for item in items)
+
+        def generate_html(character):
+            character = normalize_character_data(character)
+            class_info = get_class_by_name(character.get("class", "")) or {}
+
+            html_lines = [
+                "<!DOCTYPE html>",
+                "<html lang='en'>",
+                "<head>",
+                "<meta charset='utf-8'>",
+                "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+                "<title>Shadowdark Character Sheet</title>",
+                "<style>",
+                "body{font-family:Arial,sans-serif;background:#f7f7f7;color:#111;margin:24px;}",
+                "h1,h2,h3{color:#222;}",
+                "section{background:#fff;border:1px solid #ddd;border-radius:10px;padding:18px;margin-bottom:18px;}",
+                "table{width:100%;border-collapse:collapse;margin-top:10px;}",
+                "td,th{padding:8px;border:1px solid #ddd;vertical-align:top;}",
+                "ul{margin:0;padding-left:18px;}",
+                "</style>",
+                "</head>",
+                "<body>",
+                "<h1>Shadowdark Character Sheet</h1>",
+                "<section>",
+                "<h2>Character Info</h2>",
+                "<table>",
+                f"<tr><th>Name</th><td>{html_escape(character.get('name', 'Unnamed'))}</td></tr>",
+                f"<tr><th>Level</th><td>{html_escape(character.get('level', 1))}</td></tr>",
+                f"<tr><th>HP</th><td>{html_escape(character.get('hp', 0))}</td></tr>",
+                f"<tr><th>Ancestry</th><td>{html_escape(character.get('ancestry', ''))}</td></tr>",
+                f"<tr><th>Background</th><td>{html_escape(character.get('background', ''))}</td></tr>",
+                f"<tr><th>Class</th><td>{html_escape(character.get('class', ''))}</td></tr>",
+                "</table>",
+                "</section>",
+                "<section>",
+                "<h2>Ability Scores</h2>",
+                "<table>",
+            ]
+
+            ability_scores = [
+                ("STR", character.get("strength", 10)),
+                ("DEX", character.get("dexterity", 10)),
+                ("CON", character.get("constitution", 10)),
+                ("INT", character.get("intelligence", 10)),
+                ("WIS", character.get("wisdom", 10)),
+                ("CHA", character.get("charisma", 10)),
+            ]
+
+            for name, score in ability_scores:
+                modifier = (score - 10) // 2
+                html_lines.append(f"<tr><th>{name}</th><td>{score} ({modifier:+d})</td></tr>")
+
+            html_lines += [
+                "</table>",
+                "</section>",
+                "<section>",
+                "<h2>Profile</h2>",
+                f"<p><strong>Languages:</strong> {html_list(character.get('languages', []))}</p>",
+                f"<p><strong>Gear:</strong> {html_list(character.get('gear', []))}</p>",
+                "</section>",
+                "<section>",
+                "<h2>Ancestry Trait</h2>",
+            ]
+
+            ancestry_info = get_ancestry_by_name(character.get('ancestry', '')) or {}
+            trait_info = ancestry_info.get('trait', {})
+            if trait_info:
+                html_lines.append(
+                    f"<p><strong>{html_escape(trait_info.get('name', 'Trait'))}:</strong> {html_escape(trait_info.get('description', 'No description available.'))}</p>"
+                )
+            else:
+                html_lines.append("<p>No ancestry trait available.</p>")
+
+            html_lines.append("</section>")
+            html_lines.append("<section>")
+            html_lines.append("<h2>Class Features</h2>")
+
+            if class_info.get("class_features"):
+                html_lines.append("<ul>")
+                for feature in class_info.get("class_features", []):
+                    html_lines.append(
+                        f"<li><strong>{html_escape(feature.get('name', ''))}:</strong> {html_escape(feature.get('description', ''))}</li>"
+                    )
+                html_lines.append("</ul>")
+            else:
+                html_lines.append("<p>No class features available.</p>")
+
+            html_lines.append("<h2>Talents</h2>")
+            if character.get("talents"):
+                html_lines.append("<h3>Selected Talents</h3>")
+                html_lines.append("<ul>")
+                for talent in character.get("talents", []):
+                    html_lines.append(f"<li>{html_escape(talent)}</li>")
+                html_lines.append("</ul>")
+            else:
+                html_lines.append("<p>No talents selected.</p>")
+
+            if character.get("spells"):
+                html_lines.extend([
+                    "<h3>Known Spells</h3>",
+                ])
+                for spell_name in character.get("spells", []):
+                    spell = get_spell_by_name(spell_name)
+                    if spell:
+                        html_lines.extend([
+                            f"<div style='margin-bottom:14px;'>",
+                            f"<h4>{html_escape(spell['name'])} (Tier {html_escape(spell.get('tier', '?'))})</h4>",
+                            f"<p>{html_escape(spell.get('description', 'No description available.'))}</p>",
+                            "</div>",
+                        ])
+                    else:
+                        html_lines.append(
+                            f"<p>{html_escape(spell_name)} - details unavailable.</p>"
+                        )
+            else:
+                html_lines.append("<p>No spells selected.</p>")
+
+            html_lines.extend([
+                "</section>",
+                "</body>",
+                "</html>",
+            ])
+            return "\n".join(html_lines)
+
+        html_content = generate_html(st.session_state.character)
+        st.session_state["html_preview_content"] = html_content
+        st.download_button(
+            label="📥 Download HTML",
+            data=html_content.encode("utf-8"),
+            file_name=f"{st.session_state.character.get('name', 'Character')}_Shadowdark_Sheet.html",
+            mime="text/html",
+            key="download_html"
+        )
+
+    if st.session_state.get("html_preview_content"):
+        st.divider()
+        st.subheader("👁️ HTML Preview")
+        components.html(
+            st.session_state["html_preview_content"],
+            height=600,
+            scrolling=True,
+        )
 
 
 elif page == "Wiki":
