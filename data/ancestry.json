@@ -10,6 +10,15 @@
       }
     },
     {
+      "name": "Kobold",
+      "description": "Tiny, humanoid dog-lizards with a penchant for tinkering, trap building, and a hint of magic.",
+      "languages": ["Common", "Draconic"],
+      "trait": {
+        "name": "Knack",
+        "description": "You get +1 to spellcasting checks or may begin each session with a luck token."
+      }
+    },
+    {
       "name": "Elf",
       "description": "Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.",
       "languages": ["Common", "Elvish", "Sylvan"],
