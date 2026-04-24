@@ -2321,6 +2321,564 @@
           "Baba"
         ]
       }
+    },
+    {
+      "name": "Beastmaster",
+      "description": "Limbs and mouths contort and crack as bones and jaws rearrange themselves. A shapeshifting warrior who bonds with animals and transforms into beasts.",
+      "hit_points": "1d8 per level",
+      "armor": [
+        "None"
+      ],
+      "weapons": [
+        "All missile weapons"
+      ],
+      "languages": {
+        "fixed": [
+          "Language of chosen animal species"
+        ]
+      },
+      "class_features": [
+        {
+          "name": "Beast Attack",
+          "description": "Choose one animal type to use for all melee attacks (see Class Options). If your talents allow for multiple animals, you may choose which animal to use with every individual attack."
+        },
+        {
+          "name": "Beast Hide",
+          "description": "Your skin is covered with a protective hide. If your CON modifier is positive, also add it to your AC."
+        },
+        {
+          "name": "Beast Shape",
+          "description": "Once per day, you and your possessions may transform into the natural form of your chosen beast for 3 rounds, taking on the animal's statistics, attacks, and abilities. You still need light to see. If you take damage while in this form, do not transfer that damage to your own HP when you return to your humanoid form. If you reach 0 HP in your animal form, you transform back at 0 HP, starting your death timer as normal."
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "You may use Beast Shape 1 additional time per day"
+        },
+        {
+          "roll": "3-5",
+          "effect": "Increase die category to chosen Beast Attack damage"
+        },
+        {
+          "roll": "6-9",
+          "effect": "+2 to Strength or Constitution stat or +1 to unarmored AC"
+        },
+        {
+          "roll": "10-11",
+          "effect": "Make an animal magic item (see p 135, 136, 144 of Un. Sel.)"
+        },
+        {
+          "roll": "12",
+          "effect": "Select and add a new beast attack to your arsenal"
+        }
+      ]
+    },
+    {
+      "name": "Fiend",
+      "description": "Disciplined inferno keepers, molten architects, or diabolical pyromancers who harness the energy of arcane flame from the molten heart of the earth, the nightmarish abyss, or the searing forges of fallen stars.",
+      "hit_points": "1d8 per level",
+      "armor": [
+        "All armor",
+        "Shields"
+      ],
+      "weapons": [
+        "All weapons"
+      ],
+      "languages": {
+        "fixed": [
+          "Diabolic"
+        ]
+      },
+      "class_features": [
+        {
+          "name": "Wicked Tongue",
+          "description": "Your oratory prowess deceives others, granting you advantage on any negotiation, intimidation, persuasion, or misdirection checks."
+        },
+        {
+          "name": "Firebond Weapon",
+          "description": "Pulling from the eternal flames of the abyss, you can ignite your melee or ranged weapon as part of making an attack. It deals an additional d4 of fire damage on hit. The weapon's flame is not enough to pierce the darkness."
+        },
+        {
+          "name": "Pyromancy",
+          "description": "You wield the relentless energy of the eternal flame in powerful and unique ways. Only one pyromancy talent can be active at a time. Upon gaining level 2, roll one talent from the Pyromancy table, with additional rolls at every even level. You are immune to your own pyromancy."
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "1/day, know the desires or fears of a creature in near range"
+        },
+        {
+          "roll": "3-6",
+          "effect": "+1 to melee or ranged attacks"
+        },
+        {
+          "roll": "7-9",
+          "effect": "+2 to Strength, Dexterity or Constitution stat"
+        },
+        {
+          "roll": "10-11",
+          "effect": "Roll an additional talent on the Pyromancy Talents table"
+        },
+        {
+          "roll": "12",
+          "effect": "Choose one option or +2 points to distribute to stats"
+        }
+      ]
+    },
+    {
+      "name": "Grave Warden",
+      "description": "Reverent undertakers, eager bone-setters, or cold-hearted executioners who wield the power of the undead to do their bidding.",
+      "hit_points": "1d4 per level",
+      "armor": [
+        "Leather armor"
+      ],
+      "weapons": [
+        "Dagger",
+        "Scythe"
+      ],
+      "languages": {
+        "fixed": [
+          "One rare language (player's choice)"
+        ]
+      },
+      "class_features": [
+        {
+          "name": "Necrotic Reap",
+          "description": "You can cast touch spells through a scythe. Add +1 spellcasting bonus to touch spells when doing so."
+        },
+        {
+          "name": "Claim Undead",
+          "description": "1/day you can seize control of any number of undead. Their total LV cannot exceed your own. Undead make a DC 12 CHA check to resist."
+        },
+        {
+          "name": "Spellcasting",
+          "description": "You can cast grave warden spells you know. You may choose three tier 1 spells of your choice from the grave warden spell list. Add your constitution modifier when casting grave warden spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a natural 1 on a spellcasting check, you must also roll on the corresponding Necrotic Mishap table for the spell's tier."
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "Claim Undead gains one DC step for undead resistance (max DC 18)"
+        },
+        {
+          "roll": "3-7",
+          "effect": "+2 to constitution stat or +1 to grave warden spellcasting checks"
+        },
+        {
+          "roll": "8-9",
+          "effect": "Gain advantage on casting one spell you know"
+        },
+        {
+          "roll": "10-11",
+          "effect": "Increase the Necrotic Reap bonus by an additional +2"
+        },
+        {
+          "roll": "12",
+          "effect": "Choose a talent or +2 points to distribute to stats"
+        }
+      ],
+      "spells_known_progression": {
+        "level_1": {
+          "tier_1": 3
+        },
+        "level_2": {
+          "tier_1": 4
+        },
+        "level_3": {
+          "tier_1": 4,
+          "tier_2": 1
+        },
+        "level_4": {
+          "tier_1": 4,
+          "tier_2": 2
+        },
+        "level_5": {
+          "tier_1": 4,
+          "tier_2": 2,
+          "tier_3": 1
+        },
+        "level_6": {
+          "tier_1": 4,
+          "tier_2": 3,
+          "tier_3": 2
+        },
+        "level_7": {
+          "tier_1": 4,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 1
+        },
+        "level_8": {
+          "tier_1": 4,
+          "tier_2": 4,
+          "tier_3": 2,
+          "tier_4": 2
+        },
+        "level_9": {
+          "tier_1": 4,
+          "tier_2": 4,
+          "tier_3": 3,
+          "tier_4": 2,
+          "tier_5": 1
+        },
+        "level_10": {
+          "tier_1": 4,
+          "tier_2": 4,
+          "tier_3": 4,
+          "tier_4": 2,
+          "tier_5": 2
+        }
+      }
+    },
+    {
+      "name": "Ovate",
+      "description": "Custodians of nature's balance, wielders of flora's might, or omen-reading diviners who guide the primal forces to shape our destiny.",
+      "hit_points": "1d6 per level",
+      "armor": [
+        "Leather armor",
+        "Wooden shields"
+      ],
+      "weapons": [
+        "Bolas",
+        "Club",
+        "Staff",
+        "Sling",
+        "Whip"
+      ],
+      "languages": {
+        "fixed": [
+          "Two animal species of player's choice"
+        ]
+      },
+      "class_features": [
+        {
+          "name": "Animal Companion",
+          "description": "To start, you verbally control one 0-level non-insect animal companion such as a fox, owl, or iguana."
+        },
+        {
+          "name": "Calm Animals",
+          "description": "1/day, your soothing aura pacifies natural animals within near. Their total LV cannot exceed 2X your own. Giant animals attempt a DC 12 WIS check to resist. A calmed animal will regard you as a friend, but not a companion."
+        },
+        {
+          "name": "Train Animal",
+          "description": "You can train a calm or captive animal to become a new Animal Companion. You can only have one animal companion at a time, and its LV cannot exceed yours. For every 2 LV of the animal, training takes 1 day. You must know its language to understand it."
+        },
+        {
+          "name": "Spellcasting",
+          "description": "You can cast ovate spells you know. You may choose two tier 1 spells from the ovate spell list. Add your wisdom modifier when casting ovate spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a 1, you can't cast that spell again until you attend a ritualistic purging or ceremony."
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "The number of animal companions you can have increases by one"
+        },
+        {
+          "roll": "3-6",
+          "effect": "Gain advantage on casting one spell you know"
+        },
+        {
+          "roll": "7-9",
+          "effect": "+2 to wisdom or +1 to ovate spellcasting checks"
+        },
+        {
+          "roll": "10-11",
+          "effect": "You can speak to an additional species of animal"
+        },
+        {
+          "roll": "12",
+          "effect": "Choose a talent or +2 points to distribute to stats"
+        }
+      ],
+      "spells_known_progression": {
+        "level_1": {
+          "tier_1": 2
+        },
+        "level_2": {
+          "tier_1": 3
+        },
+        "level_3": {
+          "tier_1": 3,
+          "tier_2": 1
+        },
+        "level_4": {
+          "tier_1": 3,
+          "tier_2": 2
+        },
+        "level_5": {
+          "tier_1": 3,
+          "tier_2": 2,
+          "tier_3": 1
+        },
+        "level_6": {
+          "tier_1": 3,
+          "tier_2": 2,
+          "tier_3": 2
+        },
+        "level_7": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 1
+        },
+        "level_8": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 2
+        },
+        "level_9": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 2,
+          "tier_5": 1
+        },
+        "level_10": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 3,
+          "tier_4": 2,
+          "tier_5": 2
+        }
+      }
+    },
+    {
+      "name": "Plague Doctor",
+      "description": "Shadow-veiled alchemical apothecaries, compassionate herbalist healers, or beak-masked disease cultists who can perform surgeries and harness the power of science.",
+      "hit_points": "1d6 per level",
+      "armor": [
+        "Leather armor"
+      ],
+      "weapons": [
+        "Censer flail",
+        "Darts",
+        "Needle whip",
+        "Stiletto",
+        "Rapier"
+      ],
+      "languages": {
+        "additional_common": 2
+      },
+      "class_features": [
+        {
+          "name": "Mask Infusion",
+          "description": "Inhale one pre-made herbal elixir from your mask for immediate infusion. Lasts all day, expires on use."
+        },
+        {
+          "name": "Mesmerize Insect",
+          "description": "1/day, you bewitch an insect to automatically deliver an injure elixir to a target within near range via sting or bite."
+        },
+        {
+          "name": "Elixirs",
+          "description": "You can craft elixirs by making an INT check. Apply the modifier for the chosen delivery method (see Delivery Method table) to this check. This does not cost an action. If you fail, you can't make that elixir again until you rest. Except for mask infusions, elixirs expire in 5 rounds. Critical success increases DC or die category by one or doubles duration. Critical fails self-inflict harmful elixirs.",
+          "elixirs": [
+            {
+              "dc": 10,
+              "name": "Stenchwort",
+              "effect": "Immune to smells and cures paralysis."
+            },
+            {
+              "dc": 11,
+              "name": "Panacea",
+              "effect": "Ends one poison, disease, or plague."
+            },
+            {
+              "dc": 11,
+              "name": "Inoculant",
+              "effect": "Receive ADV on a check vs. a specific hazard type you name. Examples: Fire, acid, necrosis."
+            },
+            {
+              "dc": 12,
+              "name": "Tonic",
+              "effect": "Heals 1 HP. Stabilizes and revives."
+            },
+            {
+              "dc": 12,
+              "name": "Toxin",
+              "effect": "DC 12 CON check or paralyzed for 1d4 rounds."
+            },
+            {
+              "dc": 13,
+              "name": "Acid",
+              "effect": "Target takes d6 damage equal to half your level rounded down."
+            },
+            {
+              "dc": 13,
+              "name": "Plague",
+              "effect": "DC 12 CON check or 1d6 permanent damage. Check daily to fully recover or take another 1d6."
+            },
+            {
+              "dc": 14,
+              "name": "Pheromone",
+              "effect": "DC 12 WIS check or living creatures are calmed and consider you a reluctant friend for 5 rounds or until they are attacked by you or an ally."
+            },
+            {
+              "dc": 14,
+              "name": "Remedy",
+              "effect": "Heals d6 equal to one plus half your level rounded down."
+            }
+          ],
+          "delivery_methods": [
+            {
+              "bonus": "+3",
+              "type": "Mask Infusion",
+              "description": "Lasts up to 1 day or until activated."
+            },
+            {
+              "bonus": "+1",
+              "type": "Injest",
+              "description": "Quaffed like a potion or otherwise eaten."
+            },
+            {
+              "bonus": "0",
+              "type": "Injure",
+              "description": "Skin must be punctured after elixir is applied to a weapon like a stiletto, rapier, or dart."
+            },
+            {
+              "bonus": "-1",
+              "type": "Touch",
+              "description": "Skin must simply be touched by the elixir."
+            },
+            {
+              "bonus": "-3",
+              "type": "Inhaled",
+              "description": "Gas covers near radius."
+            }
+          ]
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "Mesmerize one additional insect per day (reroll duplicates)"
+        },
+        {
+          "roll": "3-6",
+          "effect": "Add an extra die rolled on an elixir you choose"
+        },
+        {
+          "roll": "7-9",
+          "effect": "+2 to intelligence or dexterity stat, or +1 to elixir checks"
+        },
+        {
+          "roll": "10-11",
+          "effect": "You gain ADV on elixir checks for an elixir you choose"
+        },
+        {
+          "roll": "12",
+          "effect": "Choose a talent or +2 points to distribute to stats"
+        }
+      ]
+    },
+    {
+      "name": "Shaman",
+      "description": "Indispensable medicine men and oracles who serve as healers, guardians of ancient wisdom, and conduits between the tangible and ethereal realms.",
+      "hit_points": "1d6 per level",
+      "armor": [
+        "None"
+      ],
+      "weapons": [
+        "Club",
+        "Dagger",
+        "Hunting knife",
+        "Javelin",
+        "Longbow",
+        "Shortbow",
+        "Spear",
+        "Staff"
+      ],
+      "languages": {
+        "fixed": [
+          "Primordial"
+        ]
+      },
+      "class_features": [
+        {
+          "name": "Healing Circle",
+          "description": "1/day you can perform a 10-minute drumming and chanting meditation. All participants are healed for 1d4 HP if the performance is not interrupted. A spellcaster or herbalist can recover a lost spell or elixir instead. Random encounter chance is increased."
+        },
+        {
+          "name": "Chanting",
+          "description": "You can perform shamanic chants you know using your drum and voice. You know two tier 1 chants of your choice from the shamanic chants list. Add your Wisdom modifier to perform shamanic chants. The DC is 9 + the chant's tier. If you fail a chanting check, you can't perform that chant again until you complete a rest. All chants are like focus spells; while maintaining a chant you can move but take no action."
+        }
+      ],
+      "talents_table": [
+        {
+          "roll": "2",
+          "effect": "Gain an additional use of your Healing Circle talent each day"
+        },
+        {
+          "roll": "3-7",
+          "effect": "+2 to wisdom stat or +1 to shamanic chanting checks"
+        },
+        {
+          "roll": "8-9",
+          "effect": "Gain advantage on performing one chant you know"
+        },
+        {
+          "roll": "10-11",
+          "effect": "Learn one additional shamanic chant of any tier you know"
+        },
+        {
+          "roll": "12",
+          "effect": "Choose a talent or +2 points to distribute to stats"
+        }
+      ],
+      "spells_known_progression": {
+        "level_1": {
+          "tier_1": 2
+        },
+        "level_2": {
+          "tier_1": 3
+        },
+        "level_3": {
+          "tier_1": 3,
+          "tier_2": 1
+        },
+        "level_4": {
+          "tier_1": 3,
+          "tier_2": 2
+        },
+        "level_5": {
+          "tier_1": 3,
+          "tier_2": 2,
+          "tier_3": 1
+        },
+        "level_6": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2
+        },
+        "level_7": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 1
+        },
+        "level_8": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 2,
+          "tier_4": 2
+        },
+        "level_9": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 3,
+          "tier_4": 2,
+          "tier_5": 1
+        },
+        "level_10": {
+          "tier_1": 3,
+          "tier_2": 3,
+          "tier_3": 3,
+          "tier_4": 2,
+          "tier_5": 2
+        }
+      }
     }
   ]
 }
