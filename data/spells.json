@@ -1425,6 +1425,966 @@
       "duration": "Focus",
       "range": "Near",
       "description": "You compel a creature you can see to speak truth. It can't utter a deliberate lie while within range."
+    },
+    {
+      "name": "Flora's Embrace",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You awaken the spirits of the plants, entwining foes in a near radius within the chant's range. Targets are limited to move at close range only, but they can still perform actions. Targets can escape if they pass a STR check vs. your last chanting check."
+    },
+    {
+      "name": "Heart of the Lion",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You bang your drum with ferocity, causing yourself and your allies within near range to gain unwavering determination. Those affected cannot be surprised and have advantage on initiative rolls."
+    },
+    {
+      "name": "Hiss of the Viper",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You hiss loudly and rattle your shakers, calling on the spirit of the serpent. Enemies within a near radius centered on you must make a DC 9 morale check at the beginning of their turn."
+    },
+    {
+      "name": "Sacred Bounty",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You open yourself to the abundance of the universe. When you or your allies discover treasure worth at least 1 XP, you gain an additional +1 XP."
+    },
+    {
+      "name": "Shamanic Purge",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You compel your allies within a near range from you to undergo a violent upheaval, expelling possessing spirits, compulsions, or beguilements."
+    },
+    {
+      "name": "Shell of the Turtle",
+      "tier": 1,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You invoke the tortoise's protective energies, granting you and your allies within a near range a +1 bonus to their AC."
+    },
+    {
+      "name": "Call to the Wild",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "Your voice carries the ancient melody that invites animals in a far range to come to your aid. The GM decides how many are available, their levels adding up to 2x your LV. They begin arriving in one round and will take the most obvious, instinctual action that can assist you and your allies. This chant does not grant you the ability to speak to them or control them."
+    },
+    {
+      "name": "Dance of the Drum",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your captivating drumming compels enemies within a near distance from you to dance in revelry unless they pass a WIS check vs. your last chanting check. The effect on one target ends if you or your allies do anything the target notices to injure it."
+    },
+    {
+      "name": "Divine Intervention",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your revered ancestors intercede on your behalf. All allies within a near distance from you may reroll 1s, keeping the second result. This applies to all rolls, including damage dice."
+    },
+    {
+      "name": "Gift of Earth",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your resonating chant causes yourself and your allies in a near radius centered on you to become rooted in place and grow bark-like skin, giving a +2 AC bonus. You and your allies are rooted in place until the chant ends."
+    },
+    {
+      "name": "Grace of the Gazelle",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You channel the spry spirit of the gazelle, granting you and your allies within a near distance from you advantage on all DEX checks and ranged attacks."
+    },
+    {
+      "name": "Voice of Verity",
+      "tier": 2,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "Anyone who hears your chant will be compelled to reveal the unvarnished truth."
+    },
+    {
+      "name": "Ancestral Guidance",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your voice carries the insight of ancient mystics, granting your allies in near distance advantage on all spellcasting and herbal checks."
+    },
+    {
+      "name": "Armaments of the Ancients",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You invoke ancestral grace, imbuing your near allies' weapons with magic. They all become +1 magical weapons."
+    },
+    {
+      "name": "Bramble Bridge",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "Your song stirs the dormant energy within the surrounding plants, prompting them to sprout and weave together into a bridge, stairway, or ramp, spanning a near-sized cube. Attempts to maintain this chant are made with advantage."
+    },
+    {
+      "name": "Gift of Water",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You call on the water spirits, who enchant all allies in a near radius centered around you. As an action, they can unleash a forceful spray of water from an extended hand, dousing flames and pushing enemies straight back from close to near with a successful ranged attack roll. Targets can withstand the water spray by making a STR check vs. the attack roll."
+    },
+    {
+      "name": "Leaves in the Breeze",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your chant invokes a gentle breeze that slows the descent of you and your falling allies a near distance from you, allowing you to float safely to the ground."
+    },
+    {
+      "name": "Song of Resistance",
+      "tier": 3,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You name a type of hazard, and you and your allies within a near area from you receive half damage from that source. Examples include fire, electricity, acid, necrosis, poison, cold, and disease, but does not include general magic resistance or physical damage resistance."
+    },
+    {
+      "name": "Bite of the Mantis",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You invoke the fierce spirit of the mantis. Enemies a near distance from you who damage you or your allies inflict an additional half damage to themselves. Targets know this damage is coming from you."
+    },
+    {
+      "name": "Gift of Fire",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You cause the wielded weapons of your allies in a near radius centered on you to leap into flame. These weapons do an additional 1d4 fire damage on successful hits. Ranged weapons are set on fire for each round the chant continues."
+    },
+    {
+      "name": "Lure of the Piper",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your enchanting performance compels enemies in a near distance from you to abandon their actions and follow you obediently wherever you lead. Beguiled creatures make a WIS check vs. your last chanting check on their turn to resist. If you stop moving, or if you or your allies actively harm a beguiled creature, the beguilement ends."
+    },
+    {
+      "name": "Song of Immunity",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You name a type of hazard, and you and your allies within a near area from you become immune to that source. Examples include fire, electricity, acid, necrosis, poison, cold, and disease, but does not include general magic immunity or physical damage."
+    },
+    {
+      "name": "The Sky is Falling",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Your spirit guides deem your enemies unworthy, releasing falling debris from the sky to strike them in a near area centered on you. All enemies must make a DEX check vs. your last chanting check to dodge or each takes 2d6 damage."
+    },
+    {
+      "name": "Vault of the Flea",
+      "tier": 4,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You bestow upon your allies within near range from you the agility of the flea, enabling them to effortlessly bound to any location within a near cube as their movement action."
+    },
+    {
+      "name": "Fury of the Spirits",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "The spirits favor your cause. Your allies roll double damage dice when successfully hitting enemies a near distance from you with physical attacks."
+    },
+    {
+      "name": "Gift of Air",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Allies in a near area sprout majestic eagle wings, gifting them with flight. Allies can fly a near distance on their turn. You have ADV on maintenance checks for this chant."
+    },
+    {
+      "name": "Living Revelation",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "Your rhythmic chant pierces through walls and doors, revealing the presence of living creatures beyond. You can determine their approximate size, shape, and location. The chant reveals creatures behind walls up to a far distance, but the sound cannot penetrate through double walls."
+    },
+    {
+      "name": "Poseidon's Passage",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You call on the water spirits to part the sea. You create passages or hold back the tide in a double near cube within the chant's range."
+    },
+    {
+      "name": "Primal Purge",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You compel your allies within near range from you to expel any curses, enchantments, possessions, poison, disease, or parasites."
+    },
+    {
+      "name": "Shaman's Shield",
+      "tier": 5,
+      "classes": ["Shaman"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Harnessing the power of ancestral shamans, you conjure a shield of protection against hostile magic out to a near-sized cube centered on yourself. Such magic cannot affect or harm you or your allies inside the shield."
+    },
+    {
+      "name": "Arrow of Hornets",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "A mass of hornets you summon coalesce into an arrow that hits a target, dealing 1d6 damage."
+    },
+    {
+      "name": "Barkhide",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "5 rounds",
+      "range": "Close",
+      "description": "An animal or giant animal's skin you touch hardens like tree bark. For the spell's duration, the animal's armor class is increased by 2. Can also be cast on Beastmasters."
+    },
+    {
+      "name": "Create Tree",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "1 day",
+      "range": "Close",
+      "description": "You lift your hands and a climbable tree grows from any flat, horizontal surface, up to 50' high. It lasts for one day before dematerializing and returning to the forest."
+    },
+    {
+      "name": "Fungal Cloud",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You lift your hands and a shrub-sized mushroom grows from any surface and explodes, causing a cloud of spores to fill a near radius. All living creatures must make a CON check vs. your spellcasting check or have DISADV on attacks and checks for the next round."
+    },
+    {
+      "name": "Know Intention",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You instantly know the intention of one creature a near distance from you."
+    },
+    {
+      "name": "Speak with Animals",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You are able to understand any animals within a near radius, and you may ask them any question."
+    },
+    {
+      "name": "Torch of Fireflies",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "1 hour real time",
+      "range": "Close",
+      "description": "You summon a cloud of fireflies that illuminate out to a near distance for 1 hour of real time. The fireflies follow the ovate around. Treat them as a LV 0 animal with 1 hp. They are attracted to any invisible creatures, revealing their position if encountered."
+    },
+    {
+      "name": "Tree Guardian",
+      "tier": 1,
+      "classes": ["Ovate"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You turn a tree in near into a guardian for you and your allies. Any ally within close will be protected by the tree's branches, gaining +2 to their AC."
+    },
+    {
+      "name": "Charm Animals",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "1 day",
+      "range": "Near",
+      "description": "You magically beguile a number of natural animals whose combined levels equal your level. Two 0-level animals count as 1 LV. They regard you as their master, but if they cannot understand you, they will take the most obvious, instinctual action to assist you. The spell ends if you or your allies cause harm to any of them. The animals return to their wild form when the spell ends."
+    },
+    {
+      "name": "Foresee Good",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You call on nature spirits to give you insights into a being's future. One humanoid you touch gains a luck token."
+    },
+    {
+      "name": "Healing Sprout",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You lift one palm, and a restoring plant springs from any surface within a near distance from you. Consuming the plant restores hit points equal to d6s determined by half of your level (rounded down)."
+    },
+    {
+      "name": "Obscuring Spores",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You create and cause a mushroom to explode, causing a dense cloud of obscuring spores to fill a near cube centered on a point within near. Creatures cannot see in or out of the cloud. It lasts for the full duration or until a wind disperses it."
+    },
+    {
+      "name": "Reduce Animal",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "5 rounds",
+      "range": "Close",
+      "description": "Any animal you touch is reduced to a quarter of its normal size, and any giant animal is reduced to normal size. If the reduced animal is engaged in combat, make a morale check."
+    },
+    {
+      "name": "Tree Assault",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You cause a tree within a near radius to use its limbs to lash any close opponents. Use your own STR or DEX attack bonuses to calculate one melee slam attack per round, doing 2d6 damage."
+    },
+    {
+      "name": "Vicious Bite",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Close",
+      "description": "The teeth on an animal you touch elongate and sharpen. The animal gains an extra die of damage on any bite attack. This spell can be applied to Beastmasters."
+    },
+    {
+      "name": "Whip of Fire Ants",
+      "tier": 2,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "With the snap of your fingers, a colony of fire ants form into a living needle whip that hits a creature in near, causing 1d8 damage. The hit causes fire ants to remain on the target, biting for an additional 1d4 damage per round until they are actively removed."
+    },
+    {
+      "name": "Animal Totem",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "1 day",
+      "range": "Close",
+      "description": "A willing animal you touch is transformed into a small wooden statue in your inventory. You can return it to natural form at any time before the duration expires, and it returns on its own."
+    },
+    {
+      "name": "Arbor Vantage",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "Any ally within close range of a tree you enchant makes attacks with advantage."
+    },
+    {
+      "name": "Bloomquake",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Far",
+      "description": "You cause thousands of flowers to burst from the ground, creating an earthquake centered on a target a far distance from you. All creatures in a near area from target location must make a DEX check vs. your spellcasting check or fall and take 2d6 damage."
+    },
+    {
+      "name": "Plantidote",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You cause a curative plant to spring from any surface within a near distance from you. Consuming the plant neutralizes poison, disease, or heals 1d4 stat damage."
+    },
+    {
+      "name": "Summon Animal",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You invoke your nature spirit, summoning a natural animal of LV 5 or less, arriving in one round. During that round, you do not have to make a focus check. The animal is under your control and acts on your turn. If you lose focus on this spell, you lose control of the animal and it acts instinctually based on the situation. It cannot communicate with you unless you know its language."
+    },
+    {
+      "name": "Sword of Scorpions",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You clap your hands, conjuring a swarm of scorpions that form into a living scimitar that hits a close opponent, dealing 1d12 damage. Damaged target must make a CON check vs. your spellcasting check or be paralyzed for 1d4 rounds."
+    },
+    {
+      "name": "Train Animal",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "After 10 rounds of concentration, you train any calmed or captive animal to become your companion. This companionship mirrors the class talent of the same name."
+    },
+    {
+      "name": "Yesterday's Vision",
+      "tier": 3,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Far",
+      "description": "After one round of communing with your nature spirit, you can ask a single yes/no question to gain insight into an event that occurred within the last week."
+    },
+    {
+      "name": "Companion Sight",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You close your eyes and match your breath to that of your companion. You can see through the eyes of your animal companion."
+    },
+    {
+      "name": "Enlarge Animal",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "An animal you touch grows into the giant version of itself. Replace its stat block with its giant version."
+    },
+    {
+      "name": "Forest Blend",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Self",
+      "description": "In a forest environment, you and your allies turn invisible as long as they remain a near distance from you. The spell ends if you or your hidden allies attack or cast a spell. You have advantage on focus checks for this spell."
+    },
+    {
+      "name": "Life Wolf",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Until allies are stable",
+      "range": "Near",
+      "description": "You summon a celestial life wolf that acts on your turn. It spends its movement and actions to save your dying and unconscious allies, using one action to magically heal them to 1 HP. Once no more allies are dying, the wolf vanishes. If you drop to 0 HP while the life wolf is active, it will turn its attention to you, and vanish after saving you, even if others still require aid."
+    },
+    {
+      "name": "Mass Breathe Water",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "1 hour",
+      "range": "Near",
+      "description": "You and your allies a near distance from you gain magical gills, allowing you to breathe underwater for the spell's duration."
+    },
+    {
+      "name": "Resurrect Animal",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You bring a natural animal you touch back to life from the dead. The animal must have been dead for no more than the number of days equal to half your level rounded up."
+    },
+    {
+      "name": "Tomorrow's Vision",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "After one round of communing with your nature spirit, you can ask three yes/no questions to gain insight into an important event or events that are expected to happen in the next week. Your role in the event cannot be predicted, only a general sense of what is likely to occur. The question cannot pertain to you or your allies."
+    },
+    {
+      "name": "Tree Sanctuary",
+      "tier": 4,
+      "classes": ["Ovate"],
+      "duration": "1 rest",
+      "range": "Close",
+      "description": "After 2 rounds of concentration, a portal appears on a tree you touch. Stepping inside seals the portal, transporting you to a secure chamber within the tree. While inside, you are aware of, but protected from, external influences. You are expelled from the chamber if the tree is destroyed. You may complete a rest while safely in this chamber. Once your rest is complete, you re-emerge from the tree. No one else can pass through the tree portal."
+    },
+    {
+      "name": "Forest Altar",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You prepare a natural altar and commune with a nature spirit for 5 rounds. You gain answers to any question regarding an entire region, be they historical, navigational, or political."
+    },
+    {
+      "name": "Forest of Treants",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You call on the very essence of nature to bestow sentient life to up to 4 trees in a forest. These trees become fully realized oak treants who will act friendly toward you and assist you with any task that does not involve the destruction of nature. They return to their tree form when the spell ends."
+    },
+    {
+      "name": "Giant Antapult",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Close",
+      "description": "You wring your hands, conjuring a group of giant ants that form into a makeshift catapult capable of launching magical boulders at a single visible target within far. Make a ranged attack that deals 8d6 damage on a successful hit."
+    },
+    {
+      "name": "Healing Feast",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You conjure a meal for all allies in near, healing 4d12 HP and curing poisoning and fatigue. It takes 5 rounds to eat and must be fully consumed."
+    },
+    {
+      "name": "Pass Tree",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You teleport from a tree you touch to any tree that you have seen before."
+    },
+    {
+      "name": "Rock to Mud",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "With your touch, you transmute a near-cube area of contiguous rock into mud."
+    },
+    {
+      "name": "Summon Giant Animal",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "By invoking the earth spirits, you summon a giant animal of LV 9 or less, arriving in one round. During that round, you don't have to make a focus check. The animal is under your control and acts on your turn. If you lose focus on this spell, you lose control of the animal and it acts instinctually based on the situation. It cannot communicate with you unless you know its language."
+    },
+    {
+      "name": "Timber",
+      "tier": 5,
+      "classes": ["Ovate"],
+      "duration": "Instant",
+      "range": "Far",
+      "description": "With a simple hand motion, you topple a tree, dealing 4d8 damage to any creatures along a near-length line where the base of the tree falls."
+    },
+    {
+      "name": "Carrion Stench",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "Other living creatures within a near area centered on you make a CON check vs. your spellcasting check or suffer DISADV on attack rolls and spellcasting checks on their next turn."
+    },
+    {
+      "name": "Corpse Companion",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "10 rounds",
+      "range": "Close",
+      "description": "A mostly intact corpse you touch rises as an animated lesser skeleton. You control this undead minion and it acts on your turn. Only one instance of this spell may be active at a time. A 2nd casting of this spell destroys the previous minion, even if the spell fails. This does not count against your minion LV limit."
+    },
+    {
+      "name": "Deadlight",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "1 hour real time",
+      "range": "Near",
+      "description": "You use the soul of a fresh corpse to create a floating light that bobs in the air and casts illumination to a near distance around it. It can float up to a near distance on your turn."
+    },
+    {
+      "name": "Locate Corpse",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "You know the direction and range of the closest non-animated corpse."
+    },
+    {
+      "name": "Protection from Undead",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Close",
+      "description": "Undead beings have DISADV on attack rolls against a target you touch. These beings also can't possess, compel, or beguile it. When cast on an already-possessed target, the possessing entity makes a CHA check vs. the last spellcasting check. On a failure, the entity is expelled."
+    },
+    {
+      "name": "Speak with Dead",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "A dead body you touch answers your questions in a distant, wheezing voice. You can ask the dead body up to three yes or no questions (one at a time). The GM truthfully answers 'yes' or 'no' to each. If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure instead."
+    },
+    {
+      "name": "Spectral Scythe",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "10 turns",
+      "range": "Near",
+      "description": "You manifest a ghostly image of a scythe floating within near. On your turn, you can move it up to near distance away and cast touch spells through it. Apply the Necrotic Reap bonus to any spell cast in this way. Only one instance of this spell may be active at a time. A second casting of this spell while another instance exists immediately de-activates the previous one, even if the spell fails."
+    },
+    {
+      "name": "Thrall Offering",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You magically beguile one humanoid of LV 2 or less within near range who is compelled to approach one of your undead minions and allow itself to be attacked with advantage. If there are no undead minions, the affected humanoid follows you to the best of its ability until the spell ends or an undead minion appears. If a minion kills it, that undead is healed to full HP. The spell ends if you or your allies hurt it, but stays beguiled if a minion attacks it. The target remembers you magically enchanted it."
+    },
+    {
+      "name": "Touch of Fatigue",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "1 round",
+      "range": "Close",
+      "description": "A target you touch becomes exhausted during its next turn, giving it disadvantage on attacks and spellcasting checks."
+    },
+    {
+      "name": "Undeath Blessing",
+      "tier": 1,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "Your touch infuses necrotic vitality to an undead or withers the living. The undead target you touch regains 1d6 hit points, while a living target you touch loses that many hit points."
+    },
+    {
+      "name": "Bone Fire",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "1 day",
+      "range": "Close",
+      "description": "You light a corpse into a magical campfire that cannot be moved, illuminating a near radius. There's a 50% chance that the necromantic energy from the fire will deter wandering monsters from attacking a resting party."
+    },
+    {
+      "name": "Bonebound Sentry",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "10 rounds",
+      "range": "Near",
+      "description": "Using spectral energy, you double the size of one undead minion that you control and root it in place. The bonebound minion cannot move, but its max HP is doubled and its attack damage die is doubled. You may dispel Bonebound Sentry at any time."
+    },
+    {
+      "name": "Boneskin",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "10 rounds",
+      "range": "Self",
+      "description": "Your skin becomes covered in hardened bone armor. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check)."
+    },
+    {
+      "name": "Create Corpse",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "With the snap of your fingers, a fresh human corpse materializes at your feet."
+    },
+    {
+      "name": "Dark Step",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "Starting from darkness, you teleport to a near distance that is also shrouded in darkness."
+    },
+    {
+      "name": "Darkness",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You magically create darkness in a near cube within the spell's range. Creatures inside the area are blinded and obscured from view from the outside. Only magical light can penetrate this magical darkness."
+    },
+    {
+      "name": "Fireskull Familiar",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "1 hour real time",
+      "range": "Close",
+      "description": "You animate a single skull as your familiar from a corpse or skull you touch. The skull is bathed in blue flames and gifted with levitation-based flight. It projects light in a near radius, it can speak and understand, retrieve small items, perform a minor bite attack, and deliver messages. On your turn, you can move it a near distance from you. Consider it an AC 10 creature with a 1d2 damage bite attack and 3 HP. Only one instance of this spell may be active at a time."
+    },
+    {
+      "name": "Ghoulish Claws",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Close",
+      "description": "By your touch, a willing target's hands transform into ghastly claws. Your target may make a claw attack that deals 1d8 points of damage plus paralyze. Victims hit by this attack must make a DC 12 CON check or be paralyzed for 1d4 rounds."
+    },
+    {
+      "name": "Grasp From the Grave",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Far",
+      "description": "You call forth spectral hands that erupt from the ground in a near-sized cube of effect. Any creature in the cube moves at half speed and takes 1d4 damage per round. Once cast, the spectral hands cannot be moved to a new location without a new instance of the spell being cast."
+    },
+    {
+      "name": "Prevent Decay",
+      "tier": 2,
+      "classes": ["Grave Warden"],
+      "duration": "1 day",
+      "range": "Close",
+      "description": "Any corpse you touch is perfectly preserved for 1 day."
+    },
+    {
+      "name": "Blood Pact",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "10 rounds",
+      "range": "Near",
+      "description": "You form a life-preserving contract among willing allies in near range. If any target is reduced to 0 HP, an ally automatically drains 1 HP from all other allies who have at least 2 HPs in near range. Blood Pact can only be cast once per day."
+    },
+    {
+      "name": "Chilling Shriek",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "With a ghastly scream, you terrify living creatures. Living beings LV 9 or less within near range of you must make a CON check vs. your spellcasting check. Any who fail flee from you for 1d4 rounds."
+    },
+    {
+      "name": "Corpse Explosion",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "With a clench of your fist, you cause a non-animated corpse to explode. All creatures in close radius around the corpse take 5d6 damage."
+    },
+    {
+      "name": "Deathward Circle",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You conjure a circle of bones and necrotic energy out to near-sized cube centered on yourself. For the spell's duration, undead creatures LV 9 or less cannot attack or cast a hostile spell on anyone inside the circle. The undead also can't possess, compel, or beguile anyone inside the circle."
+    },
+    {
+      "name": "Fossilize",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Permanent",
+      "range": "Close",
+      "description": "Your touch hardens the bones of an undead minion, granting it +2 AC and imposing half damage on all damage dealt to it. Fossilized undead cannot be healed. This spell has no effect on already fossilized undead."
+    },
+    {
+      "name": "Grub Geyser",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Close",
+      "description": "You breathe a stream of flesh-eating maggots at a close target. Target must make a CON vs. your spellcasting check or take 1d6 damage and suffer DISADV on attacks and spellcasting checks as long as they are covered in maggots. Target continues to take 1d6 damage each round until the effect ends or until they take an action to brush them off."
+    },
+    {
+      "name": "Lay to Rest",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "You instantly send an undead creature you touch to its final afterlife, destroying it utterly. You can target an undead creature of LV 9 or less."
+    },
+    {
+      "name": "Raise Dead",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "1 day",
+      "range": "Near",
+      "description": "You utter an incantation and all corpses within a near range rise as zombies or skeletons under your control, their condition dictating which form they take. They maintain the shape, HP, and LV they had in life but lose all of their abilities. They gain the attacks, stats, and abilities of skeletons and zombies. They act on your turn, then collapse to dust after 1 day. The combined LV of controlled undead cannot exceed yours. A critical fail causes all undead minions under your control to collapse into grave dust."
+    },
+    {
+      "name": "Summon Wraith",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You summon forth a wraith from the incorporeal plane who will act on your turn and do your bidding. After 5 rounds, it melts away into smoke. A critical fail on casting this spell still summons the wraith, but it turns against you during its 5 round lifespan. Do not roll on the mishap table."
+    },
+    {
+      "name": "Wither",
+      "tier": 3,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You lift your hands, and all plants within near range quickly wither and die. This also dispels any spells that enhance or conjure plants. Plant creatures like Assassin Vines, Venus Flytraps, or Treants take 2d6 damage."
+    },
+    {
+      "name": "Black Blood",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "With the touch of your hand, any living creature whose LV is half of yours or less must make a CON check vs. your spellcasting check or be turned into a zombie under your control. The zombie retains the original shape, LV, and HP, but loses its abilities, using zombie stats and abilities. Total undead LV under your control cannot exceed your level. If this new minion would exceed your LV limit, previous minions de-animate to make room."
+    },
+    {
+      "name": "Bone Ballista",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Close",
+      "description": "You form a ballista made of bone from a corpse you touch. It fires a bolt of bone shards during your turn, automatically hitting its target in near range, doing 4d6 damage. The bone ballista has 10 HP, 11 AC, and can be damaged by physical or magical attacks."
+    },
+    {
+      "name": "Demonic Possession",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "Your soul willingly leaves your body and occupies a target in near range. An unwilling target can make a CON check vs. your spellcasting check. If they fail, you control the target on your turn, but your body stands in a helpless daze. When the target returns to its body, it becomes aware of the possession but retains no memories of what transpired. If the target dies, you return to your body as long as it is within near range, otherwise you return to your body and drop to 0 HP."
+    },
+    {
+      "name": "Domain of Fatigue",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Self",
+      "description": "You cause a wilting of vitality for the living. All living creatures a near distance from you must make a CON check vs. your spellcasting check or have DISADV on all attacks and spellcasting checks."
+    },
+    {
+      "name": "Drainblade",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Close",
+      "description": "A melee weapon you touch becomes thirsty for blood. It now heals the wielder for an amount of HP equal to the damage it deals."
+    },
+    {
+      "name": "Mortal Rejuvenation",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "By reaping the last death energy from any fresh corpses within near, you and allies within near each regain 1d6 HP per corpse. These corpses turn to grave dust."
+    },
+    {
+      "name": "Remove Curse",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "With the touch of your hands, you expunge one curse of your choice affecting the target creature."
+    },
+    {
+      "name": "Spectral Drain",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Far",
+      "description": "Partially transparent black tendrils erupt from your hands and engulf an undead creature, dealing 3d6 damage and healing you by the same amount."
+    },
+    {
+      "name": "Summon Mummy",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You summon forth a mummy from its hidden crypt who will act on your turn and do your bidding. After 5 rounds, it melts away into smoke. A critical fail on casting this spell still summons the mummy, but it turns against you during its 5 round lifespan. Do not roll on the mishap table."
+    },
+    {
+      "name": "Wall of Bones",
+      "tier": 4,
+      "classes": ["Grave Warden"],
+      "duration": "5 rounds",
+      "range": "Near",
+      "description": "You summon a wall of writhing bones to rise from the ground. The 1-foot thick wall must be contiguous and can cover a near-sized area in length and 10 feet tall or less. Foes close to the wall take 2d4 damage from the grasping and clawing bones. A close-sized section of the wall can be attacked and destroyed when 15 HP damage is done to it."
+    },
+    {
+      "name": "Bone Storm",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You call upon deathly winds to create a tornado of whirling bones that cover a near cube. Any creatures caught inside take 5d6 damage per round. You can forgo moving to move the storm a near distance."
+    },
+    {
+      "name": "Conjure Wraith",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "1 day",
+      "range": "Near",
+      "description": "You touch a fresh corpse to conjure a vengeful wraith to do your bidding. It acts on your turn. After 1 day it turns to dust. Only one instance of this spell may be active at a time. A second casting while another instance exists immediately destroys the previous wraith, even if the spell fails. The wraith counts against the LV limit of other undead minions. A critical fail on casting this spell still conjures the wraith, but it turns against you."
+    },
+    {
+      "name": "Ghost Shift",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Self",
+      "description": "You and your equipment become incorporeal, allowing you to move in any direction, including up or down at half movement speed. You can move through solid objects and cannot attack with or be struck by physical weapons. You may cast spells, and hostile spells can affect you."
+    },
+    {
+      "name": "Killing Shriek",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You let out a mind-shattering scream that instantly slays any living beings who hear it. Living beings within near range of you must make a CON check vs. your spellcasting check. If they fail, they die. You can target living creatures of LV 9 or less."
+    },
+    {
+      "name": "Lifeward Circle",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Focus",
+      "range": "Near",
+      "description": "You conjure a circle of bones and necrotic energy out to a near-sized cube centered on yourself. For the spell's duration, enemy living creatures LV 9 or below cannot attack or cast a hostile spell on anyone inside the circle."
+    },
+    {
+      "name": "Mummify",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Permanent",
+      "range": "Close",
+      "description": "After a day of preparation and ceremony, you embalm a corpse as a mummy who acts on your turn. Mummies deteriorate when walking long distances but can be carried in a casket or left to guard a location. This minion does not count against the LV limit of other raised undead minions."
+    },
+    {
+      "name": "Soul Reap",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Close",
+      "description": "Your hand goes incorporeal as you reach into the body of a LV 9 or lower target and pull out its soul, causing the target to die. Treat a failed spellcasting check as a critical failure."
+    },
+    {
+      "name": "Undeath to Dust",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Instant",
+      "range": "Near",
+      "description": "You wave your arm and all undead less than LV 9 in a near radius around you instantly turn to dust. Undead LV 9 or above take 4d6 damage."
+    },
+    {
+      "name": "Unhallowed Ground",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "Permanent",
+      "range": "Far",
+      "description": "You imbue a landmark with profane magic, permanently turning it into a necromantic beacon of undeath. All the land within 6 miles of the beacon is cursed. Any burial grounds in the area are immediately overrun with the rising of the dead in the form of zombies or skeletons. These undead are not under your control, but will savagely attack anyone they find. Anyone who dies in this cursed area immediately rises again as a zombie."
+    },
+    {
+      "name": "Veil of Life",
+      "tier": 5,
+      "classes": ["Grave Warden"],
+      "duration": "1 day",
+      "range": "Close",
+      "description": "With your touch, one of your undead minions appears to be alive. You choose the ancestry and style of clothes worn by the undead creature. It can appear only slightly larger or smaller than the original undead minion. The spell will also make the target's movements appear life-like. Even the stench will be fully disguised. Anyone suspicious can make an INT check vs. your last spellcasting check to disbelieve the illusion."
     }
   ]
 }
