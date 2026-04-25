@@ -3,6 +3,7 @@ import streamlit.components.v1 as components
 import json
 import random
 import html
+from pathlib import Path
 from data_loader import (
     get_ancestries,
     get_ancestry_names,
@@ -42,6 +43,11 @@ def default_character():
         "languages": [],
         "spells": [],
         "talents": [],
+        "additional_features": "",
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "custom_gear": "",
     }
 
 
@@ -63,7 +69,7 @@ def normalize_character_data(data):
     except (TypeError, ValueError):
         character["level"] = 1
 
-    for attr in ["hp", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]:
+    for attr in ["hp", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "gold", "silver", "copper"]:
         try:
             character[attr] = int(character.get(attr, default_character()[attr]))
         except (TypeError, ValueError):
@@ -77,6 +83,14 @@ def normalize_character_data(data):
             character[list_attr] = []
         else:
             character[list_attr] = list(value)
+
+    # Ensure string fields are properly typed
+    for str_attr in ["additional_features", "custom_gear"]:
+        value = character.get(str_attr, "")
+        if value is None:
+            character[str_attr] = ""
+        else:
+            character[str_attr] = str(value)
 
     return character
 
@@ -123,6 +137,11 @@ if page == "Character Creator":
         st.session_state["class_select"] = imported_data["class"]
         st.session_state["languages_select"] = imported_data["languages"]
         st.session_state["talents_select"] = imported_data.get("talents", [])
+        st.session_state["additional_features_input"] = imported_data.get("additional_features", "")
+        st.session_state["gold_input"] = imported_data.get("gold", 0)
+        st.session_state["silver_input"] = imported_data.get("silver", 0)
+        st.session_state["copper_input"] = imported_data.get("copper", 0)
+        st.session_state["custom_gear_input"] = imported_data.get("custom_gear", "")
 
         spell_options = []
         for spell in imported_data["spells"]:
@@ -245,6 +264,54 @@ if page == "Character Creator":
         st.session_state.character["charisma"] = charisma
         modifier = (charisma - 10) // 2
         st.markdown(f"**Modifier:** {modifier:+d}")
+    
+    # Dice Roller Section
+    st.subheader("🎲 Ability Score Dice Roller")
+    
+    # Single roll button
+    col_roll, col_select, col_apply = st.columns([1, 2, 1])
+    
+    with col_roll:
+        if st.button("🎲 Roll 3d6", key="roll_ability_dice"):
+            st.session_state["last_roll_result"] = sum(random.randint(1, 6) for _ in range(3))
+
+    with col_select:
+        ability_options = ["-"] + ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+        if "ability_select" not in st.session_state:
+            st.session_state["ability_select"] = "-"
+        selected_ability = st.selectbox(
+            "Apply roll to:",
+            ability_options,
+            index=ability_options.index(st.session_state["ability_select"]),
+            key="ability_select"
+        )
+
+    with col_apply:
+        if st.button("Apply", key="apply_roll"):
+            if "last_roll_result" not in st.session_state:
+                st.warning("Roll first before applying the result.")
+            elif selected_ability == "-":
+                st.warning("Please choose a stat to apply the result to.")
+            else:
+                ability_map = {
+                    "STR": "strength",
+                    "DEX": "dexterity",
+                    "CON": "constitution",
+                    "INT": "intelligence",
+                    "WIS": "wisdom",
+                    "CHA": "charisma",
+                }
+                target = ability_map[selected_ability]
+                st.session_state.character[target] = st.session_state["last_roll_result"]
+                st.success(f"Applied {st.session_state['last_roll_result']} to {selected_ability}")
+                st.session_state["last_roll_result"] = None
+
+    # Display the last roll result if it exists
+    last_roll = st.session_state.get("last_roll_result")
+    if last_roll:
+        st.markdown(f"**Last Roll Result:** {last_roll}")
+    else:
+        st.markdown("*No roll result yet*")
     
     col1, col2, col3 = st.columns(3)
     
@@ -417,6 +484,53 @@ if page == "Character Creator":
             )
             st.session_state.character["talents"] = selected_talents
     
+    # Additional Details
+    st.subheader("Additional Details")
+    
+    # Currency
+    st.markdown("**Currency:**")
+    col_gold, col_silver, col_copper = st.columns(3)
+    with col_gold:
+        gold = st.number_input(
+            "Gold Pieces",
+            min_value=0,
+            value=st.session_state.character["gold"],
+            key="gold_input",
+        )
+        st.session_state.character["gold"] = gold
+    with col_silver:
+        silver = st.number_input(
+            "Silver Pieces",
+            min_value=0,
+            value=st.session_state.character["silver"],
+            key="silver_input",
+        )
+        st.session_state.character["silver"] = silver
+    with col_copper:
+        copper = st.number_input(
+            "Copper Pieces",
+            min_value=0,
+            value=st.session_state.character["copper"],
+            key="copper_input",
+        )
+        st.session_state.character["copper"] = copper
+    
+    # Additional Features
+    additional_features = st.text_area(
+        "Additional Features",
+        value=st.session_state.character["additional_features"],
+        key="additional_features_input",
+    )
+    st.session_state.character["additional_features"] = additional_features
+    
+    # Custom Gear
+    custom_gear = st.text_area(
+        "Custom Gear",
+        value=st.session_state.character["custom_gear"],
+        key="custom_gear_input",
+    )
+    st.session_state.character["custom_gear"] = custom_gear
+    
     # Display character summary
     st.divider()
     st.subheader("⚔️ Character Summary")
@@ -459,6 +573,19 @@ if page == "Character Creator":
             )
             if len(st.session_state.character["gear"]) > 5:
                 st.markdown(f"*...and {len(st.session_state.character['gear']) - 5} more items*")
+        if st.session_state.character["gold"] or st.session_state.character["silver"] or st.session_state.character["copper"]:
+            currency = []
+            if st.session_state.character["gold"]:
+                currency.append(f"{st.session_state.character['gold']} GP")
+            if st.session_state.character["silver"]:
+                currency.append(f"{st.session_state.character['silver']} SP")
+            if st.session_state.character["copper"]:
+                currency.append(f"{st.session_state.character['copper']} CP")
+            st.markdown(f"**Currency:** {', '.join(currency)}")
+        if st.session_state.character["additional_features"]:
+            st.markdown(f"**Additional Features:** {st.session_state.character['additional_features'][:100]}{'...' if len(st.session_state.character['additional_features']) > 100 else ''}")
+        if st.session_state.character["custom_gear"]:
+            st.markdown(f"**Custom Gear:** {st.session_state.character['custom_gear'][:100]}{'...' if len(st.session_state.character['custom_gear']) > 100 else ''}")
         if st.session_state.character["spells"]:
             # Get spells with tiers
             all_spells = get_spells()
@@ -583,128 +710,78 @@ if page == "Character Creator":
         def html_list(items):
             return ", ".join(html_escape(item) for item in items)
 
+        def generate_currency(character):
+            gold = character.get("gold", 0)
+            silver = character.get("silver", 0)
+            copper = character.get("copper", 0)
+            if gold or silver or copper:
+                currency_parts = []
+                if gold:
+                    currency_parts.append(f"{gold} GP")
+                if silver:
+                    currency_parts.append(f"{silver} SP")
+                if copper:
+                    currency_parts.append(f"{copper} CP")
+                return ", ".join(currency_parts)
+            return "0 GP"
+
         def generate_html(character):
             character = normalize_character_data(character)
             class_info = get_class_by_name(character.get("class", "")) or {}
 
-            html_lines = [
-                "<!DOCTYPE html>",
-                "<html lang='en'>",
-                "<head>",
-                "<meta charset='utf-8'>",
-                "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
-                "<title>Shadowdark Character Sheet</title>",
-                "<style>",
-                "body{font-family:Arial,sans-serif;background:#f7f7f7;color:#111;margin:24px;}",
-                "h1,h2,h3{color:#222;}",
-                "section{background:#fff;border:1px solid #ddd;border-radius:10px;padding:18px;margin-bottom:18px;}",
-                "table{width:100%;border-collapse:collapse;margin-top:10px;}",
-                "td,th{padding:8px;border:1px solid #ddd;vertical-align:top;}",
-                "ul{margin:0;padding-left:18px;}",
-                "</style>",
-                "</head>",
-                "<body>",
-                "<h1>Shadowdark Character Sheet</h1>",
-                "<section>",
-                "<h2>Character Info</h2>",
-                "<table>",
-                f"<tr><th>Name</th><td>{html_escape(character.get('name', 'Unnamed'))}</td></tr>",
-                f"<tr><th>Level</th><td>{html_escape(character.get('level', 1))}</td></tr>",
-                f"<tr><th>HP</th><td>{html_escape(character.get('hp', 0))}</td></tr>",
-                f"<tr><th>Ancestry</th><td>{html_escape(character.get('ancestry', ''))}</td></tr>",
-                f"<tr><th>Background</th><td>{html_escape(character.get('background', ''))}</td></tr>",
-                f"<tr><th>Class</th><td>{html_escape(character.get('class', ''))}</td></tr>",
-                "</table>",
-                "</section>",
-                "<section>",
-                "<h2>Ability Scores</h2>",
-                "<table>",
-            ]
+            template_path = Path(__file__).resolve().parent / "data" / "shadowdark_character_sheet_v4.html"
+            template = template_path.read_text(encoding="utf-8")
 
-            ability_scores = [
-                ("STR", character.get("strength", 10)),
-                ("DEX", character.get("dexterity", 10)),
-                ("CON", character.get("constitution", 10)),
-                ("INT", character.get("intelligence", 10)),
-                ("WIS", character.get("wisdom", 10)),
-                ("CHA", character.get("charisma", 10)),
-            ]
-
-            for name, score in ability_scores:
-                modifier = (score - 10) // 2
-                html_lines.append(f"<tr><th>{name}</th><td>{score} ({modifier:+d})</td></tr>")
-
-            html_lines += [
-                "</table>",
-                "</section>",
-                "<section>",
-                "<h2>Profile</h2>",
-                f"<p><strong>Languages:</strong> {html_list(character.get('languages', []))}</p>",
-                f"<p><strong>Gear:</strong> {html_list(character.get('gear', []))}</p>",
-                "</section>",
-                "<section>",
-                "<h2>Ancestry Trait</h2>",
-            ]
-
-            ancestry_info = get_ancestry_by_name(character.get('ancestry', '')) or {}
-            trait_info = ancestry_info.get('trait', {})
-            if trait_info:
-                html_lines.append(
-                    f"<p><strong>{html_escape(trait_info.get('name', 'Trait'))}:</strong> {html_escape(trait_info.get('description', 'No description available.'))}</p>"
-                )
-            else:
-                html_lines.append("<p>No ancestry trait available.</p>")
-
-            html_lines.append("</section>")
-            html_lines.append("<section>")
-            html_lines.append("<h2>Class Features</h2>")
-
+            talent_lines = []
             if class_info.get("class_features"):
-                html_lines.append("<ul>")
                 for feature in class_info.get("class_features", []):
-                    html_lines.append(
-                        f"<li><strong>{html_escape(feature.get('name', ''))}:</strong> {html_escape(feature.get('description', ''))}</li>"
-                    )
-                html_lines.append("</ul>")
-            else:
-                html_lines.append("<p>No class features available.</p>")
+                    talent_lines.append(f"{feature.get('name', 'Feature')}: {feature.get('description', '')}")
+            for talent in character.get("talents", []):
+                talent_lines.append(f"Talent: {talent}")
+            for spell_name in character.get("spells", []):
+                spell = get_spell_by_name(spell_name)
+                if spell:
+                    talent_lines.append(f"Spell: {spell['name']} (Tier {spell.get('tier', '?')}): {spell.get('description', '')}")
+                else:
+                    talent_lines.append(f"Spell: {spell_name}")
+            additional = character.get("additional_features", "").strip()
+            if additional:
+                talent_lines.append(f"Additional Features: {additional}")
 
-            html_lines.append("<h2>Talents</h2>")
-            if character.get("talents"):
-                html_lines.append("<h3>Selected Talents</h3>")
-                html_lines.append("<ul>")
-                for talent in character.get("talents", []):
-                    html_lines.append(f"<li>{html_escape(talent)}</li>")
-                html_lines.append("</ul>")
-            else:
-                html_lines.append("<p>No talents selected.</p>")
+            gear_items = list(character.get("gear", []))
+            custom_gear = character.get("custom_gear", "").strip()
+            if custom_gear:
+                gear_items.append(f"Custom: {custom_gear}")
 
-            if character.get("spells"):
-                html_lines.extend([
-                    "<h3>Known Spells</h3>",
-                ])
-                for spell_name in character.get("spells", []):
-                    spell = get_spell_by_name(spell_name)
-                    if spell:
-                        html_lines.extend([
-                            f"<div style='margin-bottom:14px;'>",
-                            f"<h4>{html_escape(spell['name'])} (Tier {html_escape(spell.get('tier', '?'))})</h4>",
-                            f"<p>{html_escape(spell.get('description', 'No description available.'))}</p>",
-                            "</div>",
-                        ])
-                    else:
-                        html_lines.append(
-                            f"<p>{html_escape(spell_name)} - details unavailable.</p>"
-                        )
-            else:
-                html_lines.append("<p>No spells selected.</p>")
+            replacements = {
+                "__NAME__": html_escape(character.get("name", "")),
+                "__ANCESTRY__": html_escape(character.get("ancestry", "")),
+                "__CLASS__": html_escape(character.get("class", "")),
+                "__TITLE__": html_escape(character.get("title", "")),
+                "__ALIGNMENT__": html_escape(character.get("alignment", "")),
+                "__BACKGROUND__": html_escape(character.get("background", "")),
+                "__DEITY__": html_escape(character.get("deity", "")),
+                "__XP__": html_escape(character.get("xp", "")),
+                "__LEVEL__": html_escape(character.get("level", 1)),
+                "__STR__": html_escape(character.get("strength", 10)),
+                "__DEX__": html_escape(character.get("dexterity", 10)),
+                "__CON__": html_escape(character.get("constitution", 10)),
+                "__INT__": html_escape(character.get("intelligence", 10)),
+                "__WIS__": html_escape(character.get("wisdom", 10)),
+                "__CHA__": html_escape(character.get("charisma", 10)),
+                "__HP__": html_escape(character.get("hp", 0)),
+                "__AC__": html_escape(character.get("ac", "")),
+                "__GP__": html_escape(character.get("gold", 0)),
+                "__SP__": html_escape(character.get("silver", 0)),
+                "__CP__": html_escape(character.get("copper", 0)),
+                "__TALENTS__": html_escape("\n".join(talent_lines)),
+                "__GEAR__": html_escape("\n".join(gear_items)),
+            }
 
-            html_lines.extend([
-                "</section>",
-                "</body>",
-                "</html>",
-            ])
-            return "\n".join(html_lines)
+            for placeholder, value in replacements.items():
+                template = template.replace(placeholder, value)
+
+            return template
 
         html_content = generate_html(st.session_state.character)
         st.session_state["html_preview_content"] = html_content
