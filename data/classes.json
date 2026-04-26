@@ -1,2884 +1,2884 @@
 {
-  "classes": [
-    {
-      "name": "Fighter",
-      "description": "Blood-soaked gladiators in dented armor, acrobatic duelists with darting swords, or far-eyed elven archers who carve their legends with steel and grit.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All weapons"
-      ],
-      "class_features": [
-        {
-          "name": "Hauler",
-          "description": "Add your Constitution modifier, if positive, to your gear slots."
-        },
-        {
-          "name": "Weapon Mastery",
-          "description": "Choose one type of weapon. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down)."
-        },
-        {
-          "name": "Grit",
-          "description": "Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Gain Weapon Mastery with one additional weapon type"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee and ranged attacks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength, Dexterity, or Constitution stat"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Choose one kind of armor. You get +1 AC from that armor"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ]
-    },
-    {
-      "name": "Priest",
-      "description": "Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "Club",
-        "Crossbow",
-        "Dagger",
-        "Mace",
-        "Longsword",
-        "Staff",
-        "Warhammer"
-      ],
-      "languages": {
-        "fixed": [
-          "Choice of Celestial, Diabolic, or Primordial"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Turn Undead",
-          "description": "You know the turn undead spell. It doesn't count toward your number of known spells."
-        },
-        {
-          "name": "Deity",
-          "description": "Choose a god to serve who matches your alignment. You have a holy symbol for your god (takes up no gear slots)."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "You can cast priest spells you know. You know two tier 1 spells at level 1. Use Wisdom for spellcasting checks."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Gain advantage on casting one spell you know"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attacks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to priest spellcasting checks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+2 to Strength or Wisdom stat"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 2
-        },
-        "level_2": {
-          "tier_1": 3
-        },
-        "level_3": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      }
-    },
-    {
-      "name": "Thief",
-      "description": "Rooftop assassins, grinning con artists, or cloaked cat burglars who can pluck a gem from the claws of a sleeping demon.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor",
-        "Mithral chainmail"
-      ],
-      "weapons": [
-        "Club",
-        "Crossbow",
-        "Dagger",
-        "Shortbow",
-        "Shortsword"
-      ],
-      "class_features": [
-        {
-          "name": "Backstab",
-          "description": "Deal an extra weapon die of damage against unaware targets. Add additional dice equal to half your level (round down)."
-        },
-        {
-          "name": "Thievery",
-          "description": "You have the necessary tools (0 slots). You have advantage on checks for: Climbing, Sneaking/Hiding, Disguises, Traps, and Delicate tasks (picking pockets/locks)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Gain advantage on initiative rolls (reroll if duplicate)"
-        },
-        {
-          "roll": "3-5",
-          "effect": "Your Backstab deals +1 dice of damage"
-        },
-        {
-          "roll": "6-9",
-          "effect": "+2 to Strength, Dexterity, or Charisma stat"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee and ranged attacks"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ]
-    },
-    {
-      "name": "Wizard",
-      "description": "Rune-tattooed adepts, bespectacled magi, and flame-conjuring witches who dare to manipulate the fell forces of magic.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "None"
-      ],
-      "weapons": [
-        "Dagger",
-        "Staff"
-      ],
-      "languages": {
-        "additional_common": 2,
-        "additional_rare": 2
-      },
-      "class_features": [
-        {
-          "name": "Learning Spells",
-          "description": "Study a spell scroll for a day and pass a DC 15 INT check to learn it permanently. These do not count toward your known spells limit."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "You can cast wizard spells you know. You start with three tier 1 spells. Use Intelligence for spellcasting checks."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Make 1 random magic item of a type you choose"
-        },
-        {
-          "roll": "3-7",
-          "effect": "+2 to Intelligence stat or +1 to wizard spellcasting checks"
-        },
-        {
-          "roll": "8-9",
-          "effect": "Gain advantage on casting one spell you know"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Learn one additional wizard spell of any tier you know"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 3
-        },
-        "level_2": {
-          "tier_1": 4
-        },
-        "level_3": {
-          "tier_1": 4,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 4,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 4,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 4,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      }
-    },
-    {
-      "name": "Bard",
-      "description": "Bards are welcome wanderers and wise advisors; it is their task to protect and share knowledge handed down through the ages.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail",
-        "Shields"
-      ],
-      "weapons": [
-        "Crossbow",
-        "Dagger",
-        "Mace",
-        "Shortbow",
-        "Shortsword",
-        "Spear",
-        "Staff"
-      ],
-      "languages": {
-        "additional_common": 4,
-        "additional_rare": 1
-      },
-      "class_features": [
-        {
-          "name": "Bardic Arts",
-          "description": "You're trained in oration, performing arts, lore, and diplomacy. You have advantage on related checks."
-        },
-        {
-          "name": "Magical Dabbler",
-          "description": "You can activate spell scrolls and wands using Charisma as your spellcasting stat. If you critically fail, roll a wizard mishap."
-        },
-        {
-          "name": "Presence",
-          "description": "Make a DC 12 CHA check to enact one effect. Inspire: One target in near range gains a luck token. Fascinate (focus): You transfix all chosen targets of level 4 or less within near range."
-        },
-        {
-          "name": "Prolific",
-          "description": "Add 1d6 to your learning rolls. Groups carousing with 1 or more bards add 1d6 to their rolls."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You find a random priest or wizard wand (you choose)"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee and ranged attacks or +1 to Magical Dabbler rolls"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 points to distribute to any stats"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Your Presence effects become DC 9 to enact (reroll if duplicate)"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Storyteller",
-          "Balladeer",
-          "Philosopher",
-          "Poet",
-          "Master Poet"
-        ],
-        "chaotic": [
-          "Guttersnipe",
-          "Charlatan",
-          "Satirist",
-          "Silvertongue",
-          "Doomspeaker"
-        ],
-        "neutral": [
-          "Seeker",
-          "Witness",
-          "Speaker",
-          "Voice",
-          "Truthbearer"
-        ]
-      }
-    },
-    {
-      "name": "Ranger",
-      "description": "Skilled trackers, stealthy wanderers, and peerless warriors who call the wilds their home.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail"
-      ],
-      "weapons": [
-        "Dagger",
-        "Longbow",
-        "Longsword",
-        "Shortbow",
-        "Shortsword",
-        "Spear",
-        "Staff"
-      ],
-      "class_features": [
-        {
-          "name": "Wayfinder",
-          "description": "You have advantage on checks associated with: Navigation, Tracking, Bushcraft, Stealth, and Wild animals."
-        },
-        {
-          "name": "Herbalism",
-          "description": "Make an INT check to prepare an herbal remedy. Remedies: Salve (DC 11, heals 1 HP), Stimulant (DC 12, can't be surprised 10 rounds), Foebane (DC 13, advantage on attacks vs one creature type 1d6 rounds), Restorative (DC 14, ends one poison/disease), Curative (DC 15, equivalent to Potion of Healing)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You deal d12 damage with one weapon type you choose"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attacks and damage"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength, Dexterity, or Intelligence stat"
-        },
-        {
-          "roll": "10-11",
-          "effect": "You gain advantage on Herbalism checks for a remedy you choose"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Wanderer",
-          "Strider",
-          "Warden",
-          "Guardian",
-          "Sentinel"
-        ],
-        "chaotic": [
-          "Hood",
-          "Outlaw",
-          "Fugitive",
-          "Exile",
-          "Pariah"
-        ],
-        "neutral": [
-          "Stranger",
-          "Wayfarer",
-          "Outlander",
-          "Recluse",
-          "Hermit"
-        ]
-      }
-    },
-    {
-      "name": "Cursedblade",
-      "description": "A cursing spellcaster who gains mystical energy from a powerful being and wields it through a weapon.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail",
-        "Shields"
-      ],
-      "weapons": [
-        "Bastard sword",
-        "Dagger",
-        "Greataxe",
-        "Greatsword",
-        "Longsword",
-        "Shortsword",
-        "Spear"
-      ],
-      "spellcasting_stat": "Charisma",
-      "class_features": [
-        {
-          "name": "Magic Weapon",
-          "description": "DC 11 CHA check. The weapon becomes magical with +1 to attack and damage for 3 rounds. No rest needed on failure."
-        },
-        {
-          "name": "Eldritch Blast",
-          "description": "DC 11 CHA check. 1d4 damage within far range. No rest needed on failure."
-        },
-        {
-          "name": "Patron Boon",
-          "description": "Choose a patron. Gain a new Patron Boon at even levels: 1. Read all written languages, 2. Summon Skeleton/Ghoul 1hr/day, 3. Read surface thoughts (near), 4. Apply disadvantage to target's next d20 (far), 5. Detect magic (near), 6. Don't need to breathe air."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to spellcasting checks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee attacks with weapons"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee damage rolls with weapons"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Angel",
-          "Archangel",
-          "Throne",
-          "Cherubim",
-          "Seraphim"
-        ],
-        "chaotic": [
-          "Baron/Baroness",
-          "Count/Countess",
-          "Duke/Duchess",
-          "Prince/Princess",
-          "King/Queen"
-        ],
-        "neutral": [
-          "Fallen",
-          "Messenger",
-          "Watcher",
-          "Nephilim",
-          "Archon"
-        ]
-      }
-    },
-    {
-      "name": "Elemental Warrior",
-      "description": "A martial artist who has mastered controlling their internal energy to release it as devastating elemental blows and blasts.",
-      "hit_points": "1d10 per level",
-      "armor": [],
-      "weapons": [
-        "Crossbow",
-        "Dagger",
-        "Longsword",
-        "Mace",
-        "Shortsword",
-        "Shortbow",
-        "Staff"
-      ],
-      "spellcasting_stat": "Constitution",
-      "class_features": [
-        {
-          "name": "Elemental Expert",
-          "description": "Advantage on knowledge checks related to fire, electricity, water, earth, air and spirits."
-        },
-        {
-          "name": "Unarmored",
-          "description": "Use Dexterity or Constitution when calculating AC."
-        },
-        {
-          "name": "Elemental Blow",
-          "description": "Unarmed strikes do 1d6 damage. Choose damage type: normal, fire, electrical, cold, or acid."
-        },
-        {
-          "name": "Elemental Blast",
-          "description": "DC 11 CON check. 1d4 damage (far) at levels 1-5, 1d6 at levels 6-10. Fire, electricity, cold, or acid."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to unarmed strike attack rolls"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to unarmed strike damage rolls"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Gain advantage on spellcasting checks (reroll if duplicated)"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Gaia",
-          "Aquan",
-          "Aura",
-          "Smelter",
-          "Celestial"
-        ],
-        "chaotic": [
-          "Tellus",
-          "Tainted",
-          "Tempest",
-          "Inferno",
-          "Primordial"
-        ],
-        "neutral": [
-          "Terran",
-          "Balancer",
-          "Drafter",
-          "Blazer",
-          "Cosmic"
-        ]
-      }
-    },
-    {
-      "name": "Monster Slayer",
-      "description": "A seeker of Vampires, Dragons, fiends, fey and evil monsters of the dark.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail",
-        "Shields"
-      ],
-      "weapons": [
-        "Bastard sword",
-        "Club",
-        "Crossbow",
-        "Dagger",
-        "Longbow",
-        "Longsword",
-        "Mace",
-        "Shortbow",
-        "Shortsword",
-        "Spear",
-        "Staff"
-      ],
-      "spellcasting_stat": "Wisdom",
-      "class_features": [
-        {
-          "name": "Monster Expert",
-          "description": "You know immunities of chaotic monsters within near range. Advantage on monster knowledge checks."
-        },
-        {
-          "name": "Stalker",
-          "description": "Advantage on checks to sense creatures, sneak, and hide."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "WIS-based. Spells: Protection from Evil (LV1+, DC11), Zone of Truth (LV3+, DC12), Magic Circle (LV5+, DC13), Flame Strike (LV7+, DC14), Hold Monster (LV9+, DC15)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to spellcasting checks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee and ranged attack rolls"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee and ranged damage rolls"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Seeker",
-          "Tracer",
-          "Hunter/Huntress",
-          "Nimrod",
-          "Slayer"
-        ],
-        "chaotic": [
-          "Butcher",
-          "Slaughterer",
-          "Executioner",
-          "Terminator",
-          "Predator"
-        ],
-        "neutral": [
-          "Tracker",
-          "Stalker",
-          "Sleuth",
-          "Skinner",
-          "Orion"
-        ]
-      }
-    },
-    {
-      "name": "Mystical Archer",
-      "description": "An expert warrior in channeling magic into arrows fired from a bow.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail"
-      ],
-      "weapons": [
-        "Longbow",
-        "Shortbow",
-        "Dagger",
-        "Shortsword",
-        "Longsword"
-      ],
-      "spellcasting_stat": "Intelligence, Wisdom, or Charisma (player's choice)",
-      "class_features": [
-        {
-          "name": "Detecting Magic",
-          "description": "Cast Detect Magic with DC 11 check using INT, WIS, or CHA."
-        },
-        {
-          "name": "Mystical Knowledge",
-          "description": "Advantage on magic knowledge checks."
-        },
-        {
-          "name": "Magical Shot",
-          "description": "Imbue arrow with one effect per round: Sharp (+1 damage), Accurate (+1 attack), Seeker (ignore cover), Elemental (fire/electrical/cold/acid), Returning (arrow returns), Paralysing (paralyze 1 round)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to ranged attack rolls"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to ranged damage rolls"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to initiative rolls"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Toxotes",
-          "Lucznik",
-          "Arqueiro",
-          "Bogenschutz",
-          "Sagittarii"
-        ],
-        "chaotic": [
-          "Archer",
-          "Piercer",
-          "Sharpshooter",
-          "Sniper",
-          "Deadeye"
-        ],
-        "neutral": [
-          "Ivar",
-          "Bersagliere",
-          "Kyudo",
-          "Sheshou",
-          "Iuchnik"
-        ]
-      }
-    },
-    {
-      "name": "Psychic Infiltrator",
-      "description": "A spy who strikes the psyche, infiltrates the mind and body with psionic power.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Crossbow",
-        "Dagger",
-        "Longbow",
-        "Shortbow",
-        "Shortsword"
-      ],
-      "spellcasting_stat": "Constitution or Wisdom (player's choice)",
-      "class_features": [
-        {
-          "name": "Psychic Blade",
-          "description": "DC 12 CON/WIS check. Invisible blade does 1d6 damage with +1 to attack and damage for 1 minute."
-        },
-        {
-          "name": "Shadow Veil",
-          "description": "Advantage on checks related to hiding and sneaking."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "CON/WIS-based. Spells: Charm Person (LV1+, DC11), Detect Thoughts (LV3+, DC12), Alter Self (LV5+, DC12), Arcane Eye (LV7+, DC14), Teleport (LV9+, DC15)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to spellcasting checks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee and ranged attack rolls"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee and ranged damage rolls"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Spy",
-          "Agent",
-          "Operative",
-          "Infiltrator",
-          "Spymaster"
-        ],
-        "chaotic": [
-          "Prowler",
-          "Deceiver",
-          "Manipulator",
-          "Subversive",
-          "Shadow"
-        ],
-        "neutral": [
-          "Monitor",
-          "Investigator",
-          "Spook",
-          "Sleeper",
-          "Neutralizer"
-        ]
-      }
-    },
-    {
-      "name": "Samurai",
-      "description": "A military soldier, trained in swordsmanship, archery, and other martial arts with a special code of conduct.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All swords",
-        "Dagger",
-        "Longbow",
-        "Shortbow",
-        "Spear",
-        "Staff",
-        "Warhammer"
-      ],
-      "class_features": [
-        {
-          "name": "Bushido Code",
-          "description": "Immune to fear effects."
-        },
-        {
-          "name": "Aesthetic",
-          "description": "Advantage on checks related to literature and art. Advanced calligraphy."
-        },
-        {
-          "name": "Samurai Style",
-          "description": "Select one style at level 1, new style at every even level. Styles: Kenjutsu (+1 attack/damage with sword + half level), Jujutsu (unarmed grapple/throw), Sojutsu (+1 attack/damage with spear + prone), Kyujutsu (+1 attack/damage with bow + ignore cover), Aikiken (+1 AC with sword parry), Bojutsu (+1 attack/damage with staff + push/trip), Iaijutsu (+1 initiative)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee attack rolls"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to ranged attack rolls"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee damage rolls"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Ashigaru",
-          "Goshi",
-          "Gokenin",
-          "Hatamoto",
-          "Daimyo"
-        ],
-        "chaotic": [
-          "Shatei",
-          "Kyodai",
-          "Shateigashira",
-          "Wakagashira",
-          "Oyabun"
-        ],
-        "neutral": [
-          "Ronin",
-          "Ronin",
-          "Ronin",
-          "Ronin",
-          "Ronin"
-        ]
-      }
-    },
-    {
-      "name": "Shadow Stalker",
-      "description": "An experienced hunter that uses the darkness, detecting and hunting creatures.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Shields"
-      ],
-      "weapons": [
-        "Bastard sword",
-        "Crossbow",
-        "Dagger",
-        "Longbow",
-        "Longsword",
-        "Mace",
-        "Shortbow",
-        "Shortsword",
-        "Spear"
-      ],
-      "spellcasting_stat": "Wisdom",
-      "class_features": [
-        {
-          "name": "Ambusher",
-          "description": "You have advantage on Initiative rolls. You're an expert in sneaking and hiding, gaining advantage on related checks."
-        },
-        {
-          "name": "Iron Mind",
-          "description": "You have advantage on checks that affect your mind."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "WIS-based. Spells: Light (LV1+, DC11), Invisibility (LV3+, DC12), Alter Self (LV5+, DC12), Arcane Eye (LV7+, DC14), Wrath (LV9+, DC14)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats."
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to spellcasting checks."
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee and ranged attack rolls."
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to melee and ranged damage rolls."
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent."
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Stalker",
-          "Umbra",
-          "Spook",
-          "Ghost",
-          "Phantom"
-        ],
-        "chaotic": [
-          "Lurker",
-          "Prowler",
-          "Darkling",
-          "Shade",
-          "Grim"
-        ],
-        "neutral": [
-          "Shadow",
-          "Murker",
-          "Skulker",
-          "Mystery",
-          "Wraith"
-        ]
-      }
-    },
-    {
-      "name": "Spellsword",
-      "description": "A mage that incorporates swordplay and magical dance with music.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Dagger",
-        "Longsword",
-        "Shortsword"
-      ],
-      "spellcasting_stat": "Intelligence",
-      "class_features": [
-        {
-          "name": "Bless",
-          "description": "You know the Bless spell. It doesn't count toward your number of known spells."
-        },
-        {
-          "name": "Performance",
-          "description": "Advantage on checks related to performance, dancing and singing."
-        },
-        {
-          "name": "Blade Magic",
-          "description": "You can cast wizard spells you know through the blade you hold. You know two tier 1 spells from the wizard spell list."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats."
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attack rolls."
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to Spellsword spellcasting checks."
-        },
-        {
-          "roll": "10-11",
-          "effect": "Gain advantage on casting one spell you know."
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent."
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 2
-        },
-        "level_2": {
-          "tier_1": 3
-        },
-        "level_3": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      },
-      "titles": {
-        "lawful": [
-          "Spellblade",
-          "Spellsword",
-          "Mageblade",
-          "Songblade",
-          "Mysticmaestro"
-        ],
-        "chaotic": [
-          "Arcaneblade",
-          "Arcanesword",
-          "Voodooblade",
-          "Doomsword",
-          "Deathdancer"
-        ],
-        "neutral": [
-          "Spellknife",
-          "Mysticblade",
-          "Songcutter",
-          "Mysticsword",
-          "Songsword"
-        ]
-      }
-    },
-    {
-      "name": "Swashbuckler",
-      "description": "A lightly armored acrobatic fencer that is an expert in the blade, acrobatics and charm.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Shields"
-      ],
-      "weapons": [
-        "Club",
-        "Crossbow",
-        "Dagger",
-        "Longsword",
-        "Mace",
-        "Rapier",
-        "Shortbow",
-        "Shortsword",
-        "Staff"
-      ],
-      "class_features": [
-        {
-          "name": "Dual-Wielder",
-          "description": "Make two attacks on your turn with a rapier and dagger, or two daggers."
-        },
-        {
-          "name": "Rapier",
-          "description": "The Swashbuckler has access to the Rapier (Cost: 8 gp, Type: M, Range: C, Damage: 1d6, Properties: Finesse)."
-        },
-        {
-          "name": "Gentile",
-          "description": "Expert at acrobatics, stealth, guile and romance. Advantage on Dexterity and Charisma checks."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats."
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee and ranged attack rolls."
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee and ranged damage rolls."
-        },
-        {
-          "roll": "10-11",
-          "effect": "+1 to armor class (reroll if duplicated)."
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent."
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Flamboyant",
-          "Exhibitionist",
-          "Picaroon",
-          "Buccaneer",
-          "Swashbuckler"
-        ],
-        "chaotic": [
-          "Daredevil",
-          "Desperado",
-          "Raider",
-          "Privateer",
-          "Pirate"
-        ],
-        "neutral": [
-          "Scoundrel",
-          "Vigilante",
-          "Freebooter",
-          "Duelist",
-          "Corsair"
-        ]
-      }
-    },
-    {
-      "name": "War Mage",
-      "description": "A magic-user trained for war on the battlefield that wears armor.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Special \u2014 Arcane Armor only (see class feature)"
-      ],
-      "weapons": [
-        "Crossbow",
-        "Dagger",
-        "Shortsword",
-        "Staff"
-      ],
-      "spellcasting_stat": "Intelligence",
-      "class_features": [
-        {
-          "name": "Arcane Armor",
-          "description": "Transform leather armor into magical armor only you can wear, granting AC 11 + DEX modifier. You can cast spells while wearing it."
-        },
-        {
-          "name": "Detect Magic",
-          "description": "You know the Detect Magic spell. It doesn't count toward your number of known spells."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "You can cast wizard spells you know. You know two tier 1 spells at 1st level."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "+2 points to distribute to stats."
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attack rolls."
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to War Mage spellcasting checks."
-        },
-        {
-          "roll": "10-11",
-          "effect": "Gain advantage on casting one spell you know."
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent."
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 2
-        },
-        "level_2": {
-          "tier_1": 3
-        },
-        "level_3": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      },
-      "titles": {
-        "lawful": [
-          "Spellweaver",
-          "Battlemage",
-          "Gish",
-          "Magewright",
-          "Warcaster"
-        ],
-        "chaotic": [
-          "Ritualist",
-          "Spellblaster",
-          "Doomcaster",
-          "Warmancer",
-          "Necromancer"
-        ],
-        "neutral": [
-          "Magician",
-          "Spellcaster",
-          "Spellbinder",
-          "Tactician",
-          "Battleblaster"
-        ]
-      }
-    },
-    {
-      "name": "War Master",
-      "description": "A master of weapons that can utilize multiple techniques during a battle.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All weapons"
-      ],
-      "class_features": [
-        {
-          "name": "Blacksmith",
-          "description": "You can make and repair armor, weapons and metal items. Access to a forge, smithing tools and materials."
-        },
-        {
-          "name": "Art of War",
-          "description": "Advantage on checks related to war, historic battles, military organizations and combat tactics."
-        },
-        {
-          "name": "Maneuvers",
-          "description": "Declare one technique per round: Disarm (take weapon), Parry (+1 AC 1 round), Evade (enemy has disadvantage), Precision (+1 to hit), Power (+1 damage), Trip (knock prone), Push (push to near range with shield)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You get +1 AC from the armor you wear."
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee and ranged attack rolls."
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee and ranged damage rolls."
-        },
-        {
-          "roll": "10-11",
-          "effect": "+2 points to distribute to stats."
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent."
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Combatmaster",
-          "Champion",
-          "Paragon",
-          "Lionheart",
-          "Commander"
-        ],
-        "chaotic": [
-          "Warmaster",
-          "Dominator",
-          "Despoiler",
-          "Oppressor",
-          "Tyrant"
-        ],
-        "neutral": [
-          "Weaponmaster",
-          "Legionnaire",
-          "Vanquisher",
-          "Tactian",
-          "Overlord"
-        ]
-      }
-    },
-    {
-      "name": "Desert Rider",
-      "description": "Howling barbarians thundering across the sand on wild horses, elven spies wielding curved blades atop silvery camels, or bandits wrapped in colorful silks racing on sleek, desert stallions.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "Leather armor",
-        "Shields"
-      ],
-      "weapons": [
-        "Club",
-        "Dagger",
-        "Javelin",
-        "Longsword",
-        "Pike",
-        "Shortbow",
-        "Scimitar",
-        "Spear",
-        "Whip"
-      ],
-      "class_features": [
-        {
-          "name": "Charge",
-          "description": "3/day, charge into combat by moving at least near before attacking. Melee attacks deal double damage that round."
-        },
-        {
-          "name": "Mount",
-          "description": "You have a common camel or horse with a reliable or lovely demeanor. It comes when you call and never spooks. While riding, you both get +AC equal to half your level (round down). Mount has additional levels equal to half your level (round down). Freely leap on/off once per round. DC 15 CHA to replace a lost mount, lowering DC each attempt."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You can use any rider-bearing creature as your mount"
-        },
-        {
-          "roll": "3-6",
-          "effect": "You gain +1 to attacks or damage"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength or Dexterity stat, or +1 to melee attacks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Gain an additional use of your Charge talent each day"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Outrider",
-          "Sandrunner",
-          "Trailblazer",
-          "Swift Wind",
-          "Stormrunner"
-        ],
-        "chaotic": [
-          "Bandit",
-          "Robber",
-          "Raider",
-          "Scourge",
-          "Bandit King/Queen"
-        ],
-        "neutral": [
-          "Rat",
-          "Fox",
-          "Wolf",
-          "Tiger",
-          "Dragon"
-        ]
-      }
-    },
-    {
-      "name": "Pit Fighter",
-      "description": "Blood-soaked warriors circling each other in a roaring arena, scarred desert bandits dueling for the right to lead their gang, or brash tavern brawlers who never turn down a challenge.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "Leather armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All weapons"
-      ],
-      "class_features": [
-        {
-          "name": "Flourish",
-          "description": "3/day, regain 1d6 hit points when you hit an enemy with a melee attack."
-        },
-        {
-          "name": "Implacable",
-          "description": "Advantage on Constitution checks to resist injury, poison, or endure extreme environments."
-        },
-        {
-          "name": "Last Stand",
-          "description": "You get up from dying with 1 hit point on a natural d20 roll of 18-20."
-        },
-        {
-          "name": "Relentless",
-          "description": "3/day, when reduced to 0 HP, make a DC 18 CON check (Implacable applies). On success, go to 1 HP instead."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "1/day, ignore all damage and effects from one attack"
-        },
-        {
-          "roll": "3-6",
-          "effect": "You gain +1 to melee weapon damage"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength or Constitution stat, or +1 to melee attacks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Increase the HP you gain from Flourish by 1d6"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Rookie",
-          "Gladiator",
-          "Hero",
-          "Champion",
-          "Legend"
-        ],
-        "chaotic": [
-          "Ruffian",
-          "Brawler",
-          "Heel",
-          "Villain",
-          "Legend"
-        ],
-        "neutral": [
-          "Underdog",
-          "Dark Horse",
-          "Wild Card",
-          "Victor",
-          "Legend"
-        ]
-      }
-    },
-    {
-      "name": "Ras-Godai",
-      "description": "Black-clad assassins who train from childhood inside a hidden desert monastery. They gain their sorcerous powers from a legendary black lotus flower that was given to them by a demon.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Blowgun",
-        "Bolas",
-        "Dagger",
-        "Razor chain",
-        "Scimitar",
-        "Shuriken",
-        "Spear"
-      ],
-      "languages": {
-        "fixed": [
-          "Diabolic"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Assassin",
-          "description": "Advantage on checks to sneak and hide. Attacks deal double damage against unaware targets."
-        },
-        {
-          "name": "Smoke Step",
-          "description": "3/day, teleport to a location you can see within near. Does not use your action."
-        },
-        {
-          "name": "Black Lotus",
-          "description": "Roll one talent on the Black Lotus table (d12): 1. Gain two Black Lotus talents (reroll further 1s), 2. 1/day paralyze target LV9 or less for 1d4 rounds on weapon damage, 3. ADV on DEX checks to avoid entrapment/injury, 4. +1 AC when dual-wielding melee weapons, 5. Gain an additional HP die, 6. Triple damage with Assassinate, 7. Enemy morale DC becomes 18, 8. 1/day walk on water 1d4 rounds, 9. 1/day put LV5 or less creature to sleep (DC15 CON), 10. 1/day walk on walls 1d4 rounds, 11. +1 melee weapon damage, 12. 1/day creature can't see/hear you 1d4 rounds (DC15 WIS)."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You are trained in the use of poisons"
-        },
-        {
-          "roll": "3-6",
-          "effect": "Roll an additional talent on the Black Lotus Talents table"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength or Dexterity stat, or +1 to melee attacks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Gain an additional use of your Smoke Step talent"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Acolyte",
-          "Mirror Path",
-          "Monk",
-          "Master",
-          "White Lotus"
-        ],
-        "chaotic": [
-          "Acolyte",
-          "Shadow Path",
-          "Monk",
-          "Assassin",
-          "Black Lotus"
-        ],
-        "neutral": [
-          "Acolyte",
-          "Fire Path",
-          "Monk",
-          "Demon Blade",
-          "Red Lotus"
-        ]
-      }
-    },
-    {
-      "name": "Sea Wolf",
-      "description": "Seafaring raiders who prowl the isles for plunder in dragon-headed longboats. When the warhorn sounds, they become fierce berserkers and shield maidens who hope to please their gods with a brave death.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail",
-        "Shields"
-      ],
-      "weapons": [
-        "Dagger",
-        "Greataxe",
-        "Handaxe",
-        "Longbow",
-        "Longsword",
-        "Spear"
-      ],
-      "class_features": [
-        {
-          "name": "Seafarer",
-          "description": "Advantage on checks related to navigating and crewing boats."
-        },
-        {
-          "name": "Old Gods",
-          "description": "Choose one after each rest: Odin (regain 1d4 HP per kill), Freya (gain luck token + add 1d6 when using luck tokens), Loki (advantage on lie/sneak/hide checks)."
-        },
-        {
-          "name": "Shield Wall",
-          "description": "If you wield a shield, use your action to take a defensive stance. Your AC becomes 20."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "1/day, go berserk: immune to damage for 3 rounds"
-        },
-        {
-          "roll": "3-6",
-          "effect": "Your attacks deal +1 damage"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength or Constitution stat, or +1 to attacks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Duality; choose two different Old Gods effects each day"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Freefolk",
-          "Shieldman/maiden",
-          "Thane",
-          "Jarl",
-          "King/Queen"
-        ],
-        "chaotic": [
-          "Rabble",
-          "Raider",
-          "Reaver",
-          "Conqueror",
-          "Usurper"
-        ],
-        "neutral": [
-          "Wanderer",
-          "Explorer",
-          "Adventurer",
-          "Renowned",
-          "Legendary"
-        ]
-      }
-    },
-    {
-      "name": "Seer",
-      "description": "Baleful diviners who reek of smoke and blood. They untangle the whispers of the gods by reading the runes, the bones, and the stars. Their knowledge of fate allows them to bend it.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Dagger",
-        "Stave",
-        "Spear"
-      ],
-      "spellcasting_stat": "Wisdom",
-      "class_features": [
-        {
-          "name": "Destined",
-          "description": "Whenever you use a luck token, add 1d6 to the roll."
-        },
-        {
-          "name": "Omen",
-          "description": "3/day, make a DC 9 WIS check. On success, gain a luck token (max one at a time)."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "Cast seer spells using Wisdom. DC = 10 + spell tier. Failed check = can't cast that spell until rest. Natural 1 = must complete Seer Penance."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Learn an additional seer spell from any tier you can cast"
-        },
-        {
-          "roll": "3-6",
-          "effect": "Gain an additional use of your Omen talent each day"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to WIS or CHA stat, or +1 to spellcasting checks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Increase the die category of your Destined talent by one"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 1
-        },
-        "level_2": {
-          "tier_1": 2
-        },
-        "level_3": {
-          "tier_1": 2,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 2,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 2,
-          "tier_2": 2,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      },
-      "seer_penance": [
-        {
-          "tier": 1,
-          "sacrifice": "Temporarily give up 1d4 HP (stay at 1 HP minimum); returns in a week"
-        },
-        {
-          "tier": 2,
-          "sacrifice": "Temporarily lower WIS stat by 2 points; returns in two weeks"
-        },
-        {
-          "tier": 3,
-          "sacrifice": "Sacrifice 1 point of Charisma; it never returns"
-        },
-        {
-          "tier": 4,
-          "sacrifice": "Ritualistically sink a burning longboat into the sea"
-        },
-        {
-          "tier": 5,
-          "sacrifice": "Ritualistically sacrifice 9 humanoid lives"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Guide",
-          "Chanter",
-          "Rune Reader",
-          "Wise One",
-          "Seer of Odin"
-        ],
-        "chaotic": [
-          "Hedge Witch",
-          "Whisperer",
-          "Bone Reader",
-          "Dreaded One",
-          "Seer of Loki"
-        ],
-        "neutral": [
-          "Fortune Teller",
-          "Singer",
-          "Star Reader",
-          "Blessed One",
-          "Seer of Freya"
-        ]
-      }
-    },
-    {
-      "name": "Knight of St. Ydris",
-      "description": "Cursed knights who walk the path of St. Ydris the Unholy, the Possessed. They embrace the darkness in order to fight it, cleansing evil with a flurry of steel and forbidden sorcery.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All melee weapons",
-        "Crossbow"
-      ],
-      "languages": {
-        "fixed": [
-          "Diabolic"
-        ]
-      },
-      "spellcasting_stat": "Charisma",
-      "class_features": [
-        {
-          "name": "Demonic Possession",
-          "description": "3/day, gain +1 bonus to damage rolls for 3 rounds. Add half your level to the damage bonus (round down)."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "Cast witch spells using Charisma. DC = 10 + spell tier. Failed check = can't cast until rest. Natural 1 = roll on Diabolical Mishap table."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Your Demonic Possession bonus increases by 1 point"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attacks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength, Dexterity, or Constitution stat"
-        },
-        {
-          "roll": "10-11",
-          "effect": "+2 to Charisma stat or +1 to witch spellcasting checks"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 1
-        },
-        "level_2": {
-          "tier_1": 1
-        },
-        "level_3": {
-          "tier_1": 1
-        },
-        "level_4": {
-          "tier_1": 2
-        },
-        "level_5": {
-          "tier_1": 3
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2
-        }
-      },
-      "titles": {
-        "lawful": [
-          "Arbiter",
-          "Enforcer",
-          "Knight Marshal",
-          "Judge",
-          "Justiciar"
-        ],
-        "chaotic": [
-          "Traitor",
-          "Fallen",
-          "Oathbreaker",
-          "Blackguard",
-          "Demonlord"
-        ],
-        "neutral": [
-          "Brother/Sister",
-          "Exorcist",
-          "Reverend Knight",
-          "Inquisitor",
-          "Grand Inquisitor"
-        ]
-      }
-    },
-    {
-      "name": "Warlock",
-      "description": "Howling warriors with sharpened teeth, wild-eyed doomspeakers preaching of The Dissolution, and cloaked lore-hunters bearing the hidden Mark of Shune.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Chainmail",
-        "Shields"
-      ],
-      "weapons": [
-        "Club",
-        "Crossbow",
-        "Dagger",
-        "Mace",
-        "Longsword"
-      ],
-      "languages": {
-        "fixed": [
-          "Choice of Celestial, Diabolic, Draconic, Primordial, or Sylvan"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Patron",
-          "description": "Choose a patron to serve. Your patron is the source of your supernatural gifts. It can grant or withhold gifts at any time."
-        },
-        {
-          "name": "Patron Boon",
-          "description": "At 1st level, gain a random Patron Boon from your patron. You may roll on your Patron Boon table instead of the Warlock Talents table when you gain a talent.",
-          "patron_boons": {
-            "Almazzat": [
-              {
-                "roll": "2",
-                "effect": "1/day, gain advantage on melee attacks for 3 rounds"
-              },
-              {
-                "roll": "3-7",
-                "effect": "Learn to wield 1 melee weapon or get +1 to melee attacks"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Strength or Constitution stat or +1 to melee damage"
-              },
-              {
-                "roll": "10-11",
-                "effect": "Gain advantage on initiative rolls (reroll if duplicate)"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
+    "classes": [
+        {
+            "name": "Fighter",
+            "description": "Blood-soaked gladiators in dented armor, acrobatic duelists with darting swords, or far-eyed elven archers who carve their legends with steel and grit.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "All armor",
+                "Shields"
             ],
-            "Kytheros": [
-              {
-                "roll": "2",
-                "effect": "1/day, force the GM to reroll a single roll"
-              },
-              {
-                "roll": "3-7",
-                "effect": "Gain +1 to your AC through supernatural foresight"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Strength, Dexterity, or Wisdom stat"
-              },
-              {
-                "roll": "10-11",
-                "effect": "3/day, add your WIS bonus to any roll (reroll if duplicate)"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
+            "weapons": [
+                "All weapons"
             ],
-            "Shune the Vile": [
-              {
-                "roll": "2",
-                "effect": "1/day, read the mind of a creature you touch for 3 rounds"
-              },
-              {
-                "roll": "3-7",
-                "effect": "Learn a wizard spell, tier = half your level. Cast it with INT"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Dexterity or Intelligence stat"
-              },
-              {
-                "roll": "10-11",
-                "effect": "+1 XP whenever you learn a valuable or significant secret"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
+            "class_features": [
+                {
+                    "name": "Hauler",
+                    "description": "Add your Constitution modifier, if positive, to your gear slots."
+                },
+                {
+                    "name": "Weapon Mastery",
+                    "description": "Choose one type of weapon. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down)."
+                },
+                {
+                    "name": "Grit",
+                    "description": "Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force."
+                }
             ],
-            "Mugdulblub": [
-              {
-                "roll": "2",
-                "effect": "1/day, turn into a crawling puddle of slime for 3 rounds"
-              },
-              {
-                "roll": "3-7",
-                "effect": "Maximize 2 hit point die rolls (prior or future)"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Dexterity or Constitution stat"
-              },
-              {
-                "roll": "10-11",
-                "effect": "Become immune to 1: acid, cold, poison (reroll if no options)"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
-            ],
-            "Titania": [
-              {
-                "roll": "2",
-                "effect": "1/day, hypnotize a LV 5 or less creature for 3 rounds"
-              },
-              {
-                "roll": "3-7",
-                "effect": "Learn to wield a longbow or gain +1 to ranged attacks"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Dexterity or Charisma stat"
-              },
-              {
-                "roll": "10-11",
-                "effect": "Hostile spells that target you are always hard to cast"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
-            ],
-            "The Willowman": [
-              {
-                "roll": "2",
-                "effect": "1/day, teleport to a far location you see as your move"
-              },
-              {
-                "roll": "3-7",
-                "effect": "+1 to melee or ranged attacks"
-              },
-              {
-                "roll": "8-9",
-                "effect": "+2 to Strength or Dexterity stat"
-              },
-              {
-                "roll": "10-11",
-                "effect": "1/day, force a close being to check morale, even if immune"
-              },
-              {
-                "roll": "12",
-                "effect": "Choose one option or 2 points to distribute to stats"
-              }
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Gain Weapon Mastery with one additional weapon type"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee and ranged attacks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength, Dexterity, or Constitution stat"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Choose one kind of armor. You get +1 AC from that armor"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
             ]
-          }
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Roll a Patron Boon from any patron; an unexplained gift"
         },
         {
-          "roll": "3-6",
-          "effect": "Add +1 point to two stats (they must be different)"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+1 to melee or ranged attacks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Roll two Patron Boons and choose one to keep"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "titles": {
-        "lawful": [
-          "Favored",
-          "Herald",
-          "Eminent",
-          "Exalted",
-          "Incarnation"
-        ],
-        "chaotic": [
-          "Marked",
-          "Zealot",
-          "Occultist",
-          "Champion",
-          "Harbinger"
-        ],
-        "neutral": [
-          "Chosen",
-          "Channeler",
-          "Prophesied",
-          "Transcendent",
-          "Avatar"
-        ]
-      }
-    },
-    {
-      "name": "Witch",
-      "description": "Cackling crones stooped over cauldrons, chanting shamans smeared in blood and clay, and outcast maidens with milky eyes that see portents and secrets.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Dagger",
-        "Staff"
-      ],
-      "languages": {
-        "fixed": [
-          "Diabolic",
-          "Primordial",
-          "Sylvan"
-        ]
-      },
-      "spellcasting_stat": "Charisma",
-      "class_features": [
-        {
-          "name": "Familiar",
-          "description": "You have a small animal (raven, rat, frog, etc.) that serves you loyally and can speak Common. It can be the source of spells you cast. If it dies, restore it by permanently sacrificing 1d4 hit points."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "Cast witch spells using Charisma. Know three tier 1 spells at level 1. DC = 10 + spell tier. Failed check = can't cast until rest. Natural 1 = roll on Diabolical Mishap table."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "1/day, teleport to your familiar's location as a move"
-        },
-        {
-          "roll": "3-7",
-          "effect": "+2 to Charisma stat or +1 to witch spellcasting checks"
-        },
-        {
-          "roll": "8-9",
-          "effect": "Gain advantage on casting one spell you know"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Learn an additional witch spell of any tier you can cast"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 3
-        },
-        "level_2": {
-          "tier_1": 4
-        },
-        "level_3": {
-          "tier_1": 4,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 4,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 4,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 4,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      },
-      "titles": {
-        "lawful": [
-          "Fortune Teller",
-          "Far Seer",
-          "Prophet",
-          "Wise One",
-          "Baba"
-        ],
-        "chaotic": [
-          "Whisperer",
-          "Hexer",
-          "Hag/Elder",
-          "Crone/Uncle",
-          "Baba"
-        ],
-        "neutral": [
-          "Shaman",
-          "Conjurer",
-          "Soothsayer",
-          "Conduit",
-          "Baba"
-        ]
-      }
-    },
-    {
-      "name": "Beastmaster",
-      "description": "Limbs and mouths contort and crack as bones and jaws rearrange themselves. A shapeshifting warrior who bonds with animals and transforms into beasts.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "None"
-      ],
-      "weapons": [
-        "All missile weapons"
-      ],
-      "languages": {
-        "fixed": [
-          "Language of chosen animal species"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Beast Attack",
-          "description": "Choose one animal type to use for all melee attacks (see Class Options). If your talents allow for multiple animals, you may choose which animal to use with every individual attack."
-        },
-        {
-          "name": "Beast Hide",
-          "description": "Your skin is covered with a protective hide. If your CON modifier is positive, also add it to your AC."
-        },
-        {
-          "name": "Beast Shape",
-          "description": "Once per day, you and your possessions may transform into the natural form of your chosen beast for 3 rounds, taking on the animal's statistics, attacks, and abilities. You still need light to see. If you take damage while in this form, do not transfer that damage to your own HP when you return to your humanoid form. If you reach 0 HP in your animal form, you transform back at 0 HP, starting your death timer as normal."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "You may use Beast Shape 1 additional time per day"
-        },
-        {
-          "roll": "3-5",
-          "effect": "Increase die category to chosen Beast Attack damage"
-        },
-        {
-          "roll": "6-9",
-          "effect": "+2 to Strength or Constitution stat or +1 to unarmored AC"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Make an animal magic item (see p 135, 136, 144 of Un. Sel.)"
-        },
-        {
-          "roll": "12",
-          "effect": "Select and add a new beast attack to your arsenal"
-        }
-      ]
-    },
-    {
-      "name": "Fiend",
-      "description": "Disciplined inferno keepers, molten architects, or diabolical pyromancers who harness the energy of arcane flame from the molten heart of the earth, the nightmarish abyss, or the searing forges of fallen stars.",
-      "hit_points": "1d8 per level",
-      "armor": [
-        "All armor",
-        "Shields"
-      ],
-      "weapons": [
-        "All weapons"
-      ],
-      "languages": {
-        "fixed": [
-          "Diabolic"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Wicked Tongue",
-          "description": "Your oratory prowess deceives others, granting you advantage on any negotiation, intimidation, persuasion, or misdirection checks."
-        },
-        {
-          "name": "Firebond Weapon",
-          "description": "Pulling from the eternal flames of the abyss, you can ignite your melee or ranged weapon as part of making an attack. It deals an additional d4 of fire damage on hit. The weapon's flame is not enough to pierce the darkness."
-        },
-        {
-          "name": "Pyromancy",
-          "description": "You wield the relentless energy of the eternal flame in powerful and unique ways. Only one pyromancy talent can be active at a time. Upon gaining level 2, roll one talent from the Pyromancy table, with additional rolls at every even level. You are immune to your own pyromancy."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "1/day, know the desires or fears of a creature in near range"
-        },
-        {
-          "roll": "3-6",
-          "effect": "+1 to melee or ranged attacks"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to Strength, Dexterity or Constitution stat"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Roll an additional talent on the Pyromancy Talents table"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose one option or +2 points to distribute to stats"
-        }
-      ]
-    },
-    {
-      "name": "Grave Warden",
-      "description": "Reverent undertakers, eager bone-setters, or cold-hearted executioners who wield the power of the undead to do their bidding.",
-      "hit_points": "1d4 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Dagger",
-        "Scythe"
-      ],
-      "languages": {
-        "fixed": [
-          "One rare language (player's choice)"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Necrotic Reap",
-          "description": "You can cast touch spells through a scythe. Add +1 spellcasting bonus to touch spells when doing so."
-        },
-        {
-          "name": "Claim Undead",
-          "description": "1/day you can seize control of any number of undead. Their total LV cannot exceed your own. Undead make a DC 12 CHA check to resist."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "You can cast grave warden spells you know. You may choose three tier 1 spells of your choice from the grave warden spell list. Add your constitution modifier when casting grave warden spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a natural 1 on a spellcasting check, you must also roll on the corresponding Necrotic Mishap table for the spell's tier."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Claim Undead gains one DC step for undead resistance (max DC 18)"
-        },
-        {
-          "roll": "3-7",
-          "effect": "+2 to constitution stat or +1 to grave warden spellcasting checks"
-        },
-        {
-          "roll": "8-9",
-          "effect": "Gain advantage on casting one spell you know"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Increase the Necrotic Reap bonus by an additional +2"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 3
-        },
-        "level_2": {
-          "tier_1": 4
-        },
-        "level_3": {
-          "tier_1": 4,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 4,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 4,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 4,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 4,
-          "tier_2": 4,
-          "tier_3": 4,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      }
-    },
-    {
-      "name": "Ovate",
-      "description": "Custodians of nature's balance, wielders of flora's might, or omen-reading diviners who guide the primal forces to shape our destiny.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor",
-        "Wooden shields"
-      ],
-      "weapons": [
-        "Bolas",
-        "Club",
-        "Staff",
-        "Sling",
-        "Whip"
-      ],
-      "languages": {
-        "fixed": [
-          "Two animal species of player's choice"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Animal Companion",
-          "description": "To start, you verbally control one 0-level non-insect animal companion such as a fox, owl, or iguana."
-        },
-        {
-          "name": "Calm Animals",
-          "description": "1/day, your soothing aura pacifies natural animals within near. Their total LV cannot exceed 2X your own. Giant animals attempt a DC 12 WIS check to resist. A calmed animal will regard you as a friend, but not a companion."
-        },
-        {
-          "name": "Train Animal",
-          "description": "You can train a calm or captive animal to become a new Animal Companion. You can only have one animal companion at a time, and its LV cannot exceed yours. For every 2 LV of the animal, training takes 1 day. You must know its language to understand it."
-        },
-        {
-          "name": "Spellcasting",
-          "description": "You can cast ovate spells you know. You may choose two tier 1 spells from the ovate spell list. Add your wisdom modifier when casting ovate spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a 1, you can't cast that spell again until you attend a ritualistic purging or ceremony."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "The number of animal companions you can have increases by one"
-        },
-        {
-          "roll": "3-6",
-          "effect": "Gain advantage on casting one spell you know"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to wisdom or +1 to ovate spellcasting checks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "You can speak to an additional species of animal"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 2
-        },
-        "level_2": {
-          "tier_1": 3
-        },
-        "level_3": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      }
-    },
-    {
-      "name": "Plague Doctor",
-      "description": "Shadow-veiled alchemical apothecaries, compassionate herbalist healers, or beak-masked disease cultists who can perform surgeries and harness the power of science.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "Leather armor"
-      ],
-      "weapons": [
-        "Censer flail",
-        "Darts",
-        "Needle whip",
-        "Stiletto",
-        "Rapier"
-      ],
-      "languages": {
-        "additional_common": 2
-      },
-      "class_features": [
-        {
-          "name": "Mask Infusion",
-          "description": "Inhale one pre-made herbal elixir from your mask for immediate infusion. Lasts all day, expires on use."
-        },
-        {
-          "name": "Mesmerize Insect",
-          "description": "1/day, you bewitch an insect to automatically deliver an injure elixir to a target within near range via sting or bite."
-        },
-        {
-          "name": "Elixirs",
-          "description": "You can craft elixirs by making an INT check. Apply the modifier for the chosen delivery method (see Delivery Method table) to this check. This does not cost an action. If you fail, you can't make that elixir again until you rest. Except for mask infusions, elixirs expire in 5 rounds. Critical success increases DC or die category by one or doubles duration. Critical fails self-inflict harmful elixirs.",
-          "elixirs": [
-            {
-              "dc": 10,
-              "name": "Stenchwort",
-              "effect": "Immune to smells and cures paralysis."
+            "name": "Priest",
+            "description": "Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "All armor",
+                "Shields"
+            ],
+            "weapons": [
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Mace",
+                "Longsword",
+                "Staff",
+                "Warhammer"
+            ],
+            "languages": {
+                "fixed": [
+                    "Choice of Celestial, Diabolic, or Primordial"
+                ]
             },
-            {
-              "dc": 11,
-              "name": "Panacea",
-              "effect": "Ends one poison, disease, or plague."
-            },
-            {
-              "dc": 11,
-              "name": "Inoculant",
-              "effect": "Receive ADV on a check vs. a specific hazard type you name. Examples: Fire, acid, necrosis."
-            },
-            {
-              "dc": 12,
-              "name": "Tonic",
-              "effect": "Heals 1 HP. Stabilizes and revives."
-            },
-            {
-              "dc": 12,
-              "name": "Toxin",
-              "effect": "DC 12 CON check or paralyzed for 1d4 rounds."
-            },
-            {
-              "dc": 13,
-              "name": "Acid",
-              "effect": "Target takes d6 damage equal to half your level rounded down."
-            },
-            {
-              "dc": 13,
-              "name": "Plague",
-              "effect": "DC 12 CON check or 1d6 permanent damage. Check daily to fully recover or take another 1d6."
-            },
-            {
-              "dc": 14,
-              "name": "Pheromone",
-              "effect": "DC 12 WIS check or living creatures are calmed and consider you a reluctant friend for 5 rounds or until they are attacked by you or an ally."
-            },
-            {
-              "dc": 14,
-              "name": "Remedy",
-              "effect": "Heals d6 equal to one plus half your level rounded down."
+            "class_features": [
+                {
+                    "name": "Turn Undead",
+                    "description": "You know the turn undead spell. It doesn't count toward your number of known spells."
+                },
+                {
+                    "name": "Deity",
+                    "description": "Choose a god to serve who matches your alignment. You have a holy symbol for your god (takes up no gear slots)."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "You can cast priest spells you know. You know two tier 1 spells at level 1. Use Wisdom for spellcasting checks."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Gain advantage on casting one spell you know"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attacks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to priest spellcasting checks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+2 to Strength or Wisdom stat"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 2
+                },
+                "level_2": {
+                    "tier_1": 3
+                },
+                "level_3": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
             }
-          ],
-          "delivery_methods": [
-            {
-              "bonus": "+3",
-              "type": "Mask Infusion",
-              "description": "Lasts up to 1 day or until activated."
+        },
+        {
+            "name": "Thief",
+            "description": "Rooftop assassins, grinning con artists, or cloaked cat burglars who can pluck a gem from the claws of a sleeping demon.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor",
+                "Mithral chainmail"
+            ],
+            "weapons": [
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Shortbow",
+                "Shortsword"
+            ],
+            "class_features": [
+                {
+                    "name": "Backstab",
+                    "description": "Deal an extra weapon die of damage against unaware targets. Add additional dice equal to half your level (round down)."
+                },
+                {
+                    "name": "Thievery",
+                    "description": "You have the necessary tools (0 slots). You have advantage on checks for: Climbing, Sneaking/Hiding, Disguises, Traps, and Delicate tasks (picking pockets/locks)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Gain advantage on initiative rolls (reroll if duplicate)"
+                },
+                {
+                    "roll": "3-5",
+                    "effect": "Your Backstab deals +1 dice of damage"
+                },
+                {
+                    "roll": "6-9",
+                    "effect": "+2 to Strength, Dexterity, or Charisma stat"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee and ranged attacks"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ]
+        },
+        {
+            "name": "Wizard",
+            "description": "Rune-tattooed adepts, bespectacled magi, and flame-conjuring witches who dare to manipulate the fell forces of magic.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "None"
+            ],
+            "weapons": [
+                "Dagger",
+                "Staff"
+            ],
+            "languages": {
+                "additional_common": 2,
+                "additional_rare": 2
             },
-            {
-              "bonus": "+1",
-              "type": "Injest",
-              "description": "Quaffed like a potion or otherwise eaten."
-            },
-            {
-              "bonus": "0",
-              "type": "Injure",
-              "description": "Skin must be punctured after elixir is applied to a weapon like a stiletto, rapier, or dart."
-            },
-            {
-              "bonus": "-1",
-              "type": "Touch",
-              "description": "Skin must simply be touched by the elixir."
-            },
-            {
-              "bonus": "-3",
-              "type": "Inhaled",
-              "description": "Gas covers near radius."
+            "class_features": [
+                {
+                    "name": "Learning Spells",
+                    "description": "Study a spell scroll for a day and pass a DC 15 INT check to learn it permanently. These do not count toward your known spells limit."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "You can cast wizard spells you know. You start with three tier 1 spells. Use Intelligence for spellcasting checks."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Make 1 random magic item of a type you choose"
+                },
+                {
+                    "roll": "3-7",
+                    "effect": "+2 to Intelligence stat or +1 to wizard spellcasting checks"
+                },
+                {
+                    "roll": "8-9",
+                    "effect": "Gain advantage on casting one spell you know"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Learn one additional wizard spell of any tier you know"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 3
+                },
+                "level_2": {
+                    "tier_1": 4
+                },
+                "level_3": {
+                    "tier_1": 4,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 4,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 4,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 4,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
             }
-          ]
+        },
+        {
+            "name": "Bard",
+            "description": "Bards are welcome wanderers and wise advisors; it is their task to protect and share knowledge handed down through the ages.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail",
+                "Shields"
+            ],
+            "weapons": [
+                "Crossbow",
+                "Dagger",
+                "Mace",
+                "Shortbow",
+                "Shortsword",
+                "Spear",
+                "Staff"
+            ],
+            "languages": {
+                "additional_common": 4,
+                "additional_rare": 1
+            },
+            "class_features": [
+                {
+                    "name": "Bardic Arts",
+                    "description": "You're trained in oration, performing arts, lore, and diplomacy. You have advantage on related checks."
+                },
+                {
+                    "name": "Magical Dabbler",
+                    "description": "You can activate spell scrolls and wands using Charisma as your spellcasting stat. If you critically fail, roll a wizard mishap."
+                },
+                {
+                    "name": "Presence",
+                    "description": "Make a DC 12 CHA check to enact one effect. Inspire: One target in near range gains a luck token. Fascinate (focus): You transfix all chosen targets of level 4 or less within near range."
+                },
+                {
+                    "name": "Prolific",
+                    "description": "Add 1d6 to your learning rolls. Groups carousing with 1 or more bards add 1d6 to their rolls."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You find a random priest or wizard wand (you choose)"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee and ranged attacks or +1 to Magical Dabbler rolls"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 points to distribute to any stats"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Your Presence effects become DC 9 to enact (reroll if duplicate)"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Storyteller",
+                    "Balladeer",
+                    "Philosopher",
+                    "Poet",
+                    "Master Poet"
+                ],
+                "chaotic": [
+                    "Guttersnipe",
+                    "Charlatan",
+                    "Satirist",
+                    "Silvertongue",
+                    "Doomspeaker"
+                ],
+                "neutral": [
+                    "Seeker",
+                    "Witness",
+                    "Speaker",
+                    "Voice",
+                    "Truthbearer"
+                ]
+            }
+        },
+        {
+            "name": "Ranger",
+            "description": "Skilled trackers, stealthy wanderers, and peerless warriors who call the wilds their home.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail"
+            ],
+            "weapons": [
+                "Dagger",
+                "Longbow",
+                "Longsword",
+                "Shortbow",
+                "Shortsword",
+                "Spear",
+                "Staff"
+            ],
+            "class_features": [
+                {
+                    "name": "Wayfinder",
+                    "description": "You have advantage on checks associated with: Navigation, Tracking, Bushcraft, Stealth, and Wild animals."
+                },
+                {
+                    "name": "Herbalism",
+                    "description": "Make an INT check to prepare an herbal remedy. Remedies: Salve (DC 11, heals 1 HP), Stimulant (DC 12, can't be surprised 10 rounds), Foebane (DC 13, advantage on attacks vs one creature type 1d6 rounds), Restorative (DC 14, ends one poison/disease), Curative (DC 15, equivalent to Potion of Healing)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You deal d12 damage with one weapon type you choose"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attacks and damage"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength, Dexterity, or Intelligence stat"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "You gain advantage on Herbalism checks for a remedy you choose"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Wanderer",
+                    "Strider",
+                    "Warden",
+                    "Guardian",
+                    "Sentinel"
+                ],
+                "chaotic": [
+                    "Hood",
+                    "Outlaw",
+                    "Fugitive",
+                    "Exile",
+                    "Pariah"
+                ],
+                "neutral": [
+                    "Stranger",
+                    "Wayfarer",
+                    "Outlander",
+                    "Recluse",
+                    "Hermit"
+                ]
+            }
+        },
+        {
+            "name": "Cursedblade",
+            "description": "A cursing spellcaster who gains mystical energy from a powerful being and wields it through a weapon.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail",
+                "Shields"
+            ],
+            "weapons": [
+                "Bastard sword",
+                "Dagger",
+                "Greataxe",
+                "Greatsword",
+                "Longsword",
+                "Shortsword",
+                "Spear"
+            ],
+            "spellcasting_stat": "Charisma",
+            "class_features": [
+                {
+                    "name": "Magic Weapon",
+                    "description": "DC 11 CHA check. The weapon becomes magical with +1 to attack and damage for 3 rounds. No rest needed on failure."
+                },
+                {
+                    "name": "Eldritch Blast",
+                    "description": "DC 11 CHA check. 1d4 damage within far range. No rest needed on failure."
+                },
+                {
+                    "name": "Patron Boon",
+                    "description": "Choose a patron. Gain a new Patron Boon at even levels: 1. Read all written languages, 2. Summon Skeleton/Ghoul 1hr/day, 3. Read surface thoughts (near), 4. Apply disadvantage to target's next d20 (far), 5. Detect magic (near), 6. Don't need to breathe air."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to spellcasting checks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee attacks with weapons"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee damage rolls with weapons"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Angel",
+                    "Archangel",
+                    "Throne",
+                    "Cherubim",
+                    "Seraphim"
+                ],
+                "chaotic": [
+                    "Baron/Baroness",
+                    "Count/Countess",
+                    "Duke/Duchess",
+                    "Prince/Princess",
+                    "King/Queen"
+                ],
+                "neutral": [
+                    "Fallen",
+                    "Messenger",
+                    "Watcher",
+                    "Nephilim",
+                    "Archon"
+                ]
+            }
+        },
+        {
+            "name": "Elemental Warrior",
+            "description": "A martial artist who has mastered controlling their internal energy to release it as devastating elemental blows and blasts.",
+            "hit_points": "1d10 per level",
+            "armor": [],
+            "weapons": [
+                "Crossbow",
+                "Dagger",
+                "Longsword",
+                "Mace",
+                "Shortsword",
+                "Shortbow",
+                "Staff"
+            ],
+            "spellcasting_stat": "Constitution",
+            "class_features": [
+                {
+                    "name": "Elemental Expert",
+                    "description": "Advantage on knowledge checks related to fire, electricity, water, earth, air and spirits."
+                },
+                {
+                    "name": "Unarmored",
+                    "description": "Use Dexterity or Constitution when calculating AC."
+                },
+                {
+                    "name": "Elemental Blow",
+                    "description": "Unarmed strikes do 1d6 damage. Choose damage type: normal, fire, electrical, cold, or acid."
+                },
+                {
+                    "name": "Elemental Blast",
+                    "description": "DC 11 CON check. 1d4 damage (far) at levels 1-5, 1d6 at levels 6-10. Fire, electricity, cold, or acid."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to unarmed strike attack rolls"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to unarmed strike damage rolls"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Gain advantage on spellcasting checks (reroll if duplicated)"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Gaia",
+                    "Aquan",
+                    "Aura",
+                    "Smelter",
+                    "Celestial"
+                ],
+                "chaotic": [
+                    "Tellus",
+                    "Tainted",
+                    "Tempest",
+                    "Inferno",
+                    "Primordial"
+                ],
+                "neutral": [
+                    "Terran",
+                    "Balancer",
+                    "Drafter",
+                    "Blazer",
+                    "Cosmic"
+                ]
+            }
+        },
+        {
+            "name": "Monster Slayer",
+            "description": "A seeker of Vampires, Dragons, fiends, fey and evil monsters of the dark.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail",
+                "Shields"
+            ],
+            "weapons": [
+                "Bastard sword",
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Longbow",
+                "Longsword",
+                "Mace",
+                "Shortbow",
+                "Shortsword",
+                "Spear",
+                "Staff"
+            ],
+            "spellcasting_stat": "Wisdom",
+            "class_features": [
+                {
+                    "name": "Monster Expert",
+                    "description": "You know immunities of chaotic monsters within near range. Advantage on monster knowledge checks."
+                },
+                {
+                    "name": "Stalker",
+                    "description": "Advantage on checks to sense creatures, sneak, and hide."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "WIS-based. Spells: Protection from Evil (LV1+, DC11), Zone of Truth (LV3+, DC12), Magic Circle (LV5+, DC13), Flame Strike (LV7+, DC14), Hold Monster (LV9+, DC15)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to spellcasting checks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee and ranged attack rolls"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee and ranged damage rolls"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Seeker",
+                    "Tracer",
+                    "Hunter/Huntress",
+                    "Nimrod",
+                    "Slayer"
+                ],
+                "chaotic": [
+                    "Butcher",
+                    "Slaughterer",
+                    "Executioner",
+                    "Terminator",
+                    "Predator"
+                ],
+                "neutral": [
+                    "Tracker",
+                    "Stalker",
+                    "Sleuth",
+                    "Skinner",
+                    "Orion"
+                ]
+            }
+        },
+        {
+            "name": "Mystical Archer",
+            "description": "An expert warrior in channeling magic into arrows fired from a bow.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail"
+            ],
+            "weapons": [
+                "Longbow",
+                "Shortbow",
+                "Dagger",
+                "Shortsword",
+                "Longsword"
+            ],
+            "spellcasting_stat": "Intelligence, Wisdom, or Charisma (player's choice)",
+            "class_features": [
+                {
+                    "name": "Detecting Magic",
+                    "description": "Cast Detect Magic with DC 11 check using INT, WIS, or CHA."
+                },
+                {
+                    "name": "Mystical Knowledge",
+                    "description": "Advantage on magic knowledge checks."
+                },
+                {
+                    "name": "Magical Shot",
+                    "description": "Imbue arrow with one effect per round: Sharp (+1 damage), Accurate (+1 attack), Seeker (ignore cover), Elemental (fire/electrical/cold/acid), Returning (arrow returns), Paralysing (paralyze 1 round)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to ranged attack rolls"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to ranged damage rolls"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to initiative rolls"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Toxotes",
+                    "Lucznik",
+                    "Arqueiro",
+                    "Bogenschutz",
+                    "Sagittarii"
+                ],
+                "chaotic": [
+                    "Archer",
+                    "Piercer",
+                    "Sharpshooter",
+                    "Sniper",
+                    "Deadeye"
+                ],
+                "neutral": [
+                    "Ivar",
+                    "Bersagliere",
+                    "Kyudo",
+                    "Sheshou",
+                    "Iuchnik"
+                ]
+            }
+        },
+        {
+            "name": "Psychic Infiltrator",
+            "description": "A spy who strikes the psyche, infiltrates the mind and body with psionic power.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Crossbow",
+                "Dagger",
+                "Longbow",
+                "Shortbow",
+                "Shortsword"
+            ],
+            "spellcasting_stat": "Constitution or Wisdom (player's choice)",
+            "class_features": [
+                {
+                    "name": "Psychic Blade",
+                    "description": "DC 12 CON/WIS check. Invisible blade does 1d6 damage with +1 to attack and damage for 1 minute."
+                },
+                {
+                    "name": "Shadow Veil",
+                    "description": "Advantage on checks related to hiding and sneaking."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "CON/WIS-based. Spells: Charm Person (LV1+, DC11), Detect Thoughts (LV3+, DC12), Alter Self (LV5+, DC12), Arcane Eye (LV7+, DC14), Teleport (LV9+, DC15)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to spellcasting checks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee and ranged attack rolls"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee and ranged damage rolls"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Spy",
+                    "Agent",
+                    "Operative",
+                    "Infiltrator",
+                    "Spymaster"
+                ],
+                "chaotic": [
+                    "Prowler",
+                    "Deceiver",
+                    "Manipulator",
+                    "Subversive",
+                    "Shadow"
+                ],
+                "neutral": [
+                    "Monitor",
+                    "Investigator",
+                    "Spook",
+                    "Sleeper",
+                    "Neutralizer"
+                ]
+            }
+        },
+        {
+            "name": "Samurai",
+            "description": "A military soldier, trained in swordsmanship, archery, and other martial arts with a special code of conduct.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "All armor",
+                "Shields"
+            ],
+            "weapons": [
+                "All swords",
+                "Dagger",
+                "Longbow",
+                "Shortbow",
+                "Spear",
+                "Staff",
+                "Warhammer"
+            ],
+            "class_features": [
+                {
+                    "name": "Bushido Code",
+                    "description": "Immune to fear effects."
+                },
+                {
+                    "name": "Aesthetic",
+                    "description": "Advantage on checks related to literature and art. Advanced calligraphy."
+                },
+                {
+                    "name": "Samurai Style",
+                    "description": "Select one style at level 1, new style at every even level. Styles: Kenjutsu (+1 attack/damage with sword + half level), Jujutsu (unarmed grapple/throw), Sojutsu (+1 attack/damage with spear + prone), Kyujutsu (+1 attack/damage with bow + ignore cover), Aikiken (+1 AC with sword parry), Bojutsu (+1 attack/damage with staff + push/trip), Iaijutsu (+1 initiative)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee attack rolls"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to ranged attack rolls"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee damage rolls"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Ashigaru",
+                    "Goshi",
+                    "Gokenin",
+                    "Hatamoto",
+                    "Daimyo"
+                ],
+                "chaotic": [
+                    "Shatei",
+                    "Kyodai",
+                    "Shateigashira",
+                    "Wakagashira",
+                    "Oyabun"
+                ],
+                "neutral": [
+                    "Ronin",
+                    "Ronin",
+                    "Ronin",
+                    "Ronin",
+                    "Ronin"
+                ]
+            }
+        },
+        {
+            "name": "Shadow Stalker",
+            "description": "An experienced hunter that uses the darkness, detecting and hunting creatures.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Shields"
+            ],
+            "weapons": [
+                "Bastard sword",
+                "Crossbow",
+                "Dagger",
+                "Longbow",
+                "Longsword",
+                "Mace",
+                "Shortbow",
+                "Shortsword",
+                "Spear"
+            ],
+            "spellcasting_stat": "Wisdom",
+            "class_features": [
+                {
+                    "name": "Ambusher",
+                    "description": "You have advantage on Initiative rolls. You're an expert in sneaking and hiding, gaining advantage on related checks."
+                },
+                {
+                    "name": "Iron Mind",
+                    "description": "You have advantage on checks that affect your mind."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "WIS-based. Spells: Light (LV1+, DC11), Invisibility (LV3+, DC12), Alter Self (LV5+, DC12), Arcane Eye (LV7+, DC14), Wrath (LV9+, DC14)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats."
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to spellcasting checks."
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee and ranged attack rolls."
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to melee and ranged damage rolls."
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent."
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Stalker",
+                    "Umbra",
+                    "Spook",
+                    "Ghost",
+                    "Phantom"
+                ],
+                "chaotic": [
+                    "Lurker",
+                    "Prowler",
+                    "Darkling",
+                    "Shade",
+                    "Grim"
+                ],
+                "neutral": [
+                    "Shadow",
+                    "Murker",
+                    "Skulker",
+                    "Mystery",
+                    "Wraith"
+                ]
+            }
+        },
+        {
+            "name": "Spellsword",
+            "description": "A mage that incorporates swordplay and magical dance with music.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Dagger",
+                "Longsword",
+                "Shortsword"
+            ],
+            "spellcasting_stat": "Intelligence",
+            "class_features": [
+                {
+                    "name": "Bless",
+                    "description": "You know the Bless spell. It doesn't count toward your number of known spells."
+                },
+                {
+                    "name": "Performance",
+                    "description": "Advantage on checks related to performance, dancing and singing."
+                },
+                {
+                    "name": "Blade Magic",
+                    "description": "You can cast wizard spells you know through the blade you hold. You know two tier 1 spells from the wizard spell list."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats."
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attack rolls."
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to Spellsword spellcasting checks."
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Gain advantage on casting one spell you know."
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent."
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 2
+                },
+                "level_2": {
+                    "tier_1": 3
+                },
+                "level_3": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            },
+            "titles": {
+                "lawful": [
+                    "Spellblade",
+                    "Spellsword",
+                    "Mageblade",
+                    "Songblade",
+                    "Mysticmaestro"
+                ],
+                "chaotic": [
+                    "Arcaneblade",
+                    "Arcanesword",
+                    "Voodooblade",
+                    "Doomsword",
+                    "Deathdancer"
+                ],
+                "neutral": [
+                    "Spellknife",
+                    "Mysticblade",
+                    "Songcutter",
+                    "Mysticsword",
+                    "Songsword"
+                ]
+            }
+        },
+        {
+            "name": "Swashbuckler",
+            "description": "A lightly armored acrobatic fencer that is an expert in the blade, acrobatics and charm.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Shields"
+            ],
+            "weapons": [
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Longsword",
+                "Mace",
+                "Rapier",
+                "Shortbow",
+                "Shortsword",
+                "Staff"
+            ],
+            "class_features": [
+                {
+                    "name": "Dual-Wielder",
+                    "description": "Make two attacks on your turn with a rapier and dagger, or two daggers."
+                },
+                {
+                    "name": "Rapier",
+                    "description": "The Swashbuckler has access to the Rapier (Cost: 8 gp, Type: M, Range: C, Damage: 1d6, Properties: Finesse)."
+                },
+                {
+                    "name": "Gentile",
+                    "description": "Expert at acrobatics, stealth, guile and romance. Advantage on Dexterity and Charisma checks."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats."
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee and ranged attack rolls."
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee and ranged damage rolls."
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+1 to armor class (reroll if duplicated)."
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent."
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Flamboyant",
+                    "Exhibitionist",
+                    "Picaroon",
+                    "Buccaneer",
+                    "Swashbuckler"
+                ],
+                "chaotic": [
+                    "Daredevil",
+                    "Desperado",
+                    "Raider",
+                    "Privateer",
+                    "Pirate"
+                ],
+                "neutral": [
+                    "Scoundrel",
+                    "Vigilante",
+                    "Freebooter",
+                    "Duelist",
+                    "Corsair"
+                ]
+            }
+        },
+        {
+            "name": "War Mage",
+            "description": "A magic-user trained for war on the battlefield that wears armor.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Special \u2014 Arcane Armor only (see class feature)"
+            ],
+            "weapons": [
+                "Crossbow",
+                "Dagger",
+                "Shortsword",
+                "Staff"
+            ],
+            "spellcasting_stat": "Intelligence",
+            "class_features": [
+                {
+                    "name": "Arcane Armor",
+                    "description": "Transform leather armor into magical armor only you can wear, granting AC 11 + DEX modifier. You can cast spells while wearing it."
+                },
+                {
+                    "name": "Detect Magic",
+                    "description": "You know the Detect Magic spell. It doesn't count toward your number of known spells."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "You can cast wizard spells you know. You know two tier 1 spells at 1st level."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "+2 points to distribute to stats."
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attack rolls."
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to War Mage spellcasting checks."
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Gain advantage on casting one spell you know."
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent."
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 2
+                },
+                "level_2": {
+                    "tier_1": 3
+                },
+                "level_3": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            },
+            "titles": {
+                "lawful": [
+                    "Spellweaver",
+                    "Battlemage",
+                    "Gish",
+                    "Magewright",
+                    "Warcaster"
+                ],
+                "chaotic": [
+                    "Ritualist",
+                    "Spellblaster",
+                    "Doomcaster",
+                    "Warmancer",
+                    "Necromancer"
+                ],
+                "neutral": [
+                    "Magician",
+                    "Spellcaster",
+                    "Spellbinder",
+                    "Tactician",
+                    "Battleblaster"
+                ]
+            }
+        },
+        {
+            "name": "War Master",
+            "description": "A master of weapons that can utilize multiple techniques during a battle.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "All armor",
+                "Shields"
+            ],
+            "weapons": [
+                "All weapons"
+            ],
+            "class_features": [
+                {
+                    "name": "Blacksmith",
+                    "description": "You can make and repair armor, weapons and metal items. Access to a forge, smithing tools and materials."
+                },
+                {
+                    "name": "Art of War",
+                    "description": "Advantage on checks related to war, historic battles, military organizations and combat tactics."
+                },
+                {
+                    "name": "Maneuvers",
+                    "description": "Declare one technique per round: Disarm (take weapon), Parry (+1 AC 1 round), Evade (enemy has disadvantage), Precision (+1 to hit), Power (+1 damage), Trip (knock prone), Push (push to near range with shield)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You get +1 AC from the armor you wear."
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee and ranged attack rolls."
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee and ranged damage rolls."
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+2 points to distribute to stats."
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent."
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Combatmaster",
+                    "Champion",
+                    "Paragon",
+                    "Lionheart",
+                    "Commander"
+                ],
+                "chaotic": [
+                    "Warmaster",
+                    "Dominator",
+                    "Despoiler",
+                    "Oppressor",
+                    "Tyrant"
+                ],
+                "neutral": [
+                    "Weaponmaster",
+                    "Legionnaire",
+                    "Vanquisher",
+                    "Tactian",
+                    "Overlord"
+                ]
+            }
+        },
+        {
+            "name": "Desert Rider",
+            "description": "Howling barbarians thundering across the sand on wild horses, elven spies wielding curved blades atop silvery camels, or bandits wrapped in colorful silks racing on sleek, desert stallions.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "Leather armor",
+                "Shields"
+            ],
+            "weapons": [
+                "Club",
+                "Dagger",
+                "Javelin",
+                "Longsword",
+                "Pike",
+                "Shortbow",
+                "Scimitar",
+                "Spear",
+                "Whip"
+            ],
+            "class_features": [
+                {
+                    "name": "Charge",
+                    "description": "3/day, charge into combat by moving at least near before attacking. Melee attacks deal double damage that round."
+                },
+                {
+                    "name": "Mount",
+                    "description": "You have a common camel or horse with a reliable or lovely demeanor. It comes when you call and never spooks. While riding, you both get +AC equal to half your level (round down). Mount has additional levels equal to half your level (round down). Freely leap on/off once per round. DC 15 CHA to replace a lost mount, lowering DC each attempt."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You can use any rider-bearing creature as your mount"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "You gain +1 to attacks or damage"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength or Dexterity stat, or +1 to melee attacks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Gain an additional use of your Charge talent each day"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Outrider",
+                    "Sandrunner",
+                    "Trailblazer",
+                    "Swift Wind",
+                    "Stormrunner"
+                ],
+                "chaotic": [
+                    "Bandit",
+                    "Robber",
+                    "Raider",
+                    "Scourge",
+                    "Bandit King/Queen"
+                ],
+                "neutral": [
+                    "Rat",
+                    "Fox",
+                    "Wolf",
+                    "Tiger",
+                    "Dragon"
+                ]
+            }
+        },
+        {
+            "name": "Pit Fighter",
+            "description": "Blood-soaked warriors circling each other in a roaring arena, scarred desert bandits dueling for the right to lead their gang, or brash tavern brawlers who never turn down a challenge.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "Leather armor",
+                "Shields"
+            ],
+            "weapons": [
+                "All weapons"
+            ],
+            "class_features": [
+                {
+                    "name": "Flourish",
+                    "description": "3/day, regain 1d6 hit points when you hit an enemy with a melee attack."
+                },
+                {
+                    "name": "Implacable",
+                    "description": "Advantage on Constitution checks to resist injury, poison, or endure extreme environments."
+                },
+                {
+                    "name": "Last Stand",
+                    "description": "You get up from dying with 1 hit point on a natural d20 roll of 18-20."
+                },
+                {
+                    "name": "Relentless",
+                    "description": "3/day, when reduced to 0 HP, make a DC 18 CON check (Implacable applies). On success, go to 1 HP instead."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "1/day, ignore all damage and effects from one attack"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "You gain +1 to melee weapon damage"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength or Constitution stat, or +1 to melee attacks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Increase the HP you gain from Flourish by 1d6"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Rookie",
+                    "Gladiator",
+                    "Hero",
+                    "Champion",
+                    "Legend"
+                ],
+                "chaotic": [
+                    "Ruffian",
+                    "Brawler",
+                    "Heel",
+                    "Villain",
+                    "Legend"
+                ],
+                "neutral": [
+                    "Underdog",
+                    "Dark Horse",
+                    "Wild Card",
+                    "Victor",
+                    "Legend"
+                ]
+            }
+        },
+        {
+            "name": "Ras-Godai",
+            "description": "Black-clad assassins who train from childhood inside a hidden desert monastery. They gain their sorcerous powers from a legendary black lotus flower that was given to them by a demon.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Blowgun",
+                "Bolas",
+                "Dagger",
+                "Razor chain",
+                "Scimitar",
+                "Shuriken",
+                "Spear"
+            ],
+            "languages": {
+                "fixed": [
+                    "Diabolic"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Assassin",
+                    "description": "Advantage on checks to sneak and hide. Attacks deal double damage against unaware targets."
+                },
+                {
+                    "name": "Smoke Step",
+                    "description": "3/day, teleport to a location you can see within near. Does not use your action."
+                },
+                {
+                    "name": "Black Lotus",
+                    "description": "Roll one talent on the Black Lotus table (d12): 1. Gain two Black Lotus talents (reroll further 1s), 2. 1/day paralyze target LV9 or less for 1d4 rounds on weapon damage, 3. ADV on DEX checks to avoid entrapment/injury, 4. +1 AC when dual-wielding melee weapons, 5. Gain an additional HP die, 6. Triple damage with Assassinate, 7. Enemy morale DC becomes 18, 8. 1/day walk on water 1d4 rounds, 9. 1/day put LV5 or less creature to sleep (DC15 CON), 10. 1/day walk on walls 1d4 rounds, 11. +1 melee weapon damage, 12. 1/day creature can't see/hear you 1d4 rounds (DC15 WIS)."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You are trained in the use of poisons"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Roll an additional talent on the Black Lotus Talents table"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength or Dexterity stat, or +1 to melee attacks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Gain an additional use of your Smoke Step talent"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Acolyte",
+                    "Mirror Path",
+                    "Monk",
+                    "Master",
+                    "White Lotus"
+                ],
+                "chaotic": [
+                    "Acolyte",
+                    "Shadow Path",
+                    "Monk",
+                    "Assassin",
+                    "Black Lotus"
+                ],
+                "neutral": [
+                    "Acolyte",
+                    "Fire Path",
+                    "Monk",
+                    "Demon Blade",
+                    "Red Lotus"
+                ]
+            }
+        },
+        {
+            "name": "Sea Wolf",
+            "description": "Seafaring raiders who prowl the isles for plunder in dragon-headed longboats. When the warhorn sounds, they become fierce berserkers and shield maidens who hope to please their gods with a brave death.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail",
+                "Shields"
+            ],
+            "weapons": [
+                "Dagger",
+                "Greataxe",
+                "Handaxe",
+                "Longbow",
+                "Longsword",
+                "Spear"
+            ],
+            "class_features": [
+                {
+                    "name": "Seafarer",
+                    "description": "Advantage on checks related to navigating and crewing boats."
+                },
+                {
+                    "name": "Old Gods",
+                    "description": "Choose one after each rest: Odin (regain 1d4 HP per kill), Freya (gain luck token + add 1d6 when using luck tokens), Loki (advantage on lie/sneak/hide checks)."
+                },
+                {
+                    "name": "Shield Wall",
+                    "description": "If you wield a shield, use your action to take a defensive stance. Your AC becomes 20."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "1/day, go berserk: immune to damage for 3 rounds"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Your attacks deal +1 damage"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength or Constitution stat, or +1 to attacks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Duality; choose two different Old Gods effects each day"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Freefolk",
+                    "Shieldman/maiden",
+                    "Thane",
+                    "Jarl",
+                    "King/Queen"
+                ],
+                "chaotic": [
+                    "Rabble",
+                    "Raider",
+                    "Reaver",
+                    "Conqueror",
+                    "Usurper"
+                ],
+                "neutral": [
+                    "Wanderer",
+                    "Explorer",
+                    "Adventurer",
+                    "Renowned",
+                    "Legendary"
+                ]
+            }
+        },
+        {
+            "name": "Seer",
+            "description": "Baleful diviners who reek of smoke and blood. They untangle the whispers of the gods by reading the runes, the bones, and the stars. Their knowledge of fate allows them to bend it.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Dagger",
+                "Stave",
+                "Spear"
+            ],
+            "spellcasting_stat": "Wisdom",
+            "class_features": [
+                {
+                    "name": "Destined",
+                    "description": "Whenever you use a luck token, add 1d6 to the roll."
+                },
+                {
+                    "name": "Omen",
+                    "description": "3/day, make a DC 9 WIS check. On success, gain a luck token (max one at a time)."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "Cast seer spells using Wisdom. DC = 10 + spell tier. Failed check = can't cast that spell until rest. Natural 1 = must complete Seer Penance."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Learn an additional seer spell from any tier you can cast"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Gain an additional use of your Omen talent each day"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to WIS or CHA stat, or +1 to spellcasting checks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Increase the die category of your Destined talent by one"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 1
+                },
+                "level_2": {
+                    "tier_1": 2
+                },
+                "level_3": {
+                    "tier_1": 2,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 2,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 2,
+                    "tier_2": 2,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            },
+            "seer_penance": [
+                {
+                    "tier": 1,
+                    "sacrifice": "Temporarily give up 1d4 HP (stay at 1 HP minimum); returns in a week"
+                },
+                {
+                    "tier": 2,
+                    "sacrifice": "Temporarily lower WIS stat by 2 points; returns in two weeks"
+                },
+                {
+                    "tier": 3,
+                    "sacrifice": "Sacrifice 1 point of Charisma; it never returns"
+                },
+                {
+                    "tier": 4,
+                    "sacrifice": "Ritualistically sink a burning longboat into the sea"
+                },
+                {
+                    "tier": 5,
+                    "sacrifice": "Ritualistically sacrifice 9 humanoid lives"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Guide",
+                    "Chanter",
+                    "Rune Reader",
+                    "Wise One",
+                    "Seer of Odin"
+                ],
+                "chaotic": [
+                    "Hedge Witch",
+                    "Whisperer",
+                    "Bone Reader",
+                    "Dreaded One",
+                    "Seer of Loki"
+                ],
+                "neutral": [
+                    "Fortune Teller",
+                    "Singer",
+                    "Star Reader",
+                    "Blessed One",
+                    "Seer of Freya"
+                ]
+            }
+        },
+        {
+            "name": "Knight of St. Ydris",
+            "description": "Cursed knights who walk the path of St. Ydris the Unholy, the Possessed. They embrace the darkness in order to fight it, cleansing evil with a flurry of steel and forbidden sorcery.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "All armor",
+                "Shields"
+            ],
+            "weapons": [
+                "All melee weapons",
+                "Crossbow"
+            ],
+            "languages": {
+                "fixed": [
+                    "Diabolic"
+                ]
+            },
+            "spellcasting_stat": "Charisma",
+            "class_features": [
+                {
+                    "name": "Demonic Possession",
+                    "description": "3/day, gain +1 bonus to damage rolls for 3 rounds. Add half your level to the damage bonus (round down)."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "Cast witch spells using Charisma. DC = 10 + spell tier. Failed check = can't cast until rest. Natural 1 = roll on Diabolical Mishap table."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Your Demonic Possession bonus increases by 1 point"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attacks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength, Dexterity, or Constitution stat"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "+2 to Charisma stat or +1 to witch spellcasting checks"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 1
+                },
+                "level_2": {
+                    "tier_1": 1
+                },
+                "level_3": {
+                    "tier_1": 1
+                },
+                "level_4": {
+                    "tier_1": 2
+                },
+                "level_5": {
+                    "tier_1": 3
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2
+                }
+            },
+            "titles": {
+                "lawful": [
+                    "Arbiter",
+                    "Enforcer",
+                    "Knight Marshal",
+                    "Judge",
+                    "Justiciar"
+                ],
+                "chaotic": [
+                    "Traitor",
+                    "Fallen",
+                    "Oathbreaker",
+                    "Blackguard",
+                    "Demonlord"
+                ],
+                "neutral": [
+                    "Brother/Sister",
+                    "Exorcist",
+                    "Reverend Knight",
+                    "Inquisitor",
+                    "Grand Inquisitor"
+                ]
+            }
+        },
+        {
+            "name": "Warlock",
+            "description": "Howling warriors with sharpened teeth, wild-eyed doomspeakers preaching of The Dissolution, and cloaked lore-hunters bearing the hidden Mark of Shune.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Chainmail",
+                "Shields"
+            ],
+            "weapons": [
+                "Club",
+                "Crossbow",
+                "Dagger",
+                "Mace",
+                "Longsword"
+            ],
+            "languages": {
+                "fixed": [
+                    "Choice of Celestial, Diabolic, Draconic, Primordial, or Sylvan"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Patron",
+                    "description": "Choose a patron to serve. Your patron is the source of your supernatural gifts. It can grant or withhold gifts at any time."
+                },
+                {
+                    "name": "Patron Boon",
+                    "description": "At 1st level, gain a random Patron Boon from your patron. You may roll on your Patron Boon table instead of the Warlock Talents table when you gain a talent.",
+                    "patron_boons": {
+                        "Almazzat": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, gain advantage on melee attacks for 3 rounds"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "Learn to wield 1 melee weapon or get +1 to melee attacks"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Strength or Constitution stat or +1 to melee damage"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "Gain advantage on initiative rolls (reroll if duplicate)"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ],
+                        "Kytheros": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, force the GM to reroll a single roll"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "Gain +1 to your AC through supernatural foresight"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Strength, Dexterity, or Wisdom stat"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "3/day, add your WIS bonus to any roll (reroll if duplicate)"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ],
+                        "Shune the Vile": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, read the mind of a creature you touch for 3 rounds"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "Learn a wizard spell, tier = half your level. Cast it with INT"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Dexterity or Intelligence stat"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "+1 XP whenever you learn a valuable or significant secret"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ],
+                        "Mugdulblub": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, turn into a crawling puddle of slime for 3 rounds"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "Maximize 2 hit point die rolls (prior or future)"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Dexterity or Constitution stat"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "Become immune to 1: acid, cold, poison (reroll if no options)"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ],
+                        "Titania": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, hypnotize a LV 5 or less creature for 3 rounds"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "Learn to wield a longbow or gain +1 to ranged attacks"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Dexterity or Charisma stat"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "Hostile spells that target you are always hard to cast"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ],
+                        "The Willowman": [
+                            {
+                                "roll": "2",
+                                "effect": "1/day, teleport to a far location you see as your move"
+                            },
+                            {
+                                "roll": "3-7",
+                                "effect": "+1 to melee or ranged attacks"
+                            },
+                            {
+                                "roll": "8-9",
+                                "effect": "+2 to Strength or Dexterity stat"
+                            },
+                            {
+                                "roll": "10-11",
+                                "effect": "1/day, force a close being to check morale, even if immune"
+                            },
+                            {
+                                "roll": "12",
+                                "effect": "Choose one option or 2 points to distribute to stats"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Roll a Patron Boon from any patron; an unexplained gift"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Add +1 point to two stats (they must be different)"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+1 to melee or ranged attacks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Roll two Patron Boons and choose one to keep"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "titles": {
+                "lawful": [
+                    "Favored",
+                    "Herald",
+                    "Eminent",
+                    "Exalted",
+                    "Incarnation"
+                ],
+                "chaotic": [
+                    "Marked",
+                    "Zealot",
+                    "Occultist",
+                    "Champion",
+                    "Harbinger"
+                ],
+                "neutral": [
+                    "Chosen",
+                    "Channeler",
+                    "Prophesied",
+                    "Transcendent",
+                    "Avatar"
+                ]
+            }
+        },
+        {
+            "name": "Witch",
+            "description": "Cackling crones stooped over cauldrons, chanting shamans smeared in blood and clay, and outcast maidens with milky eyes that see portents and secrets.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Dagger",
+                "Staff"
+            ],
+            "languages": {
+                "fixed": [
+                    "Diabolic",
+                    "Primordial",
+                    "Sylvan"
+                ]
+            },
+            "spellcasting_stat": "Charisma",
+            "class_features": [
+                {
+                    "name": "Familiar",
+                    "description": "You have a small animal (raven, rat, frog, etc.) that serves you loyally and can speak Common. It can be the source of spells you cast. If it dies, restore it by permanently sacrificing 1d4 hit points."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "Cast witch spells using Charisma. Know three tier 1 spells at level 1. DC = 10 + spell tier. Failed check = can't cast until rest. Natural 1 = roll on Diabolical Mishap table."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "1/day, teleport to your familiar's location as a move"
+                },
+                {
+                    "roll": "3-7",
+                    "effect": "+2 to Charisma stat or +1 to witch spellcasting checks"
+                },
+                {
+                    "roll": "8-9",
+                    "effect": "Gain advantage on casting one spell you know"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Learn an additional witch spell of any tier you can cast"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 3
+                },
+                "level_2": {
+                    "tier_1": 4
+                },
+                "level_3": {
+                    "tier_1": 4,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 4,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 4,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 4,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            },
+            "titles": {
+                "lawful": [
+                    "Fortune Teller",
+                    "Far Seer",
+                    "Prophet",
+                    "Wise One",
+                    "Baba"
+                ],
+                "chaotic": [
+                    "Whisperer",
+                    "Hexer",
+                    "Hag/Elder",
+                    "Crone/Uncle",
+                    "Baba"
+                ],
+                "neutral": [
+                    "Shaman",
+                    "Conjurer",
+                    "Soothsayer",
+                    "Conduit",
+                    "Baba"
+                ]
+            }
+        },
+        {
+            "name": "Beastmaster",
+            "description": "Limbs and mouths contort and crack as bones and jaws rearrange themselves. A shapeshifting warrior who bonds with animals and transforms into beasts.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "None"
+            ],
+            "weapons": [
+                "All missile weapons"
+            ],
+            "languages": {
+                "fixed": [
+                    "Language of chosen animal species"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Beast Attack",
+                    "description": "Choose one animal type to use for all melee attacks (see Class Options). If your talents allow for multiple animals, you may choose which animal to use with every individual attack."
+                },
+                {
+                    "name": "Beast Hide",
+                    "description": "Your skin is covered with a protective hide. If your CON modifier is positive, also add it to your AC."
+                },
+                {
+                    "name": "Beast Shape",
+                    "description": "Once per day, you and your possessions may transform into the natural form of your chosen beast for 3 rounds, taking on the animal's statistics, attacks, and abilities. You still need light to see. If you take damage while in this form, do not transfer that damage to your own HP when you return to your humanoid form. If you reach 0 HP in your animal form, you transform back at 0 HP, starting your death timer as normal."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "You may use Beast Shape 1 additional time per day"
+                },
+                {
+                    "roll": "3-5",
+                    "effect": "Increase die category to chosen Beast Attack damage"
+                },
+                {
+                    "roll": "6-9",
+                    "effect": "+2 to Strength or Constitution stat or +1 to unarmored AC"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Make an animal magic item (see p 135, 136, 144 of Un. Sel.)"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Select and add a new beast attack to your arsenal"
+                }
+            ]
+        },
+        {
+            "name": "Fiend",
+            "description": "Disciplined inferno keepers, molten architects, or diabolical pyromancers who harness the energy of arcane flame from the molten heart of the earth, the nightmarish abyss, or the searing forges of fallen stars.",
+            "hit_points": "1d8 per level",
+            "armor": [
+                "All armor",
+                "Shields"
+            ],
+            "weapons": [
+                "All weapons"
+            ],
+            "languages": {
+                "fixed": [
+                    "Diabolic"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Wicked Tongue",
+                    "description": "Your oratory prowess deceives others, granting you advantage on any negotiation, intimidation, persuasion, or misdirection checks."
+                },
+                {
+                    "name": "Firebond Weapon",
+                    "description": "Pulling from the eternal flames of the abyss, you can ignite your melee or ranged weapon as part of making an attack. It deals an additional d4 of fire damage on hit. The weapon's flame is not enough to pierce the darkness."
+                },
+                {
+                    "name": "Pyromancy",
+                    "description": "You wield the relentless energy of the eternal flame in powerful and unique ways. Only one pyromancy talent can be active at a time. Upon gaining level 2, roll one talent from the Pyromancy table, with additional rolls at every even level. You are immune to your own pyromancy."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "1/day, know the desires or fears of a creature in near range"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "+1 to melee or ranged attacks"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to Strength, Dexterity or Constitution stat"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Roll an additional talent on the Pyromancy Talents table"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose one option or +2 points to distribute to stats"
+                }
+            ]
+        },
+        {
+            "name": "Grave Warden",
+            "description": "Reverent undertakers, eager bone-setters, or cold-hearted executioners who wield the power of the undead to do their bidding.",
+            "hit_points": "1d4 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Dagger",
+                "Scythe"
+            ],
+            "languages": {
+                "fixed": [
+                    "One rare language (player's choice)"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Necrotic Reap",
+                    "description": "You can cast touch spells through a scythe. Add +1 spellcasting bonus to touch spells when doing so."
+                },
+                {
+                    "name": "Claim Undead",
+                    "description": "1/day you can seize control of any number of undead. Their total LV cannot exceed your own. Undead make a DC 12 CHA check to resist."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "You can cast grave warden spells you know. You may choose three tier 1 spells of your choice from the grave warden spell list. Add your constitution modifier when casting grave warden spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a natural 1 on a spellcasting check, you must also roll on the corresponding Necrotic Mishap table for the spell's tier."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Claim Undead gains one DC step for undead resistance (max DC 18)"
+                },
+                {
+                    "roll": "3-7",
+                    "effect": "+2 to constitution stat or +1 to grave warden spellcasting checks"
+                },
+                {
+                    "roll": "8-9",
+                    "effect": "Gain advantage on casting one spell you know"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Increase the Necrotic Reap bonus by an additional +2"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 3
+                },
+                "level_2": {
+                    "tier_1": 4
+                },
+                "level_3": {
+                    "tier_1": 4,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 4,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 4,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 4,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 4,
+                    "tier_2": 4,
+                    "tier_3": 4,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            }
+        },
+        {
+            "name": "Ovate",
+            "description": "Custodians of nature's balance, wielders of flora's might, or omen-reading diviners who guide the primal forces to shape our destiny.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor",
+                "Wooden shields"
+            ],
+            "weapons": [
+                "Bolas",
+                "Club",
+                "Staff",
+                "Sling",
+                "Whip"
+            ],
+            "languages": {
+                "fixed": [
+                    "Two animal species of player's choice"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Animal Companion",
+                    "description": "To start, you verbally control one 0-level non-insect animal companion such as a fox, owl, or iguana."
+                },
+                {
+                    "name": "Calm Animals",
+                    "description": "1/day, your soothing aura pacifies natural animals within near. Their total LV cannot exceed 2X your own. Giant animals attempt a DC 12 WIS check to resist. A calmed animal will regard you as a friend, but not a companion."
+                },
+                {
+                    "name": "Train Animal",
+                    "description": "You can train a calm or captive animal to become a new Animal Companion. You can only have one animal companion at a time, and its LV cannot exceed yours. For every 2 LV of the animal, training takes 1 day. You must know its language to understand it."
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "You can cast ovate spells you know. You may choose two tier 1 spells from the ovate spell list. Add your wisdom modifier when casting ovate spells. The DC is 10 + the spell's tier. If you fail a spellcasting check, you can't cast that spell again until you complete a rest. If you roll a 1, you can't cast that spell again until you attend a ritualistic purging or ceremony."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "The number of animal companions you can have increases by one"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Gain advantage on casting one spell you know"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to wisdom or +1 to ovate spellcasting checks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "You can speak to an additional species of animal"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 2
+                },
+                "level_2": {
+                    "tier_1": 3
+                },
+                "level_3": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            }
+        },
+        {
+            "name": "Plague Doctor",
+            "description": "Shadow-veiled alchemical apothecaries, compassionate herbalist healers, or beak-masked disease cultists who can perform surgeries and harness the power of science.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "Leather armor"
+            ],
+            "weapons": [
+                "Censer flail",
+                "Darts",
+                "Needle whip",
+                "Stiletto",
+                "Rapier"
+            ],
+            "languages": {
+                "additional_common": 2
+            },
+            "class_features": [
+                {
+                    "name": "Mask Infusion",
+                    "description": "Inhale one pre-made herbal elixir from your mask for immediate infusion. Lasts all day, expires on use."
+                },
+                {
+                    "name": "Mesmerize Insect",
+                    "description": "1/day, you bewitch an insect to automatically deliver an injure elixir to a target within near range via sting or bite."
+                },
+                {
+                    "name": "Elixirs",
+                    "description": "You can craft elixirs by making an INT check. Apply the modifier for the chosen delivery method (see Delivery Method table) to this check. This does not cost an action. If you fail, you can't make that elixir again until you rest. Except for mask infusions, elixirs expire in 5 rounds. Critical success increases DC or die category by one or doubles duration. Critical fails self-inflict harmful elixirs.",
+                    "elixirs": [
+                        {
+                            "dc": 10,
+                            "name": "Stenchwort",
+                            "effect": "Immune to smells and cures paralysis."
+                        },
+                        {
+                            "dc": 11,
+                            "name": "Panacea",
+                            "effect": "Ends one poison, disease, or plague."
+                        },
+                        {
+                            "dc": 11,
+                            "name": "Inoculant",
+                            "effect": "Receive ADV on a check vs. a specific hazard type you name. Examples: Fire, acid, necrosis."
+                        },
+                        {
+                            "dc": 12,
+                            "name": "Tonic",
+                            "effect": "Heals 1 HP. Stabilizes and revives."
+                        },
+                        {
+                            "dc": 12,
+                            "name": "Toxin",
+                            "effect": "DC 12 CON check or paralyzed for 1d4 rounds."
+                        },
+                        {
+                            "dc": 13,
+                            "name": "Acid",
+                            "effect": "Target takes d6 damage equal to half your level rounded down."
+                        },
+                        {
+                            "dc": 13,
+                            "name": "Plague",
+                            "effect": "DC 12 CON check or 1d6 permanent damage. Check daily to fully recover or take another 1d6."
+                        },
+                        {
+                            "dc": 14,
+                            "name": "Pheromone",
+                            "effect": "DC 12 WIS check or living creatures are calmed and consider you a reluctant friend for 5 rounds or until they are attacked by you or an ally."
+                        },
+                        {
+                            "dc": 14,
+                            "name": "Remedy",
+                            "effect": "Heals d6 equal to one plus half your level rounded down."
+                        }
+                    ],
+                    "delivery_methods": [
+                        {
+                            "bonus": "+3",
+                            "type": "Mask Infusion",
+                            "description": "Lasts up to 1 day or until activated."
+                        },
+                        {
+                            "bonus": "+1",
+                            "type": "Injest",
+                            "description": "Quaffed like a potion or otherwise eaten."
+                        },
+                        {
+                            "bonus": "0",
+                            "type": "Injure",
+                            "description": "Skin must be punctured after elixir is applied to a weapon like a stiletto, rapier, or dart."
+                        },
+                        {
+                            "bonus": "-1",
+                            "type": "Touch",
+                            "description": "Skin must simply be touched by the elixir."
+                        },
+                        {
+                            "bonus": "-3",
+                            "type": "Inhaled",
+                            "description": "Gas covers near radius."
+                        }
+                    ]
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Mesmerize one additional insect per day (reroll duplicates)"
+                },
+                {
+                    "roll": "3-6",
+                    "effect": "Add an extra die rolled on an elixir you choose"
+                },
+                {
+                    "roll": "7-9",
+                    "effect": "+2 to intelligence or dexterity stat, or +1 to elixir checks"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "You gain ADV on elixir checks for an elixir you choose"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ]
+        },
+        {
+            "name": "Shaman",
+            "description": "Indispensable medicine men and oracles who serve as healers, guardians of ancient wisdom, and conduits between the tangible and ethereal realms.",
+            "hit_points": "1d6 per level",
+            "armor": [
+                "None"
+            ],
+            "weapons": [
+                "Club",
+                "Dagger",
+                "Hunting knife",
+                "Javelin",
+                "Longbow",
+                "Shortbow",
+                "Spear",
+                "Staff"
+            ],
+            "languages": {
+                "fixed": [
+                    "Primordial"
+                ]
+            },
+            "class_features": [
+                {
+                    "name": "Healing Circle",
+                    "description": "1/day you can perform a 10-minute drumming and chanting meditation. All participants are healed for 1d4 HP if the performance is not interrupted. A spellcaster or herbalist can recover a lost spell or elixir instead. Random encounter chance is increased."
+                },
+                {
+                    "name": "Chanting",
+                    "description": "You can perform shamanic chants you know using your drum and voice. You know two tier 1 chants of your choice from the shamanic chants list. Add your Wisdom modifier to perform shamanic chants. The DC is 9 + the chant's tier. If you fail a chanting check, you can't perform that chant again until you complete a rest. All chants are like focus spells; while maintaining a chant you can move but take no action."
+                }
+            ],
+            "talents_table": [
+                {
+                    "roll": "2",
+                    "effect": "Gain an additional use of your Healing Circle talent each day"
+                },
+                {
+                    "roll": "3-7",
+                    "effect": "+2 to wisdom stat or +1 to shamanic chanting checks"
+                },
+                {
+                    "roll": "8-9",
+                    "effect": "Gain advantage on performing one chant you know"
+                },
+                {
+                    "roll": "10-11",
+                    "effect": "Learn one additional shamanic chant of any tier you know"
+                },
+                {
+                    "roll": "12",
+                    "effect": "Choose a talent or +2 points to distribute to stats"
+                }
+            ],
+            "spells_known_progression": {
+                "level_1": {
+                    "tier_1": 2
+                },
+                "level_2": {
+                    "tier_1": 3
+                },
+                "level_3": {
+                    "tier_1": 3,
+                    "tier_2": 1
+                },
+                "level_4": {
+                    "tier_1": 3,
+                    "tier_2": 2
+                },
+                "level_5": {
+                    "tier_1": 3,
+                    "tier_2": 2,
+                    "tier_3": 1
+                },
+                "level_6": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2
+                },
+                "level_7": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 1
+                },
+                "level_8": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 2,
+                    "tier_4": 2
+                },
+                "level_9": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 1
+                },
+                "level_10": {
+                    "tier_1": 3,
+                    "tier_2": 3,
+                    "tier_3": 3,
+                    "tier_4": 2,
+                    "tier_5": 2
+                }
+            }
         }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Mesmerize one additional insect per day (reroll duplicates)"
-        },
-        {
-          "roll": "3-6",
-          "effect": "Add an extra die rolled on an elixir you choose"
-        },
-        {
-          "roll": "7-9",
-          "effect": "+2 to intelligence or dexterity stat, or +1 to elixir checks"
-        },
-        {
-          "roll": "10-11",
-          "effect": "You gain ADV on elixir checks for an elixir you choose"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ]
-    },
-    {
-      "name": "Shaman",
-      "description": "Indispensable medicine men and oracles who serve as healers, guardians of ancient wisdom, and conduits between the tangible and ethereal realms.",
-      "hit_points": "1d6 per level",
-      "armor": [
-        "None"
-      ],
-      "weapons": [
-        "Club",
-        "Dagger",
-        "Hunting knife",
-        "Javelin",
-        "Longbow",
-        "Shortbow",
-        "Spear",
-        "Staff"
-      ],
-      "languages": {
-        "fixed": [
-          "Primordial"
-        ]
-      },
-      "class_features": [
-        {
-          "name": "Healing Circle",
-          "description": "1/day you can perform a 10-minute drumming and chanting meditation. All participants are healed for 1d4 HP if the performance is not interrupted. A spellcaster or herbalist can recover a lost spell or elixir instead. Random encounter chance is increased."
-        },
-        {
-          "name": "Chanting",
-          "description": "You can perform shamanic chants you know using your drum and voice. You know two tier 1 chants of your choice from the shamanic chants list. Add your Wisdom modifier to perform shamanic chants. The DC is 9 + the chant's tier. If you fail a chanting check, you can't perform that chant again until you complete a rest. All chants are like focus spells; while maintaining a chant you can move but take no action."
-        }
-      ],
-      "talents_table": [
-        {
-          "roll": "2",
-          "effect": "Gain an additional use of your Healing Circle talent each day"
-        },
-        {
-          "roll": "3-7",
-          "effect": "+2 to wisdom stat or +1 to shamanic chanting checks"
-        },
-        {
-          "roll": "8-9",
-          "effect": "Gain advantage on performing one chant you know"
-        },
-        {
-          "roll": "10-11",
-          "effect": "Learn one additional shamanic chant of any tier you know"
-        },
-        {
-          "roll": "12",
-          "effect": "Choose a talent or +2 points to distribute to stats"
-        }
-      ],
-      "spells_known_progression": {
-        "level_1": {
-          "tier_1": 2
-        },
-        "level_2": {
-          "tier_1": 3
-        },
-        "level_3": {
-          "tier_1": 3,
-          "tier_2": 1
-        },
-        "level_4": {
-          "tier_1": 3,
-          "tier_2": 2
-        },
-        "level_5": {
-          "tier_1": 3,
-          "tier_2": 2,
-          "tier_3": 1
-        },
-        "level_6": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2
-        },
-        "level_7": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 1
-        },
-        "level_8": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 2,
-          "tier_4": 2
-        },
-        "level_9": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 1
-        },
-        "level_10": {
-          "tier_1": 3,
-          "tier_2": 3,
-          "tier_3": 3,
-          "tier_4": 2,
-          "tier_5": 2
-        }
-      }
-    }
-  ]
+    ]
 }

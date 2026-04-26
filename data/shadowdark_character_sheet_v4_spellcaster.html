@@ -1,0 +1,275 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ruthie&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+  :root {
+    --color-background-primary: #ffffff;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #666666;
+    --color-text-tertiary: #999999;
+    --color-border-primary: #333333;
+    --color-border-secondary: #cccccc;
+    --color-border-tertiary: #dddddd;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .sheet {
+    font-family: 'IM Fell English', Georgia, serif;
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-border-primary);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .sheet-title {
+    font-family: 'Ruthie', cursive;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-border-primary);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+
+  .field-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .top-label { font-family: 'IM Fell English', Georgia, serif; }
+
+  .field-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border-secondary);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 14px;
+    color: var(--color-text-primary);
+    padding: 2px 4px;
+    outline: none;
+  }
+  .field-input:focus { border-bottom-color: var(--color-border-primary); }
+
+  .top-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .top-row > div { border: 1px solid var(--color-border-secondary); border-radius: 4px; padding: 4px; }
+  .info-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .info-row > div { border: 1px solid var(--color-border-secondary); border-radius: 4px; padding: 4px; }
+
+  .divider { border: none; border-top: 1px solid var(--color-border-tertiary); margin: 10px 0; }
+
+  .main-grid { display: grid; grid-template-columns: 146px 1fr 190px; gap: 16px; align-items: stretch; }
+
+  .stats-block { display: flex; flex-direction: column; gap: 8px; }
+  .stat-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .stat-box {
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 4px 4px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .stat-box .field-label { font-size: 8px; margin-bottom: 4px; }
+  .stat-value {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    background: transparent;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-text-primary);
+    outline: none;
+  }
+  .stat-value:focus { border-bottom-color: var(--color-border-primary); }
+
+  .mid-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .talents-box,
+  .spells-box {
+    flex: 1;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .talents-box .field-label,
+  .spells-box .field-label { margin-bottom: 6px; flex-shrink: 0; }
+  .talents-textarea,
+  .spells-textarea {
+    flex: 1;
+    width: 100%;
+    background: transparent; border: none; resize: none;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 13px; color: var(--color-text-primary); outline: none;
+    line-height: 1.7;
+    min-height: 0;
+  }
+
+  .right-col { display: flex; flex-direction: column; gap: 10px; }
+
+  .triple-box { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .mini-stat-box {
+    border: 1px solid var(--color-border-secondary); border-radius: 4px;
+    text-align: center; padding: 6px 4px 4px;
+  }
+  .big-value {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 22px; text-align: center;
+    color: var(--color-text-primary); outline: none;
+  }
+  .big-value:focus { border-bottom-color: var(--color-border-primary); }
+
+  .xp-row { display: flex; align-items: center; gap: 4px; font-size: 13px; }
+  .xp-input {
+    width: 40px; background: transparent; border: none;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    font-family: 'EB Garamond', Georgia, serif; font-size: 13px;
+    text-align: center; color: var(--color-text-primary); outline: none;
+  }
+  .xp-sep { color: var(--color-text-secondary); }
+
+  .attacks-box { border: 1px solid var(--color-border-secondary); border-radius: 4px; padding: 8px; }
+  .attacks-box .field-label { margin-bottom: 6px; }
+  .attack-line { display: grid; grid-template-columns: 14px 1fr; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .attack-num { font-size: 10px; color: var(--color-text-tertiary); font-family: 'Cinzel', serif; }
+  .attack-input {
+    background: transparent; border: none; border-bottom: 1px solid var(--color-border-tertiary);
+    font-family: 'EB Garamond', Georgia, serif; font-size: 12px;
+    color: var(--color-text-primary); outline: none; width: 100%; padding: 1px 3px;
+  }
+  .attack-input:focus { border-bottom-color: var(--color-border-primary); }
+
+  .coins-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .coin-box { border: 1px solid var(--color-border-secondary); border-radius: 4px; padding: 6px; text-align: center; }
+  .coin-input {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    font-family: 'EB Garamond', Georgia, serif; font-size: 16px;
+    text-align: center; color: var(--color-text-primary); outline: none;
+  }
+  .coin-input:focus { border-bottom-color: var(--color-border-primary); }
+
+  .gear-box {
+    flex: 1;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .gear-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; flex-shrink: 0; }
+  .gear-free { font-size: 11px; color: var(--color-text-secondary); font-style: italic; }
+  .gear-textarea {
+    flex: 1;
+    min-height: 200px;
+    width: 100%;
+    background: transparent; border: none; resize: none;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 13px; color: var(--color-text-primary); outline: none;
+    line-height: 1.8;
+  }
+</style>
+
+<div class="sheet">
+  <h2 class="sheet-title">ShadowDark</h2>
+
+  <div class="top-row">
+    <div><label class="field-label top-label">Name</label><input class="field-input" type="text" value="__NAME__" /></div>
+    <div><label class="field-label top-label">Ancestry</label><input class="field-input" type="text" value="__ANCESTRY__" /></div>
+    <div><label class="field-label top-label">Class</label><input class="field-input" type="text" value="__CLASS__" /></div>
+    <div><label class="field-label">Title</label><input class="field-input" type="text" value="__TITLE__" /></div>
+  </div>
+
+  <div class="info-row">
+    <div><label class="field-label top-label">Alignment</label><input class="field-input" type="text" value="__ALIGNMENT__" /></div>
+    <div><label class="field-label top-label">Background</label><input class="field-input" type="text" value="__BACKGROUND__" /></div>
+    <div><label class="field-label top-label">Deity</label><input class="field-input" type="text" value="__DEITY__" /></div>
+    <div>
+      <label class="field-label">XP / Level</label>
+      <div class="xp-row">
+        <input class="xp-input" type="text" value="__XP__" />
+        <span class="xp-sep">/</span>
+        <input class="xp-input" type="text" value="__LEVEL__" />
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="main-grid">
+    <div class="stats-block">
+      <div class="stat-pair">
+        <div class="stat-box"><span class="field-label">STR</span><input class="stat-value" type="text" value="__STR__" /></div>
+        <div class="stat-box"><span class="field-label">INT</span><input class="stat-value" type="text" value="__INT__" /></div>
+      </div>
+      <div class="stat-pair">
+        <div class="stat-box"><span class="field-label">DEX</span><input class="stat-value" type="text" value="__DEX__" /></div>
+        <div class="stat-box"><span class="field-label">WIS</span><input class="stat-value" type="text" value="__WIS__" /></div>
+      </div>
+      <div class="stat-pair">
+        <div class="stat-box"><span class="field-label">CON</span><input class="stat-value" type="text" value="__CON__" /></div>
+        <div class="stat-box"><span class="field-label">CHA</span><input class="stat-value" type="text" value="__CHA__" /></div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="triple-box">
+        <div class="mini-stat-box"><span class="field-label">HP</span><input class="big-value" type="text" value="__HP__" /></div>
+        <div class="mini-stat-box"><span class="field-label">AC</span><input class="big-value" type="text" value="__AC__" /></div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="coins-row">
+        <div class="coin-box"><span class="field-label">GP</span><input class="coin-input" type="text" value="__GP__" /></div>
+        <div class="coin-box"><span class="field-label">SP</span><input class="coin-input" type="text" value="__SP__" /></div>
+        <div class="coin-box"><span class="field-label">CP</span><input class="coin-input" type="text" value="__CP__" /></div>
+      </div>
+    </div>
+
+    <div class="mid-col">
+      <div class="talents-box">
+        <span class="field-label">Talents / Features</span>
+        <textarea class="talents-textarea" placeholder="List talents and features here...">__TALENTS__</textarea>
+      </div>
+      <div class="spells-box">
+        <span class="field-label">Spells</span>
+        <textarea class="spells-textarea" placeholder="List spells here...">__SPELLS__</textarea>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="attacks-box">
+        <span class="field-label">Attacks</span>
+        <div class="attack-line"><span class="attack-num">1.</span><input class="attack-input" type="text" /></div>
+        <div class="attack-line"><span class="attack-num">2.</span><input class="attack-input" type="text" /></div>
+        <div class="attack-line"><span class="attack-num">3.</span><input class="attack-input" type="text" /></div>
+      </div>
+
+      <div class="gear-box">
+        <div class="gear-header">
+          <span class="field-label" style="margin:0">Gear</span>
+          <span class="gear-free">Free to carry</span>
+        </div>
+        <textarea class="gear-textarea" placeholder="List your gear here...">__GEAR__</textarea>
+      </div>
+    </div>
+  </div>
+</div>

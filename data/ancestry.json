@@ -1,247 +1,172 @@
 {
-  "ancestries": [
-    {
-      "name": "Dwarf",
-      "description": "Brave, stalwart folk as sturdy as the stone kingdoms they carve inside mountains.",
-      "languages": ["Common", "Dwarvish"],
-      "trait": {
-        "name": "Stout",
-        "description": "Start with +2 HP. Roll hit points per level with advantage."
-      }
-    },
-    {
-      "name": "Kobold",
-      "description": "Tiny, humanoid dog-lizards with a penchant for tinkering, trap building, and a hint of magic.",
-      "languages": ["Common", "Draconic"],
-      "trait": {
-        "name": "Knack",
-        "description": "You get +1 to spellcasting checks or may begin each session with a luck token."
-      }
-    },
-    {
-      "name": "Elf",
-      "description": "Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.",
-      "languages": ["Common", "Elvish", "Sylvan"],
-      "trait": {
-        "name": "Farsight",
-        "description": "You get a +1 bonus to attack rolls with ranged weapons or a +1 bonus to spellcasting checks."
-      }
-    },
-    {
-      "name": "Goblin",
-      "description": "Green, clever beings who thrive in dark, cramped places. As fierce as they are tiny.",
-      "languages": ["Common", "Goblin"],
-      "trait": {
-        "name": "Keen Senses",
-        "description": "You can't be surprised."
-      }
-    },
-    {
-      "name": "Halfling",
-      "description": "Small, cheerful country folk with mischievous streaks. They enjoy life's simple pleasures.",
-      "languages": ["Common"],
-      "trait": {
-        "name": "Stealthy",
-        "description": "Once per day, you can become invisible for 3 rounds."
-      }
-    },
-    {
-      "name": "Half-Orc",
-      "description": "Towering, tusked warriors who are as daring as humans and as relentless as orcs.",
-      "languages": ["Common", "Orcish"],
-      "trait": {
-        "name": "Mighty",
-        "description": "You have a +1 bonus to attack and damage rolls with melee weapons."
-      }
-    },
-    {
-      "name": "Human",
-      "description": "Bold, adaptable, and diverse people who learn quickly and accomplish mighty deeds.",
-      "languages": ["Common", "One additional common language of your choice"],
-      "trait": {
-        "name": "Ambitious",
-        "description": "You gain one additional talent roll at 1st level."
-      }
-    },
-    {
-      "name": "Kahnjauru",
-      "description": "A humanoid with large, powerful legs.",
-      "languages": ["Common", "Thanian"],
-      "trait": {
-        "name": "Jump",
-        "description": "You jump near range. You have advantage on checks related to jumping."
-      }
-    },
-    {
-      "name": "Leprechaun",
-      "description": "A small pointy-eared sprite with a nose for treasure.",
-      "languages": ["Common", "Sylvan"],
-      "trait": {
-        "name": "Treasure Hunter",
-        "description": "You can detect treasure through barriers within double near range."
-      }
-    },
-    {
-      "name": "Living Statue",
-      "description": "A magical humanoid made of bronze, stone, or crystal. You have broken free of your creator's control.",
-      "languages": ["Common", "One extra language"],
-      "trait": {
-        "name": "Magical Construct",
-        "description": "You do not eat, breathe or drink. Hostile spellcasting checks that target you have disadvantage."
-      }
-    },
-    {
-      "name": "Lycan",
-      "description": "A supernatural lycanthrope hybrid werewolf.",
-      "languages": ["Common", "Thanian"],
-      "trait": {
-        "name": "Impervious",
-        "description": "You take half damage from non-magical sources."
-      }
-    },
-    {
-      "name": "Mantian",
-      "description": "A humanoid with insect features and four arms.",
-      "languages": ["Common", "One extra language"],
-      "trait": {
-        "name": "Secondary Arms",
-        "description": "The additional arms cannot be used to hold a shield, wield a weapon, or cast spells."
-      }
-    },
-    {
-      "name": "Shapeshifter",
-      "description": "A human that can transform into an animal.",
-      "languages": ["Common", "Thanian"],
-      "trait": {
-        "name": "Transform",
-        "description": "As an action, select one animal you can transform into for one hour. Your stats and size stay the same. Animal shapes you can change into are: ape, badger, bat, bear, bird, boar, cat, fish, frog, octopus, rat, snake, and wolf."
-      }
-    },
-    {
-      "name": "Tri'Telk",
-      "description": "A supernatural humanoid with a third telekinetic eye.",
-      "languages": ["Common", "Telepathy"],
-      "trait": {
-        "name": "Telekinesis",
-        "description": "You can move an object slowly within far range weighing 1 gear slot or less. You can communicate telepathically with any creature within near range."
-      }
-    },
-    {
-      "name": "Undead",
-      "description": "A humanoid that has risen as the undead, but retains their intelligence.",
-      "languages": ["Common", "Supernaturally to the undead"],
-      "trait": {
-        "name": "Fortitude",
-        "description": "You do not need to eat, drink, breathe or sleep. You still need to do nothing for 8 hours to get the benefits of a rest."
-      }
-    },
-    {
-      "name": "Gnome",
-      "description": "Diminutive, elusive tricksters who delight in playful pranks. As clever as they are tiny.",
-      "languages": ["Common", "Sylvan"],
-      "trait": {
-        "name": "Trickster",
-        "description": "1/day, target one creature to become the object of your nettlesome pranks, you can force a re-roll on one attack or check."
-      }
-    },
-    {
-      "name": "Chelonian",
-      "description": "Contemplative, wise turtle beings who act with caution and carry their homes on their backs.",
-      "languages": ["Common", "Chelonian"],
-      "trait": {
-        "name": "Armored Shell",
-        "description": "You gain +1 to AC"
-      }
-    },
-    {
-      "name": "Dragonborn",
-      "description": "Proud descendants of dragons whose honor holds greater value than their own lives.",
-      "languages": ["Common", "Draconic"],
-      "trait": {
-        "name": "Breath Weapon",
-        "description": "1/day, unleash a breath weapon based on your draconic heritage via ranged attack, dealing 1d8 damage to a near-sized cube in near range."
-      }
-    },
-    {
-      "name": "Forest Elf",
-      "description": "Slender, patient elves who are one with nature and uneasy amidst urban bustle.",
-      "languages": ["Common", "Elvish", "Sylvan"],
-      "trait": {
-        "name": "Forest Footwork",
-        "description": "In a forest, you can move up to near again without skipping an action on your turn."
-      }
-    },
-    {
-      "name": "Half Troll",
-      "description": "Ugly, burly beasts who easily anger and struggle to find their place within humanoid society.",
-      "languages": ["Common", "Giant"],
-      "trait": {
-        "name": "Regenerate",
-        "description": "Regain 1 HP per hour unless damaged by fire or acid."
-      }
-    },
-    {
-      "name": "Shadow Elf",
-      "description": "Lithe, stealthy offspring of drow who have embraced the surface as their home.",
-      "languages": ["Common", "Elvish", "Drow"],
-      "trait": {
-        "name": "Friend of the shadows",
-        "description": "When shrouded in darkness, monsters attack your allies first."
-      }
-    },
-    {
-      "name": "Tiefling",
-      "description": "Devout, self-reliant outcasts who have diabolic ancestry and sport demonic horns.",
-      "languages": ["Common", "Diabolic"],
-      "trait": {
-        "name": "Heatsight",
-        "description": "1/day you can see the heat signatures of living creatures for 3 rounds."
-      }
-    },
-    {
-      "name": "Mycellan",
-      "description": "Peaceful mushroom folk who connect with their natural environment through the mycelial network and telepathy.",
-      "languages": ["Common", "Sylvan"],
-      "trait": {
-        "name": "Telepathic",
-        "description": "Once per day, release rapport spores to gain telepathic communication with all in a near radius. Lasts for 10 rounds."
-      }
-    },
-    {
-      "name": "Risen",
-      "description": "Resurrected heroes, chosen to fulfill their purpose even in undeath.",
-      "languages": ["Common", "Celestial or Diabolic"],
-      "trait": {
-        "name": "Corpse Walking",
-        "description": "At 0 HP you remain active but are still dying. Someone else must stabilize you. You die early if you receive your full HP of damage again."
-      }
-    },
-    {
-      "name": "Slimefolk",
-      "description": "Oddly-shaped humanoids made of congealed slime who have chosen to coexist with solids.",
-      "languages": ["Common", "Primordial"],
-      "trait": {
-        "name": "Slime Form",
-        "description": "You can freely alter your shape to mimic other humanoids. 1/day you can also morph into a puddle of goo for 3 rounds. Puddle speed is halved and equipment does not morph."
-      }
-    },
-    {
-      "name": "Skurrid",
-      "description": "Furry ratfolk, as tall as elves, famed for their role in citywide subterranean vermin networks.",
-      "languages": ["Common", "Skurrid"],
-      "trait": {
-        "name": "Vibrating Whiskers",
-        "description": "If you focus, you sense living beings within near of you, even through doors."
-      }
-    },
-    {
-      "name": "Sylvaren",
-      "description": "Botanical beings with leaves, vines and/or berries growing from their humanoid forms.",
-      "languages": ["Common", "Sylvan"],
-      "trait": {
-        "name": "Plant Medicine",
-        "description": "Take 2 damage to sprout a healing berry on your body. Eating it will heal 1 HP."
-      }
-    }
-  ]
+    "ancestries": [
+        {
+            "name": "Dwarf",
+            "description": "Brave, stalwart folk as sturdy as the stone kingdoms they carve inside mountains.",
+            "languages": [
+                "Common",
+                "Dwarvish"
+            ],
+            "trait": {
+                "name": "Stout",
+                "description": "Start with +2 HP. Roll hit points per level with advantage."
+            }
+        },
+        {
+            "name": "Elf",
+            "description": "Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.",
+            "languages": [
+                "Common",
+                "Elvish",
+                "Sylvan"
+            ],
+            "trait": {
+                "name": "Farsight",
+                "description": "You get a +1 bonus to attack rolls with ranged weapons or a +1 bonus to spellcasting checks."
+            }
+        },
+        {
+            "name": "Goblin",
+            "description": "Green, clever beings who thrive in dark, cramped places. As fierce as they are tiny.",
+            "languages": [
+                "Common",
+                "Goblin"
+            ],
+            "trait": {
+                "name": "Keen Senses",
+                "description": "You can't be surprised."
+            }
+        },
+        {
+            "name": "Halfling",
+            "description": "Small, cheerful country folk with mischievous streaks. They enjoy life's simple pleasures.",
+            "languages": [
+                "Common"
+            ],
+            "trait": {
+                "name": "Stealthy",
+                "description": "Once per day, you can become invisible for 3 rounds."
+            }
+        },
+        {
+            "name": "Half-Orc",
+            "description": "Towering, tusked warriors who are as daring as humans and as relentless as orcs.",
+            "languages": [
+                "Common",
+                "Orcish"
+            ],
+            "trait": {
+                "name": "Mighty",
+                "description": "You have a +1 bonus to attack and damage rolls with melee weapons."
+            }
+        },
+        {
+            "name": "Human",
+            "description": "Bold, adaptable, and diverse people who learn quickly and accomplish mighty deeds.",
+            "languages": [
+                "Common",
+                "One additional common language of your choice"
+            ],
+            "trait": {
+                "name": "Ambitious",
+                "description": "You gain one additional talent roll at 1st level."
+            }
+        },
+        {
+            "name": "Kahnjauru",
+            "description": "A humanoid with large, powerful legs.",
+            "languages": [
+                "Common",
+                "Thanian"
+            ],
+            "trait": {
+                "name": "Jump",
+                "description": "You jump near range. You have advantage on checks related to jumping."
+            }
+        },
+        {
+            "name": "Leprechaun",
+            "description": "A small pointy-eared sprite with a nose for treasure.",
+            "languages": [
+                "Common",
+                "Sylvan"
+            ],
+            "trait": {
+                "name": "Treasure Hunter",
+                "description": "You can detect treasure through barriers within double near range."
+            }
+        },
+        {
+            "name": "Living Statue",
+            "description": "A magical humanoid made of bronze, stone, or crystal. You have broken free of your creator's control.",
+            "languages": [
+                "Common",
+                "One extra language"
+            ],
+            "trait": {
+                "name": "Magical Construct",
+                "description": "You do not eat, breathe or drink. Hostile spellcasting checks that target you have disadvantage."
+            }
+        },
+        {
+            "name": "Lycan",
+            "description": "A supernatural lycanthrope hybrid werewolf.",
+            "languages": [
+                "Common",
+                "Thanian"
+            ],
+            "trait": {
+                "name": "Impervious",
+                "description": "You take half damage from non-magical sources."
+            }
+        },
+        {
+            "name": "Mantian",
+            "description": "A humanoid with insect features and four arms.",
+            "languages": [
+                "Common",
+                "One extra language"
+            ],
+            "trait": {
+                "name": "Secondary Arms",
+                "description": "The additional arms cannot be used to hold a shield, wield a weapon, or cast spells."
+            }
+        },
+        {
+            "name": "Shapeshifter",
+            "description": "A human that can transform into an animal.",
+            "languages": [
+                "Common",
+                "Thanian"
+            ],
+            "trait": {
+                "name": "Transform",
+                "description": "As an action, select one animal you can transform into for one hour. Your stats and size stay the same. Animal shapes you can change into are: ape, badger, bat, bear, bird, boar, cat, fish, frog, octopus, rat, snake, and wolf."
+            }
+        },
+        {
+            "name": "Tri'Telk",
+            "description": "A supernatural humanoid with a third telekinetic eye.",
+            "languages": [
+                "Common",
+                "Telepathy"
+            ],
+            "trait": {
+                "name": "Telekinesis",
+                "description": "You can move an object slowly within far range weighing 1 gear slot or less. You can communicate telepathically with any creature within near range."
+            }
+        },
+        {
+            "name": "Undead",
+            "description": "A humanoid that has risen as the undead, but retains their intelligence.",
+            "languages": [
+                "Common",
+                "Supernaturally to the undead"
+            ],
+            "trait": {
+                "name": "Fortitude",
+                "description": "You do not need to eat, drink, breathe or sleep. You still need to do nothing for 8 hours to get the benefits of a rest."
+            }
+        }
+    ]
 }
