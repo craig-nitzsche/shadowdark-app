@@ -1,4 +1,3 @@
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Ruthie&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
@@ -96,9 +95,11 @@
   .mid-col {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
-  .talents-box {
+  .talents-box,
+  .spells-box {
     flex: 1;
     border: 1px solid var(--color-border-secondary);
     border-radius: 4px;
@@ -106,8 +107,10 @@
     display: flex;
     flex-direction: column;
   }
-  .talents-box .field-label { margin-bottom: 6px; flex-shrink: 0; }
-  .talents-textarea {
+  .talents-box .field-label,
+  .spells-box .field-label { margin-bottom: 6px; flex-shrink: 0; }
+  .talents-textarea,
+  .spells-textarea {
     flex: 1;
     width: 100%;
     background: transparent; border: none; resize: none;
@@ -228,8 +231,8 @@
       <hr class="divider" />
 
       <div class="triple-box">
-        <div class="mini-stat-box"><span class="field-label">HP</span><input class="big-value" type="text" /></div>
-        <div class="mini-stat-box"><span class="field-label">AC</span><input class="big-value" type="text" /></div>
+        <div class="mini-stat-box"><span class="field-label">HP</span><input class="big-value" type="text" value="__HP__" /></div>
+        <div class="mini-stat-box"><span class="field-label">AC</span><input class="big-value" type="text" value="__AC__" /></div>
       </div>
 
       <hr class="divider" />
@@ -243,8 +246,12 @@
 
     <div class="mid-col">
       <div class="talents-box">
-        <span class="field-label">Talents / Features / Spells</span>
-        <textarea class="talents-textarea" placeholder="List talents, features, and spells here...">__TALENTS__</textarea>
+        <span class="field-label">Talents / Features</span>
+        <textarea class="talents-textarea" placeholder="List talents and features here...">__TALENTS__</textarea>
+      </div>
+      <div class="spells-box">
+        <span class="field-label">Spells</span>
+        <textarea class="spells-textarea" placeholder="List spells here...">__SPELLS__</textarea>
       </div>
     </div>
 

@@ -30,6 +30,8 @@ def default_character():
         "name": "",
         "level": 1,
         "hp": 0,
+        "ac": 10,
+        "xp": 0,
         "strength": 10,
         "dexterity": 10,
         "constitution": 10,
@@ -52,6 +54,55 @@ def default_character():
 
 
 def normalize_character_data(data):
+    if not data:
+        return default_character()
+
+    # Check if this is OwlBear Rodeo format
+    if data.get("schemaType") == "sd-char-sheet":
+        # Map OwlBear format to internal format
+        character = default_character()
+        character.update({
+            "name": data.get("name", ""),
+            "ancestry": data.get("ancestry", "-"),
+            "class": data.get("class", "-"),
+            "level": data.get("level", 1),
+            "title": data.get("title", ""),
+            "alignment": data.get("alignment", ""),
+            "background": data.get("background", ""),
+            "deity": data.get("deity", ""),
+            "hp": data.get("hitPoints", 1),
+            "ac": data.get("armorClass", 10),
+            "gold": data.get("gold", 0),
+            "silver": data.get("silver", 0),
+            "copper": data.get("copper", 0),
+            "xp": data.get("xp", 0),
+            "strength": data.get("stats", {}).get("STR", 10),
+            "dexterity": data.get("stats", {}).get("DEX", 10),
+            "constitution": data.get("stats", {}).get("CON", 10),
+            "intelligence": data.get("stats", {}).get("INT", 10),
+            "wisdom": data.get("stats", {}).get("WIS", 10),
+            "charisma": data.get("stats", {}).get("CHA", 10),
+            "gear": data.get("gear", []) + data.get("customGear", []),
+            "languages": data.get("languages", []) + data.get("customLanguages", []),
+            "spells": data.get("spells", []) + data.get("customSpells", []),
+            "talents": data.get("customTalents", []),
+        })
+        
+        # Combine notes, bonuses, and customBonuses into additional_features
+        additional_parts = []
+        if data.get("notes"):
+            additional_parts.append(data["notes"])
+        bonuses = data.get("bonuses", []) + data.get("customBonuses", [])
+        if bonuses:
+            additional_parts.append("Bonuses: " + ", ".join(bonuses))
+        character["additional_features"] = "\n".join(additional_parts)
+        
+        # Custom gear as string
+        character["custom_gear"] = ""
+        
+        data = character  # Now treat as internal format
+
+    # Continue with existing normalization
     character = default_character()
     character.update(data or {})
 
@@ -69,7 +120,7 @@ def normalize_character_data(data):
     except (TypeError, ValueError):
         character["level"] = 1
 
-    for attr in ["hp", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "gold", "silver", "copper"]:
+    for attr in ["hp", "ac", "xp", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "gold", "silver", "copper"]:
         try:
             character[attr] = int(character.get(attr, default_character()[attr]))
         except (TypeError, ValueError):
@@ -679,9 +730,47 @@ if page == "Character Creator":
     
     with export_col:
         if st.button("📤 Export Character as JSON", key="export_json"):
-            # Prepare character data for export
-            export_data = st.session_state.character.copy()
-            json_data = json.dumps(export_data, indent=2)
+            # Prepare character data for export in OwlBear Rodeo format
+            character = st.session_state.character
+            owlbear_data = {
+                "name": character.get("name", ""),
+                "ancestry": character.get("ancestry", ""),
+                "class": character.get("class", ""),
+                "level": character.get("level", 1),
+                "title": character.get("title", ""),
+                "alignment": character.get("alignment", ""),
+                "background": character.get("background", ""),
+                "deity": character.get("deity", ""),
+                "notes": character.get("additional_features", ""),
+                "gear": character.get("gear", []),
+                "customGear": [],
+                "stats": {
+                    "STR": character.get("strength", 10),
+                    "DEX": character.get("dexterity", 10),
+                    "CON": character.get("constitution", 10),
+                    "INT": character.get("intelligence", 10),
+                    "WIS": character.get("wisdom", 10),
+                    "CHA": character.get("charisma", 10)
+                },
+                "bonuses": [],
+                "customBonuses": [],
+                "customTalents": character.get("talents", []),
+                "maxHitPoints": character.get("hp", 1),
+                "armorClass": character.get("ac", 10),
+                "gearSlotsTotal": 10,
+                "gold": character.get("gold", 0),
+                "silver": character.get("silver", 0),
+                "copper": character.get("copper", 0),
+                "languages": character.get("languages", []),
+                "customLanguages": [],
+                "xp": character.get("xp", 0),
+                "spells": character.get("spells", []),
+                "customSpells": [],
+                "hitPoints": character.get("hp", 1),
+                "schemaVersion": "1.0.0",
+                "schemaType": "sd-char-sheet"
+            }
+            json_data = json.dumps(owlbear_data, indent=2)
             
             st.download_button(
                 label="📥 Download JSON",
@@ -729,7 +818,10 @@ if page == "Character Creator":
             character = normalize_character_data(character)
             class_info = get_class_by_name(character.get("class", "")) or {}
 
-            template_path = Path(__file__).resolve().parent / "data" / "shadowdark_character_sheet_v4.html"
+            default_template_path = Path(__file__).resolve().parent / "data" / "shadowdark_character_sheet_v4.html"
+            spellcaster_template_path = Path(__file__).resolve().parent / "data" / "shadowdark_character_sheet_v4_spellcaster.html"
+            is_spellcaster = bool(get_spells_by_class(character.get("class", "")))
+            template_path = spellcaster_template_path if is_spellcaster else default_template_path
             template = template_path.read_text(encoding="utf-8")
 
             talent_lines = []
@@ -738,15 +830,17 @@ if page == "Character Creator":
                     talent_lines.append(f"{feature.get('name', 'Feature')}: {feature.get('description', '')}")
             for talent in character.get("talents", []):
                 talent_lines.append(f"Talent: {talent}")
-            for spell_name in character.get("spells", []):
-                spell = get_spell_by_name(spell_name)
-                if spell:
-                    talent_lines.append(f"Spell: {spell['name']} (Tier {spell.get('tier', '?')}): {spell.get('description', '')}")
-                else:
-                    talent_lines.append(f"Spell: {spell_name}")
             additional = character.get("additional_features", "").strip()
             if additional:
                 talent_lines.append(f"Additional Features: {additional}")
+
+            spell_lines = []
+            for spell_name in character.get("spells", []):
+                spell = get_spell_by_name(spell_name)
+                if spell:
+                    spell_lines.append(f"{spell['name']} (Tier {spell.get('tier', '?')}): {spell.get('description', '')}")
+                else:
+                    spell_lines.append(spell_name)
 
             gear_items = list(character.get("gear", []))
             custom_gear = character.get("custom_gear", "").strip()
@@ -775,6 +869,7 @@ if page == "Character Creator":
                 "__SP__": html_escape(character.get("silver", 0)),
                 "__CP__": html_escape(character.get("copper", 0)),
                 "__TALENTS__": html_escape("\n".join(talent_lines)),
+                "__SPELLS__": html_escape("\n".join(spell_lines)),
                 "__GEAR__": html_escape("\n".join(gear_items)),
             }
 
